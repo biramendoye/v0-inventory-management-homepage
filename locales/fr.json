@@ -1,0 +1,502 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "actions": "Actions",
+    "status": "Statut",
+    "date": "Date",
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "tax": "TVA",
+    "quantity": "Quantité",
+    "price": "Prix",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code postal",
+    "country": "Pays",
+    "notes": "Notes",
+    "required": "Requis",
+    "optional": "Optionnel"
+  },
+  "navigation": {
+    "dashboard": "Tableau de bord",
+    "products": "Produits",
+    "sales": "Ventes",
+    "customers": "Clients",
+    "suppliers": "Fournisseurs",
+    "reports": "Rapports",
+    "settings": "Paramètres",
+    "careers": "Carrières"
+  },
+  "landing": {
+    "header": {
+      "home": "Accueil",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "dashboard": "Tableau de Bord",
+      "login": "Connexion",
+      "toggleMenu": "Basculer le menu"
+    },
+    "hero": {
+      "title": "Optimisez Votre",
+      "titleHighlight": "Gestion d'Inventaire",
+      "description": "Prenez le contrôle de votre inventaire avec notre logiciel puissant et intuitif. Suivez les niveaux de stock, gérez les fournisseurs et générez des rapports automatisés pour optimiser vos opérations commerciales.",
+      "ctaPrimary": "Accéder au Tableau de Bord",
+      "ctaSecondary": "Voir la Démo",
+      "noCreditCard": "Aucune carte de crédit requise",
+      "freeTrial": "Essai gratuit de 14 jours",
+      "imageAlt": "Tableau de bord FIBEM"
+    },
+    "features": {
+      "title": "Fonctionnalités Puissantes pour les Entreprises Modernes",
+      "subtitle": "Tout ce dont vous avez besoin pour gérer efficacement votre inventaire et développer vos opérations commerciales.",
+      "realTimeTracking": {
+        "title": "Suivi de Stock en Temps Réel",
+        "description": "Surveillez les niveaux d'inventaire en temps réel avec des alertes automatisées pour les stocks faibles et les points de réapprovisionnement."
+      },
+      "supplierManagement": {
+        "title": "Gestion des Fournisseurs",
+        "description": "Gérez les relations avec les fournisseurs, suivez les bons de commande et maintenez les métriques de performance des vendeurs."
+      },
+      "automatedReports": {
+        "title": "Rapports Automatisés",
+        "description": "Générez des rapports complets sur la rotation des stocks, les coûts et les analyses de performance."
+      },
+      "quickIntegration": {
+        "title": "Intégration Rapide",
+        "description": "Intégrez-vous facilement avec vos plateformes ERP, comptabilité et e-commerce existantes."
+      },
+      "secureCompliant": {
+        "title": "Sécurisé et Conforme",
+        "description": "Sécurité de niveau entreprise avec contrôle d'accès basé sur les rôles et pistes d'audit."
+      },
+      "multiLocation": {
+        "title": "Support Multi-sites",
+        "description": "Gérez l'inventaire sur plusieurs entrepôts et emplacements depuis un seul tableau de bord."
+      }
+    },
+    "pricing": {
+      "title": "Tarification Simple et Transparente",
+      "subtitle": "Choisissez le plan parfait pour votre entreprise. Tous les plans incluent nos fonctionnalités principales de gestion d'inventaire.",
+      "starter": {
+        "name": "Débutant",
+        "price": "29€",
+        "period": "/mois",
+        "description": "Parfait pour les petites entreprises qui commencent",
+        "features": {
+          "products": "Jusqu'à 1 000 produits",
+          "reports": "Rapports de base",
+          "support": "Support par email",
+          "mobile": "Accès application mobile",
+          "users": "2 comptes utilisateur"
+        }
+      },
+      "professional": {
+        "name": "Professionnel",
+        "price": "79€",
+        "period": "/mois",
+        "description": "Idéal pour les entreprises en croissance",
+        "popular": "Le Plus Populaire",
+        "features": {
+          "products": "Jusqu'à 10 000 produits",
+          "analytics": "Analyses avancées",
+          "support": "Support prioritaire",
+          "api": "Accès API",
+          "users": "10 comptes utilisateur",
+          "integrations": "Intégrations personnalisées"
+        }
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "price": "Sur mesure",
+        "description": "Pour les grandes organisations aux besoins complexes",
+        "features": {
+          "products": "Produits illimités",
+          "reports": "Rapports personnalisés",
+          "support": "Support dédié 24/7",
+          "whiteLabel": "Options marque blanche",
+          "users": "Utilisateurs illimités",
+          "security": "Sécurité avancée",
+          "development": "Développement personnalisé"
+        }
+      },
+      "trialInfo": "Tous les plans incluent un essai gratuit de 14 jours. Aucune carte de crédit requise.",
+      "compareFeatures": "Comparer Toutes les Fonctionnalités",
+      "getStarted": "Commencer",
+      "contactSales": "Contacter les Ventes"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Prêt à transformer votre gestion d'inventaire ? Contactez notre équipe pour une démonstration personnalisée.",
+      "form": {
+        "title": "Envoyez-nous un Message",
+        "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.",
+        "firstName": "Prénom",
+        "firstNamePlaceholder": "Jean",
+        "lastName": "Nom",
+        "lastNamePlaceholder": "Dupont",
+        "email": "Email",
+        "emailPlaceholder": "jean@entreprise.com",
+        "company": "Entreprise",
+        "companyPlaceholder": "Nom de votre entreprise",
+        "phone": "Numéro de Téléphone",
+        "phonePlaceholder": "+33 1 23 45 67 89",
+        "message": "Message",
+        "messagePlaceholder": "Parlez-nous de vos besoins en gestion d'inventaire...",
+        "submit": "Envoyer le Message"
+      },
+      "info": {
+        "title": "Informations de Contact",
+        "description": "Contactez-nous par l'un de ces canaux.",
+        "email": {
+          "title": "Email",
+          "sales": "ventes@fibem.com",
+          "support": "support@fibem.com"
+        },
+        "phone": {
+          "title": "Téléphone",
+          "main": "+33 1 23 45 67 89",
+          "secondary": "+33 1 98 76 54 32"
+        },
+        "address": {
+          "title": "Adresse",
+          "line1": "123 Avenue des Affaires",
+          "line2": "Suite 456",
+          "line3": "75001 Paris, France"
+        },
+        "hours": {
+          "title": "Heures d'Ouverture",
+          "weekdays": "Lundi - Vendredi : 9h00 - 18h00 CET",
+          "saturday": "Samedi : 10h00 - 16h00 CET",
+          "sunday": "Dimanche : Fermé"
+        }
+      },
+      "demo": {
+        "title": "Planifier une Démonstration",
+        "description": "Voyez notre système de gestion d'inventaire en action.",
+        "details": "Réservez une démonstration personnalisée de 30 minutes avec nos experts produit et découvrez comment notre solution peut optimiser vos opérations d'inventaire.",
+        "button": "Planifier une Démo"
+      }
+    },
+    "careers": {
+      "title": "Rejoignez Notre Équipe",
+      "subtitle": "Faites partie d'une équipe dynamique qui révolutionne la gestion des stocks. Explorez des opportunités de carrière passionnantes et grandissez avec nous.",
+      "viewDetails": "Voir les Détails",
+      "viewAllPositions": "Voir Tous les Postes",
+      "notFound": "Vous ne voyez pas de poste qui vous convient ? Nous recherchons toujours des personnes talentueuses.",
+      "backToJobs": "Retour aux Offres",
+      "jobNotFound": "Offre Non Trouvée",
+      "details": {
+        "location": "Lieu",
+        "type": "Type",
+        "salary": "Salaire",
+        "experience": "Expérience",
+        "responsibilities": "Responsabilités",
+        "requirements": "Exigences",
+        "benefits": "Avantages",
+        "applyTitle": "Prêt à Postuler ?",
+        "applyDescription": "Rejoignez notre équipe et contribuez à façonner l'avenir de la gestion des stocks.",
+        "applyNow": "Postuler Maintenant"
+      },
+      "jobs": {
+        "softwareEngineer": {
+          "title": "Ingénieur Logiciel Senior",
+          "department": "Ingénierie",
+          "location": "Paris, France / Télétravail",
+          "type": "Temps plein",
+          "description": "Rejoignez notre équipe d'ingénierie pour créer des solutions de gestion de stock évolutives utilisant des technologies modernes.",
+          "salary": "70 000€ - 100 000€",
+          "experience": "5+ ans",
+          "posted": "Publié il y a 2 jours",
+          "responsibilities": [
+            "Concevoir et développer de nouvelles fonctionnalités pour notre plateforme de gestion de stock",
+            "Écrire du code propre, maintenable et bien testé",
+            "Collaborer avec les chefs de produit et les designers pour offrir des expériences utilisateur exceptionnelles",
+            "Encadrer les ingénieurs juniors et contribuer à la documentation technique",
+            "Participer aux revues de code et aux discussions architecturales"
+          ],
+          "requirements": [
+            "5+ ans d'expérience en développement logiciel",
+            "Maîtrise de React, TypeScript et Node.js",
+            "Expérience avec les technologies web modernes et les plateformes cloud",
+            "Excellentes compétences en résolution de problèmes et en communication",
+            "Diplôme en informatique ou domaine connexe"
+          ],
+          "benefits": [
+            "Salaire compétitif et package d'actions",
+            "Options de télétravail flexibles",
+            "Assurance santé et programmes de bien-être",
+            "Budget de développement professionnel",
+            "25 jours de congés payés"
+          ]
+        },
+        "productManager": {
+          "title": "Chef de Produit",
+          "department": "Produit",
+          "location": "Paris, France",
+          "type": "Temps plein",
+          "description": "Dirigez la stratégie et le développement de produits pour notre plateforme de gestion de stock, en travaillant en étroite collaboration avec les clients et les parties prenantes.",
+          "salary": "75 000€ - 110 000€",
+          "experience": "3-5 ans",
+          "posted": "Publié il y a 1 semaine",
+          "responsibilities": [
+            "Définir la vision et la feuille de route du produit basées sur les recherches de marché et les retours clients",
+            "Travailler avec les équipes d'ingénierie pour prioriser les fonctionnalités et apporter de la valeur",
+            "Mener des recherches utilisateurs et analyser les métriques produit",
+            "Collaborer avec les équipes commerciales et marketing sur les stratégies de mise sur le marché",
+            "Présenter les mises à jour produit aux parties prenantes et aux clients"
+          ],
+          "requirements": [
+            "3-5 ans d'expérience en gestion de produit dans le SaaS B2B",
+            "Solides compétences analytiques et prise de décision basée sur les données",
+            "Excellentes capacités de communication et de gestion des parties prenantes",
+            "Expérience en gestion de stock ou chaîne d'approvisionnement est un plus",
+            "MBA ou diplôme avancé pertinent préféré"
+          ],
+          "benefits": [
+            "Salaire compétitif et primes de performance",
+            "Stock-options",
+            "Avantages santé complets",
+            "Opportunités d'apprentissage et de développement",
+            "Bureau moderne au centre de Paris"
+          ]
+        },
+        "salesRepresentative": {
+          "title": "Représentant Commercial",
+          "department": "Ventes",
+          "location": "Télétravail (France/Europe)",
+          "type": "Temps plein",
+          "description": "Stimulez la croissance des revenus en identifiant et en concluant de nouvelles opportunités commerciales avec les petites et moyennes entreprises.",
+          "salary": "50 000€ - 75 000€ + Commission",
+          "experience": "2-4 ans",
+          "posted": "Publié il y a 3 jours",
+          "responsibilities": [
+            "Identifier et qualifier de nouvelles opportunités de vente par prospection sortante",
+            "Effectuer des démonstrations et présentations de produits aux clients potentiels",
+            "Établir et maintenir de solides relations avec les clients",
+            "Négocier les contrats et conclure des affaires pour atteindre les objectifs de vente",
+            "Collaborer avec les équipes marketing et succès client"
+          ],
+          "requirements": [
+            "2-4 ans d'expérience en vente B2B, de préférence dans le SaaS",
+            "Historique prouvé d'atteinte ou de dépassement des quotas de vente",
+            "Solides compétences en présentation et négociation",
+            "Autonome avec excellente gestion du temps",
+            "Expérience avec les outils CRM (Salesforce, HubSpot, etc.)"
+          ],
+          "benefits": [
+            "Salaire de base plus commission sans plafond",
+            "Flexibilité du télétravail",
+            "Assurance santé et dentaire",
+            "Formation commerciale et avancement de carrière",
+            "Retraites d'équipe annuelles"
+          ]
+        }
+      },
+      "application": {
+        "title": "Postuler pour ce Poste",
+        "description": "Remplissez le formulaire ci-dessous pour soumettre votre candidature. Nous l'examinerons et vous recontacterons bientôt.",
+        "fullName": "Nom Complet",
+        "email": "Adresse Email",
+        "phone": "Numéro de Téléphone",
+        "resume": "CV (PDF)",
+        "uploadResume": "Télécharger le CV",
+        "changeResume": "Changer le CV",
+        "viewResume": "Voir",
+        "uploading": "Téléchargement...",
+        "uploadSuccess": "CV téléchargé avec succès",
+        "uploadSuccessDescription": "Votre CV a été téléchargé et est prêt à être soumis.",
+        "preview": "Aperçu du CV",
+        "coverLetter": "Lettre de Motivation (Optionnel)",
+        "coverLetterPlaceholder": "Dites-nous pourquoi vous êtes intéressé par ce poste...",
+        "submit": "Soumettre la Candidature",
+        "success": "Candidature soumise avec succès ! Nous vous contacterons bientôt.",
+        "resumeRequired": "Veuillez télécharger votre CV pour continuer.",
+        "invalidFile": "Veuillez télécharger un fichier PDF."
+      }
+    },
+    "lowStockAlerts": {
+      "title": "Alertes de Stock Faible en Temps Réel",
+      "subtitle": "Ne manquez plus jamais de stock. Recevez des alertes automatiques lorsque vos produits atteignent des niveaux critiques et réapprovisionnez-vous à temps.",
+      "criticalItems": "Articles Critiques",
+      "criticalDescription": "Nécessitent un réapprovisionnement immédiat",
+      "warningItems": "Articles en Alerte",
+      "warningDescription": "Approchent du seuil minimum",
+      "totalValue": "Valeur Totale",
+      "valueDescription": "Valeur des articles en stock faible",
+      "itemsTitle": "Articles Nécessitant une Attention",
+      "itemsDescription": "Surveillez et gérez vos niveaux de stock en temps réel",
+      "viewDashboard": "Voir le Tableau de Bord",
+      "critical": "Critique",
+      "warning": "Alerte",
+      "sku": "SKU",
+      "currentStock": "Stock Actuel",
+      "reorder": "Réapprovisionner",
+      "ctaText": "Automatisez vos alertes de stock et ne manquez plus jamais de produits importants",
+      "ctaButton": "Essayer Gratuitement"
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Gestion d'Inventaire ?",
+      "subtitle": "Rejoignez des milliers d'entreprises qui font confiance à FIBEM STOCK pour optimiser leurs opérations et augmenter leur rentabilité.",
+      "benefits": {
+        "reduceCosts": "Réduisez les coûts d'inventaire jusqu'à 30%",
+        "eliminateStockouts": "Éliminez les ruptures et les surstocks",
+        "saveTime": "Économisez 10+ heures par semaine sur les tâches manuelles",
+        "improveRelations": "Améliorez les relations avec vos fournisseurs"
+      },
+      "ctaPrimary": "Commencer Maintenant",
+      "ctaSecondary": "Planifier une Démo",
+      "footer": "Aucun frais d'installation • Annulation à tout moment • Support 24/7 inclus"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue sur FIBEM STOCK",
+    "subtitle": "Vue d'ensemble de votre inventaire et activité",
+    "totalProducts": "Total Produits",
+    "lowStock": "Stock Faible",
+    "outOfStock": "Rupture de stock",
+    "totalValue": "Valeur Stock",
+    "recentActivity": "Activité Récente",
+    "quickActions": "Actions rapides",
+    "addProduct": "Ajouter un produit",
+    "viewReports": "Voir les rapports",
+    "manageStock": "Gérer le stock"
+  },
+  "products": {
+    "title": "Gestion des produits",
+    "addProduct": "Ajouter un produit",
+    "productName": "Nom du produit",
+    "category": "Catégorie",
+    "stockQuantity": "Quantité en stock",
+    "minimumStock": "Stock minimum",
+    "unitPrice": "Prix unitaire",
+    "supplier": "Fournisseur",
+    "description": "Description",
+    "sku": "SKU",
+    "barcode": "Code-barres",
+    "inStock": "En stock",
+    "lowStock": "Stock faible",
+    "outOfStock": "Rupture de stock",
+    "categories": {
+      "electronics": "Électronique",
+      "clothing": "Vêtements",
+      "food": "Alimentation",
+      "books": "Livres",
+      "sports": "Sport",
+      "home": "Maison",
+      "beauty": "Beauté",
+      "toys": "Jouets"
+    }
+  },
+  "sales": {
+    "title": "Gestion des ventes",
+    "newSale": "Nouvelle vente",
+    "invoiceNumber": "N° facture",
+    "customer": "Client",
+    "customerName": "Nom du client",
+    "customerEmail": "Email du client",
+    "customerPhone": "Téléphone du client",
+    "customerAddress": "Adresse du client",
+    "saleDate": "Date de vente",
+    "dueDate": "Date d'échéance",
+    "paymentStatus": "Statut de paiement",
+    "paid": "Payé",
+    "pending": "En attente",
+    "overdue": "En retard",
+    "draft": "Brouillon",
+    "viewInvoice": "Voir facture",
+    "downloadPdf": "Télécharger PDF",
+    "sendEmail": "Envoyer par email",
+    "monthlySales": "Ventes mensuelles",
+    "paidInvoices": "Factures payées",
+    "pendingPayments": "Paiements en attente",
+    "activeCustomers": "Clients actifs",
+    "selectProduct": "Sélectionner un produit",
+    "addItem": "Ajouter un article",
+    "removeItem": "Supprimer l'article",
+    "taxRate": "Taux de TVA",
+    "paymentTerms": "Conditions de paiement",
+    "invoice": "Facture",
+    "billTo": "Facturer à",
+    "itemDescription": "Description de l'article",
+    "unitPrice": "Prix unitaire",
+    "amount": "Montant",
+    "invoiceViewer": {
+      "title": "Facture",
+      "sendByEmail": "Envoyer par Email",
+      "email": "Email",
+      "downloadPdf": "Télécharger PDF",
+      "generating": "Génération...",
+      "pdf": "PDF",
+      "companyName": "FIBEM STOCK",
+      "companyTagline": "Système de Gestion d'Inventaire",
+      "companyAddress": "123 Rue de l'Entreprise",
+      "companyCity": "75001 Paris, France",
+      "companyPhone": "Tél: +33 1 23 45 67 89",
+      "companyEmail": "Email: contact@fibemstock.fr",
+      "companySiret": "SIRET: 123 456 789 00012",
+      "invoiceTitle": "FACTURE",
+      "invoiceNumber": "N°",
+      "date": "Date:",
+      "dueDate": "Échéance:",
+      "billedTo": "Facturé à:",
+      "description": "Description",
+      "sku": "SKU",
+      "quantity": "Qté",
+      "unitPriceShort": "Prix Unit.",
+      "total": "Total",
+      "subtotal": "Sous-total:",
+      "tax": "TVA",
+      "grandTotal": "TOTAL:",
+      "paymentTermsTitle": "Conditions de paiement",
+      "paymentTermsDue": "Échéance:",
+      "paymentTermsDueText": "Paiement dû sous 30 jours à réception de facture",
+      "paymentTermsMethod": "Modalités:",
+      "paymentTermsMethodText": "Virement bancaire ou chèque à l'ordre de FIBEM STOCK",
+      "paymentTermsPenalties": "Pénalités:",
+      "paymentTermsPenaltiesText": "En cas de retard, pénalités de 3 fois le taux légal",
+      "footer": "Merci de votre confiance • FIBEM STOCK • www.fibemstock.fr",
+      "emailSubject": "Facture {{invoiceId}} - FIBEM STOCK",
+      "emailBody": "Bonjour {{customerName}},\n\nVeuillez trouver ci-joint votre facture {{invoiceId}} d'un montant de €{{total}}.\n\nDate d'échéance: {{dueDate}}\n\nCordialement,\nL'équipe FIBEM STOCK",
+      "quantityLabel": "Quantité:",
+      "unitPriceLabel": "Prix unitaire:"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "Ce champ est requis",
+      "email": "Adresse email invalide",
+      "phone": "Numéro de téléphone invalide",
+      "minLength": "Minimum {{min}} caractères",
+      "maxLength": "Maximum {{max}} caractères",
+      "positiveNumber": "Doit être un nombre positif"
+    },
+    "success": {
+      "productAdded": "Produit ajouté avec succès",
+      "productUpdated": "Produit mis à jour avec succès",
+      "saleCreated": "Vente créée avec succès",
+      "invoiceSent": "Facture envoyée avec succès"
+    },
+    "errors": {
+      "generic": "Une erreur s'est produite",
+      "networkError": "Erreur de connexion",
+      "serverError": "Erreur du serveur"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 FIBEM STOCK. Tous droits réservés.",
+    "poweredBy": "Propulsé par v0"
+  }
+}

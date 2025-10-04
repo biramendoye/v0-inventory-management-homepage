@@ -1,0 +1,535 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "tax": "Tax",
+    "quantity": "Quantity",
+    "price": "Price",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "notes": "Notes",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "sales": "Sales",
+    "customers": "Customers",
+    "suppliers": "Suppliers",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "landing": {
+    "header": {
+      "home": "Home",
+      "features": "Features",
+      "pricing": "Pricing",
+      "careers": "Careers",
+      "contact": "Contact",
+      "dashboard": "Dashboard",
+      "login": "Login",
+      "toggleMenu": "Toggle menu"
+    },
+    "hero": {
+      "title": "Optimize Your",
+      "titleHighlight": "Inventory Management",
+      "description": "Take control of your inventory with our powerful and intuitive software. Track stock levels, manage suppliers, and generate automated reports to optimize your business operations.",
+      "ctaPrimary": "Access Dashboard",
+      "ctaSecondary": "Watch Demo",
+      "noCreditCard": "No credit card required",
+      "freeTrial": "14-day free trial",
+      "imageAlt": "FIBEM Dashboard"
+    },
+    "features": {
+      "title": "Powerful Features for Modern Businesses",
+      "subtitle": "Everything you need to efficiently manage your inventory and grow your business operations.",
+      "realTimeTracking": {
+        "title": "Real-Time Stock Tracking",
+        "description": "Monitor inventory levels in real-time with automated alerts for low stock and reorder points."
+      },
+      "supplierManagement": {
+        "title": "Supplier Management",
+        "description": "Manage supplier relationships, track purchase orders, and maintain vendor performance metrics."
+      },
+      "automatedReports": {
+        "title": "Automated Reports",
+        "description": "Generate comprehensive reports on stock turnover, costs, and performance analytics."
+      },
+      "quickIntegration": {
+        "title": "Quick Integration",
+        "description": "Easily integrate with your existing ERP, accounting, and e-commerce platforms."
+      },
+      "secureCompliant": {
+        "title": "Secure and Compliant",
+        "description": "Enterprise-grade security with role-based access control and audit trails."
+      },
+      "multiLocation": {
+        "title": "Multi-Location Support",
+        "description": "Manage inventory across multiple warehouses and locations from a single dashboard."
+      }
+    },
+    "pricing": {
+      "title": "Simple and Transparent Pricing",
+      "subtitle": "Choose the perfect plan for your business. All plans include our core inventory management features.",
+      "starter": {
+        "name": "Starter",
+        "price": "$29",
+        "period": "/month",
+        "description": "Perfect for small businesses getting started",
+        "features": {
+          "products": "Up to 1,000 products",
+          "reports": "Basic reports",
+          "support": "Email support",
+          "mobile": "Mobile app access",
+          "users": "2 user accounts"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "$79",
+        "period": "/month",
+        "description": "Ideal for growing businesses",
+        "popular": "Most Popular",
+        "features": {
+          "products": "Up to 10,000 products",
+          "analytics": "Advanced analytics",
+          "support": "Priority support",
+          "api": "API access",
+          "users": "10 user accounts",
+          "integrations": "Custom integrations"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For large organizations with complex needs",
+        "features": {
+          "products": "Unlimited products",
+          "reports": "Custom reports",
+          "support": "Dedicated 24/7 support",
+          "whiteLabel": "White-label options",
+          "users": "Unlimited users",
+          "security": "Advanced security",
+          "development": "Custom development"
+        }
+      },
+      "trialInfo": "All plans include a 14-day free trial. No credit card required.",
+      "compareFeatures": "Compare All Features",
+      "getStarted": "Get Started",
+      "contactSales": "Contact Sales"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Ready to transform your inventory management? Contact our team for a personalized demonstration.",
+      "form": {
+        "title": "Send Us a Message",
+        "description": "Fill out the form below and we'll respond within 24 hours.",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "John",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Doe",
+        "email": "Email",
+        "emailPlaceholder": "john@company.com",
+        "company": "Company",
+        "companyPlaceholder": "Your company name",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+1 234 567 8900",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about your inventory management needs...",
+        "submit": "Send Message"
+      },
+      "info": {
+        "title": "Contact Information",
+        "description": "Reach us through any of these channels.",
+        "email": {
+          "title": "Email",
+          "sales": "sales@fibem.com",
+          "support": "support@fibem.com"
+        },
+        "phone": {
+          "title": "Phone",
+          "main": "+1 (555) 123-4567",
+          "secondary": "+1 (555) 987-6543"
+        },
+        "address": {
+          "title": "Address",
+          "line1": "123 Business Avenue",
+          "line2": "Suite 456",
+          "line3": "New York, NY 10001, USA"
+        },
+        "hours": {
+          "title": "Business Hours",
+          "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM EST",
+          "saturday": "Saturday: 10:00 AM - 4:00 PM EST",
+          "sunday": "Sunday: Closed"
+        }
+      },
+      "demo": {
+        "title": "Schedule a Demo",
+        "description": "See our inventory management system in action.",
+        "details": "Book a personalized 30-minute demo with our product experts and discover how our solution can optimize your inventory operations.",
+        "button": "Schedule a Demo"
+      }
+    },
+    "careers": {
+      "title": "Join Our Team",
+      "subtitle": "Be part of a dynamic team that's revolutionizing inventory management. Explore exciting career opportunities and grow with us.",
+      "viewDetails": "View Details",
+      "viewAllPositions": "View All Positions",
+      "notFound": "Don't see a position that fits? We're always looking for talented individuals.",
+      "backToJobs": "Back to Jobs",
+      "jobNotFound": "Job Not Found",
+      "details": {
+        "location": "Location",
+        "type": "Type",
+        "salary": "Salary",
+        "experience": "Experience",
+        "responsibilities": "Responsibilities",
+        "requirements": "Requirements",
+        "benefits": "Benefits",
+        "applyTitle": "Ready to Apply?",
+        "applyDescription": "Join our team and help shape the future of inventory management.",
+        "applyNow": "Apply Now"
+      },
+      "jobs": {
+        "softwareEngineer": {
+          "title": "Senior Software Engineer",
+          "department": "Engineering",
+          "location": "Paris, France / Remote",
+          "type": "Full-time",
+          "description": "Join our engineering team to build scalable inventory management solutions using modern technologies.",
+          "salary": "$80,000 - $120,000",
+          "experience": "5+ years",
+          "posted": "Posted 2 days ago",
+          "responsibilities": [
+            "Design and develop new features for our inventory management platform",
+            "Write clean, maintainable, and well-tested code",
+            "Collaborate with product managers and designers to deliver exceptional user experiences",
+            "Mentor junior engineers and contribute to technical documentation",
+            "Participate in code reviews and architectural discussions"
+          ],
+          "requirements": [
+            "5+ years of experience in software development",
+            "Strong proficiency in React, TypeScript, and Node.js",
+            "Experience with modern web technologies and cloud platforms",
+            "Excellent problem-solving and communication skills",
+            "Bachelor's degree in Computer Science or related field"
+          ],
+          "benefits": [
+            "Competitive salary and equity package",
+            "Flexible remote work options",
+            "Health insurance and wellness programs",
+            "Professional development budget",
+            "25 days paid vacation"
+          ]
+        },
+        "productManager": {
+          "title": "Product Manager",
+          "department": "Product",
+          "location": "Paris, France",
+          "type": "Full-time",
+          "description": "Lead product strategy and development for our inventory management platform, working closely with customers and stakeholders.",
+          "salary": "$90,000 - $130,000",
+          "experience": "3-5 years",
+          "posted": "Posted 1 week ago",
+          "responsibilities": [
+            "Define product vision and roadmap based on market research and customer feedback",
+            "Work with engineering teams to prioritize features and deliver value",
+            "Conduct user research and analyze product metrics",
+            "Collaborate with sales and marketing teams on go-to-market strategies",
+            "Present product updates to stakeholders and customers"
+          ],
+          "requirements": [
+            "3-5 years of product management experience in B2B SaaS",
+            "Strong analytical and data-driven decision-making skills",
+            "Excellent communication and stakeholder management abilities",
+            "Experience with inventory or supply chain management is a plus",
+            "MBA or relevant advanced degree preferred"
+          ],
+          "benefits": [
+            "Competitive salary and performance bonuses",
+            "Stock options",
+            "Comprehensive health benefits",
+            "Learning and development opportunities",
+            "Modern office in central Paris"
+          ]
+        },
+        "salesRepresentative": {
+          "title": "Sales Representative",
+          "department": "Sales",
+          "location": "Remote (US/Europe)",
+          "type": "Full-time",
+          "description": "Drive revenue growth by identifying and closing new business opportunities with small to medium-sized businesses.",
+          "salary": "$60,000 - $90,000 + Commission",
+          "experience": "2-4 years",
+          "posted": "Posted 3 days ago",
+          "responsibilities": [
+            "Identify and qualify new sales opportunities through outbound prospecting",
+            "Conduct product demonstrations and presentations to potential customers",
+            "Build and maintain strong relationships with clients",
+            "Negotiate contracts and close deals to meet sales targets",
+            "Collaborate with marketing and customer success teams"
+          ],
+          "requirements": [
+            "2-4 years of B2B sales experience, preferably in SaaS",
+            "Proven track record of meeting or exceeding sales quotas",
+            "Strong presentation and negotiation skills",
+            "Self-motivated with excellent time management",
+            "Experience with CRM tools (Salesforce, HubSpot, etc.)"
+          ],
+          "benefits": [
+            "Base salary plus uncapped commission",
+            "Remote work flexibility",
+            "Health and dental insurance",
+            "Sales training and career advancement",
+            "Annual team retreats"
+          ]
+        }
+      },
+      "application": {
+        "title": "Apply for this Position",
+        "description": "Fill out the form below to submit your application. We'll review it and get back to you soon.",
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "resume": "Resume (PDF)",
+        "uploadResume": "Upload Resume",
+        "changeResume": "Change Resume",
+        "viewResume": "View",
+        "uploading": "Uploading...",
+        "uploadSuccess": "Resume uploaded successfully",
+        "uploadSuccessDescription": "Your resume has been uploaded and is ready to submit.",
+        "preview": "Resume Preview",
+        "coverLetter": "Cover Letter (Optional)",
+        "coverLetterPlaceholder": "Tell us why you're interested in this position...",
+        "submit": "Submit Application",
+        "success": "Application submitted successfully! We'll be in touch soon.",
+        "resumeRequired": "Please upload your resume to continue.",
+        "invalidFile": "Please upload a PDF file."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Inventory Management?",
+      "subtitle": "Join thousands of businesses that trust FIBEM STOCK to optimize their operations and increase profitability.",
+      "benefits": {
+        "reduceCosts": "Reduce inventory costs by up to 30%",
+        "eliminateStockouts": "Eliminate stockouts and overstocking",
+        "saveTime": "Save 10+ hours per week on manual tasks",
+        "improveRelations": "Improve supplier relationships"
+      },
+      "ctaPrimary": "Get Started Now",
+      "ctaSecondary": "Schedule a Demo",
+      "footer": "No setup fees • Cancel anytime • 24/7 support included"
+    },
+    "footer": {
+      "description": "Optimize your inventory management with our powerful and intuitive software designed for modern businesses.",
+      "address": "123 Business Avenue, Suite 100, New York, NY 10001, USA",
+      "email": "contact@fibem.com",
+      "phone": "+1 (555) 123-4567",
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "integrations": "Integrations",
+        "api": "API"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "careers": "Careers",
+        "blog": "Blog",
+        "press": "Press"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Help Center",
+        "documentation": "Documentation",
+        "contact": "Contact Support",
+        "status": "System Status"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "cookies": "Cookie Policy",
+        "gdpr": "GDPR"
+      },
+      "copyright": "© 2025 FIBEM. All rights reserved."
+    },
+    "lowStockAlerts": {
+      "title": "Real-Time Low Stock Alerts",
+      "subtitle": "Never run out of stock again. Get automatic alerts when your products reach critical levels and reorder on time.",
+      "criticalItems": "Critical Items",
+      "criticalDescription": "Require immediate restocking",
+      "warningItems": "Warning Items",
+      "warningDescription": "Approaching minimum threshold",
+      "totalValue": "Total Value",
+      "valueDescription": "Value of low stock items",
+      "itemsTitle": "Items Requiring Attention",
+      "itemsDescription": "Monitor and manage your stock levels in real-time",
+      "viewDashboard": "View Dashboard",
+      "critical": "Critical",
+      "warning": "Warning",
+      "sku": "SKU",
+      "currentStock": "Current Stock",
+      "reorder": "Reorder",
+      "ctaText": "Automate your stock alerts and never miss important products again",
+      "ctaButton": "Try Free"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to FIBEM STOCK",
+    "subtitle": "Overview of your inventory and activity",
+    "totalProducts": "Total Products",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "totalValue": "Total Value",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "addProduct": "Add Product",
+    "viewReports": "View Reports",
+    "manageStock": "Manage Stock"
+  },
+  "products": {
+    "title": "Product Management",
+    "addProduct": "Add Product",
+    "productName": "Product Name",
+    "category": "Category",
+    "stockQuantity": "Stock Quantity",
+    "minimumStock": "Minimum Stock",
+    "unitPrice": "Unit Price",
+    "supplier": "Supplier",
+    "description": "Description",
+    "sku": "SKU",
+    "barcode": "Barcode",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "categories": {
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "food": "Food",
+      "books": "Books",
+      "sports": "Sports",
+      "home": "Home",
+      "beauty": "Beauty",
+      "toys": "Toys"
+    }
+  },
+  "sales": {
+    "title": "Sales Management",
+    "newSale": "New Sale",
+    "invoiceNumber": "Invoice Number",
+    "customer": "Customer",
+    "customerName": "Customer Name",
+    "customerEmail": "Customer Email",
+    "customerPhone": "Customer Phone",
+    "customerAddress": "Customer Address",
+    "saleDate": "Sale Date",
+    "dueDate": "Due Date",
+    "paymentStatus": "Payment Status",
+    "paid": "Paid",
+    "pending": "Pending",
+    "overdue": "Overdue",
+    "draft": "Draft",
+    "viewInvoice": "View Invoice",
+    "downloadPdf": "Download PDF",
+    "sendEmail": "Send Email",
+    "monthlySales": "Monthly Sales",
+    "paidInvoices": "Paid Invoices",
+    "pendingPayments": "Pending Payments",
+    "activeCustomers": "Active Customers",
+    "selectProduct": "Select Product",
+    "addItem": "Add Item",
+    "removeItem": "Remove Item",
+    "taxRate": "Tax Rate",
+    "paymentTerms": "Payment Terms",
+    "invoice": "Invoice",
+    "billTo": "Bill To",
+    "itemDescription": "Item Description",
+    "unitPrice": "Unit Price",
+    "amount": "Amount",
+    "invoiceViewer": {
+      "title": "Invoice",
+      "sendByEmail": "Send by Email",
+      "email": "Email",
+      "downloadPdf": "Download PDF",
+      "generating": "Generating...",
+      "pdf": "PDF",
+      "companyName": "FIBEM STOCK",
+      "companyTagline": "Inventory Management System",
+      "companyAddress": "123 Business Street",
+      "companyCity": "75001 Paris, France",
+      "companyPhone": "Tel: +33 1 23 45 67 89",
+      "companyEmail": "Email: contact@fibemstock.fr",
+      "companySiret": "SIRET: 123 456 789 00012",
+      "invoiceTitle": "INVOICE",
+      "invoiceNumber": "No.",
+      "date": "Date:",
+      "dueDate": "Due Date:",
+      "billedTo": "Billed to:",
+      "description": "Description",
+      "sku": "SKU",
+      "quantity": "Qty",
+      "unitPriceShort": "Unit Price",
+      "total": "Total",
+      "subtotal": "Subtotal:",
+      "tax": "Tax",
+      "grandTotal": "TOTAL:",
+      "paymentTermsTitle": "Payment Terms",
+      "paymentTermsDue": "Due:",
+      "paymentTermsDueText": "Payment due within 30 days of invoice receipt",
+      "paymentTermsMethod": "Method:",
+      "paymentTermsMethodText": "Bank transfer or check payable to FIBEM STOCK",
+      "paymentTermsPenalties": "Penalties:",
+      "paymentTermsPenaltiesText": "Late payment penalties of 3 times the legal rate apply",
+      "footer": "Thank you for your business • FIBEM STOCK • www.fibemstock.fr",
+      "emailSubject": "Invoice {{invoiceId}} - FIBEM STOCK",
+      "emailBody": "Hello {{customerName}},\n\nPlease find attached your invoice {{invoiceId}} for the amount of ${{total}}.\n\nDue date: {{dueDate}}\n\nBest regards,\nThe FIBEM STOCK Team",
+      "quantityLabel": "Quantity:",
+      "unitPriceLabel": "Unit price:"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Invalid email address",
+      "phone": "Invalid phone number",
+      "minLength": "Minimum {{min}} characters",
+      "maxLength": "Maximum {{max}} characters",
+      "positiveNumber": "Must be a positive number"
+    },
+    "success": {
+      "productAdded": "Product added successfully",
+      "productUpdated": "Product updated successfully",
+      "saleCreated": "Sale created successfully",
+      "invoiceSent": "Invoice sent successfully"
+    },
+    "errors": {
+      "generic": "An error occurred",
+      "networkError": "Network error",
+      "serverError": "Server error"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 FIBEM STOCK. All rights reserved.",
+    "poweredBy": "Powered by v0"
+  }
+}
