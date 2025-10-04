@@ -40,19 +40,19 @@ export function DashboardHeader() {
   }
 
   return (
-    <header className="border-b bg-white px-6 py-4">
+    <header className="border-b bg-[#00A6D6] px-6 py-4">
       <div className="flex items-center justify-between">
         {/* Logo and App Name */}
         <Link href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <Image src="/images/fibem-logo.jpg" alt="FIBEM Logo" width={40} height={40} className="rounded" />
-          <h1 className="text-xl font-playfair font-bold text-primary">FIBEM STOCK</h1>
+          <h1 className="text-xl font-playfair font-bold text-white">FIBEM STOCK</h1>
         </Link>
 
         {/* Right side - Language Selector, Notifications and User Profile */}
         <div className="flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="gap-2">
+              <Button variant="ghost" size="sm" className="gap-2 text-white hover:bg-white/20">
                 <Languages className="h-4 w-4" />
                 <span className="text-sm">{languageFlags[language]}</span>
               </Button>
@@ -79,13 +79,13 @@ export function DashboardHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
             <Bell className="h-5 w-5" />
           </Button>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+              <Button variant="ghost" className="relative h-8 w-8 rounded-full hover:bg-white/20">
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Utilisateur" />
                   <AvatarFallback>
