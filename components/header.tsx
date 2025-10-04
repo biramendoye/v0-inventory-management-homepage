@@ -76,7 +76,7 @@ export function Header() {
 
             <div className="flex items-center space-x-4">
               <Link href="/dashboard">
-                <Button variant="outline" size="sm" className="border-white text-white hover:bg-white hover:text-[#00A6D6]">
+                <Button variant="outline" size="sm" className="border-white text-white hover:bg-yellow hover:text-[#00A6D6]">
                   {t("landing.header.dashboard")}
                 </Button>
               </Link>
