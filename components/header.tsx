@@ -27,12 +27,12 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-[#00A6D6] backdrop-blur">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
             <Image src="/images/fibem-logo.jpg" alt="FIBEM Logo" width={120} height={40} className="h-10 w-auto" />
-            <div className="font-playfair text-xl font-bold text-primary tracking-wide">Gestion De Stock</div>
+            <div className="font-playfair text-xl font-bold text-white tracking-wide">Gestion De Stock</div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                className="text-sm font-medium text-white/90 hover:text-white transition-colors"
               >
                 {item.name}
               </a>
@@ -49,7 +49,7 @@ export function Header() {
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="gap-2">
+                <Button variant="ghost" size="sm" className="gap-2 text-white hover:bg-white/20">
                   <Languages className="h-4 w-4" />
                   <span className="text-sm">{languageFlags[language]}</span>
                 </Button>
@@ -76,12 +76,12 @@ export function Header() {
 
             <div className="flex items-center space-x-4">
               <Link href="/dashboard">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="border-white text-white hover:bg-white hover:text-[#00A6D6]">
                   {t("landing.header.dashboard")}
                 </Button>
               </Link>
               <Link href="/connexion">
-                <Button variant="default" size="sm">
+                <Button variant="default" size="sm" className="bg-white text-[#00A6D6] hover:bg-white/90">
                   {t("landing.header.login")}
                 </Button>
               </Link>
@@ -91,7 +91,7 @@ export function Header() {
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-white hover:bg-white/20">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">{t("landing.header.toggleMenu")}</span>
               </Button>
