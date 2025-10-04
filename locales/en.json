@@ -504,7 +504,9 @@
       "emailSubject": "Invoice {{invoiceId}} - FIBEM STOCK",
       "emailBody": "Hello {{customerName}},\n\nPlease find attached your invoice {{invoiceId}} for the amount of ${{total}}.\n\nDue date: {{dueDate}}\n\nBest regards,\nThe FIBEM STOCK Team",
       "quantityLabel": "Quantity:",
-      "unitPriceLabel": "Unit price:"
+      "unitPriceLabel": "Unit price:",
+      "viewPdf": "View PDF",
+      "view": "View"
     }
   },
   "forms": {

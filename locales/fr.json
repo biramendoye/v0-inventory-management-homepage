@@ -471,7 +471,9 @@
       "emailSubject": "Facture {{invoiceId}} - FIBEM STOCK",
       "emailBody": "Bonjour {{customerName}},\n\nVeuillez trouver ci-joint votre facture {{invoiceId}} d'un montant de €{{total}}.\n\nDate d'échéance: {{dueDate}}\n\nCordialement,\nL'équipe FIBEM STOCK",
       "quantityLabel": "Quantité:",
-      "unitPriceLabel": "Prix unitaire:"
+      "unitPriceLabel": "Prix unitaire:",
+      "viewPdf": "Voir PDF",
+      "view": "Voir"
     }
   },
   "forms": {

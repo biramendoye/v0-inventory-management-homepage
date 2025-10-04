@@ -1,12 +1,14 @@
 "use client"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Download, Mail, Building2, Calendar, CreditCard, FileText } from "lucide-react"
+import { Download, Mail, Building2, Calendar, CreditCard, FileText, Eye } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import jsPDF from "jspdf"
+import html2canvas from "html2canvas"
 
 interface InvoiceData {
   id: string
@@ -41,15 +43,13 @@ interface InvoiceViewerProps {
 export function InvoiceViewer({ isOpen, onClose, invoiceData }: InvoiceViewerProps) {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false)
   const { t, language } = useLanguage()
+  const invoiceRef = useRef<HTMLDivElement>(null)
 
   if (!invoiceData) return null
 
-  const handleDownloadPDF = async () => {
-    setIsGeneratingPDF(true)
+  const generateInvoiceHTML = () => {
 
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    const invoiceHTML = `
+    return `
       <!DOCTYPE html>
       <html>
         <head>
@@ -319,18 +319,53 @@ export function InvoiceViewer({ isOpen, onClose, invoiceData }: InvoiceViewerPro
         </body>
       </html>
     `
+  }
 
+  const handleViewPDF = () => {
+    const invoiceHTML = generateInvoiceHTML()
     const blob = new Blob([invoiceHTML], { type: "text/html" })
     const url = URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = `${t("sales.invoiceViewer.title")}_${invoiceData.id}.html`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+    window.open(url, "_blank")
+    setTimeout(() => URL.revokeObjectURL(url), 100)
+  }
 
-    setIsGeneratingPDF(false)
+  const handleDownloadPDF = async () => {
+    if (!invoiceRef.current) return
+
+    setIsGeneratingPDF(true)
+
+    try {
+      const canvas = await html2canvas(invoiceRef.current, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: "#ffffff"
+      })
+
+      const imgWidth = 210
+      const pageHeight = 297
+      const imgHeight = (canvas.height * imgWidth) / canvas.width
+
+      const pdf = new jsPDF("p", "mm", "a4")
+      let heightLeft = imgHeight
+      let position = 0
+
+      pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, position, imgWidth, imgHeight)
+      heightLeft -= pageHeight
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight
+        pdf.addPage()
+        pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, position, imgWidth, imgHeight)
+        heightLeft -= pageHeight
+      }
+
+      pdf.save(`${t("sales.invoiceViewer.title")}_${invoiceData.id}.pdf`)
+    } catch (error) {
+      console.error("Error generating PDF:", error)
+    } finally {
+      setIsGeneratingPDF(false)
+    }
   }
 
   const handleSendEmail = () => {
@@ -358,6 +393,11 @@ export function InvoiceViewer({ isOpen, onClose, invoiceData }: InvoiceViewerPro
               </DialogTitle>
             </div>
             <div className="flex items-center gap-2 flex-wrap">
+              <Button variant="outline" size="sm" onClick={handleViewPDF} className="gap-2 bg-transparent text-xs">
+                <Eye className="h-3 w-3" />
+                <span className="hidden sm:inline">{t("sales.invoiceViewer.viewPdf") || "View PDF"}</span>
+                <span className="sm:hidden">{t("sales.invoiceViewer.view") || "View"}</span>
+              </Button>
               <Button variant="outline" size="sm" onClick={handleSendEmail} className="gap-2 bg-transparent text-xs">
                 <Mail className="h-3 w-3" />
                 <span className="hidden sm:inline">{t("sales.invoiceViewer.sendByEmail")}</span>
@@ -382,7 +422,7 @@ export function InvoiceViewer({ isOpen, onClose, invoiceData }: InvoiceViewerPro
 
         <div className="overflow-y-auto flex-1 px-4 pb-4">
           <Card className="bg-white shadow-lg">
-            <CardContent className="p-4 sm:p-5">
+            <CardContent className="p-4 sm:p-5" ref={invoiceRef}>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6 pb-4 border-b-2 border-amber-500">
                 <div className="flex flex-col sm:flex-row items-start gap-3">
                   <div className="w-12 h-12 rounded-lg overflow-hidden shadow-md flex-shrink-0 bg-white border border-gray-200">

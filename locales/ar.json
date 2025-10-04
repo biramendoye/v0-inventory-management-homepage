@@ -458,7 +458,9 @@
       "emailSubject": "فاتورة {{invoiceId}} - FIBEM STOCK",
       "emailBody": "مرحبًا {{customerName}}،\n\nيرجى العثور على فاتورتك المرفقة {{invoiceId}} بمبلغ {{total}} د.م.\n\nتاريخ الاستحقاق: {{dueDate}}\n\nمع أطيب التحيات،\nفريق FIBEM STOCK",
       "quantityLabel": "الكمية:",
-      "unitPriceLabel": "سعر الوحدة:"
+      "unitPriceLabel": "سعر الوحدة:",
+      "viewPdf": "عرض PDF",
+      "view": "عرض"
     }
   },
   "forms": {
