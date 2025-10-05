@@ -423,7 +423,7 @@
   },
   "sales": {
     "title": "Gestión de Ventas",
-    "newSale": "Nueva Venta",
+    "newSale": "Nueva Venta/presupuesto",
     "invoiceNumber": "Número de Factura",
     "customer": "Cliente",
     "customerName": "Nombre del Cliente",

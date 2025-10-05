@@ -45,7 +45,7 @@ export function DashboardHeader() {
         {/* Logo and App Name */}
         <Link href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <Image src="/images/fibem-logo.jpg" alt="FIBEM Logo" width={40} height={40} className="rounded" />
-          <h1 className="text-xl font-playfair font-bold text-white">FIBEM STOCK</h1>
+          <h1 className="text-xl font-playfair font-bold text-white">Gestion De Stock</h1>
         </Link>
 
         {/* Right side - Language Selector, Notifications and User Profile */}

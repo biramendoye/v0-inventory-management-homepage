@@ -1,12 +1,20 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { usePathname } from "next/navigation"
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { LayoutDashboard, Package, Truck, BarChart3, Receipt, ChevronLeft, ChevronRight } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  LayoutDashboard,
+  Package,
+  Truck,
+  BarChart3,
+  Receipt,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 const navigationItems = [
   {
@@ -34,40 +42,64 @@ const navigationItems = [
     icon: BarChart3,
     href: "/dashboard/statistics",
   },
-]
+];
 
 export function DashboardSidebar() {
-  const [collapsed, setCollapsed] = useState(false)
-  const pathname = usePathname()
-  const { t } = useLanguage()
+  const [collapsed, setCollapsed] = useState(false);
+  const pathname = usePathname();
+  const { t } = useLanguage();
 
   return (
-    <div className={cn("border-r bg-white transition-all duration-300", collapsed ? "w-16" : "w-64")}>
+    <div
+      className={cn(
+        "border-r bg-white transition-all duration-300 flex-shrink-0",
+        collapsed ? "w-16" : "w-64",
+        "hidden md:block min-h-screen",
+      )}
+      style={{
+        maxWidth: collapsed ? "4rem" : "16rem",
+        minWidth: collapsed ? "4rem" : "16rem",
+      }}
+    >
       <div className="flex h-full flex-col">
         {/* Collapse Toggle */}
-        <div className="flex justify-end p-4">
-          <Button variant="ghost" size="icon" onClick={() => setCollapsed(!collapsed)}>
-            {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
+        <div className="flex justify-end p-2 md:p-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setCollapsed(!collapsed)}
+            className="hidden md:flex"
+          >
+            {collapsed ? (
+              <ChevronRight className="h-4 w-4" />
+            ) : (
+              <ChevronLeft className="h-4 w-4" />
+            )}
           </Button>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-2 px-4">
+        <nav className="flex-1 space-y-2 px-4 py-2">
           {navigationItems.map((item) => (
             <Button
               key={item.href}
-              variant={pathname === item.href ? "default" : "ghost"}
-              className={cn("w-full justify-start", collapsed && "px-2")}
               asChild
+              variant={pathname === item.href ? "default" : "ghost"}
+              className={cn(
+                "w-full justify-start gap-3 h-10",
+                collapsed ? "px-2 justify-center" : "px-3",
+              )}
             >
               <Link href={item.href}>
-                <item.icon className="h-4 w-4" />
-                {!collapsed && <span className="ml-2">{t(item.titleKey)}</span>}
+                <item.icon className="h-4 w-4 flex-shrink-0" />
+                {!collapsed && (
+                  <span className="truncate text-sm">{t(item.titleKey)}</span>
+                )}
               </Link>
             </Button>
           ))}
         </nav>
       </div>
     </div>
-  )
+  );
 }

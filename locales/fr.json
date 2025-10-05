@@ -23,6 +23,7 @@
     "city": "Ville",
     "postalCode": "Code postal",
     "country": "Pays",
+    "countryCode": "Code pays",
     "notes": "Notes",
     "required": "Requis",
     "optional": "Optionnel"
@@ -358,6 +359,40 @@
       "ctaPrimary": "Commencer Maintenant",
       "ctaSecondary": "Planifier une Démo",
       "footer": "Aucun frais d'installation • Annulation à tout moment • Support 24/7 inclus"
+    },
+    "footer": {
+      "description": "FIBEM STOCK est votre solution complète de gestion d'inventaire. Optimisez vos stocks, réduisez les coûts et améliorez votre productivité avec notre plateforme intuitive.",
+      "address": "123 Rue de la Technologie, 75001 Paris, France",
+      "email": "contact@fibem.com",
+      "phone": "+33 1 23 45 67 89",
+      "product": {
+        "title": "Produit",
+        "features": "Fonctionnalités",
+        "pricing": "Tarifs",
+        "integrations": "Intégrations",
+        "api": "API"
+      },
+      "company": {
+        "title": "Entreprise",
+        "about": "À propos",
+        "careers": "Carrières",
+        "blog": "Blog",
+        "press": "Presse"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Centre d'aide",
+        "documentation": "Documentation",
+        "contact": "Contact",
+        "status": "Statut"
+      },
+      "legal": {
+        "privacy": "Confidentialité",
+        "terms": "Conditions",
+        "cookies": "Cookies",
+        "gdpr": "RGPD"
+      },
+      "copyright": "© 2025 FIBEM STOCK. Tous droits réservés."
     }
   },
   "dashboard": {
@@ -402,7 +437,7 @@
   },
   "sales": {
     "title": "Gestion des ventes",
-    "newSale": "Nouvelle vente",
+    "newSale": "Nouvelle vente/devis",
     "invoiceNumber": "N° facture",
     "customer": "Client",
     "customerName": "Nom du client",
@@ -433,6 +468,7 @@
     "itemDescription": "Description de l'article",
     "unitPrice": "Prix unitaire",
     "amount": "Montant",
+    "pdfGenerationError": "Erreur lors de la génération du PDF de la facture",
     "invoiceViewer": {
       "title": "Facture",
       "sendByEmail": "Envoyer par Email",

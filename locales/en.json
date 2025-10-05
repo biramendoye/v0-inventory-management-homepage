@@ -23,6 +23,7 @@
     "city": "City",
     "postalCode": "Postal Code",
     "country": "Country",
+    "countryCode": "Country Code",
     "notes": "Notes",
     "required": "Required",
     "optional": "Optional"
@@ -435,7 +436,7 @@
   },
   "sales": {
     "title": "Sales Management",
-    "newSale": "New Sale",
+    "newSale": "New Sale/quote",
     "invoiceNumber": "Invoice Number",
     "customer": "Customer",
     "customerName": "Customer Name",
