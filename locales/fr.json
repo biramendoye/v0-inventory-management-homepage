@@ -143,19 +143,22 @@
       "form": {
         "title": "Envoyez-nous un Message",
         "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.",
-        "firstName": "Prénom",
-        "firstNamePlaceholder": "Jean",
-        "lastName": "Nom",
-        "lastNamePlaceholder": "Dupont",
+        "name": "Nom Complet",
+        "namePlaceholder": "Jean Dupont",
         "email": "Email",
         "emailPlaceholder": "jean@entreprise.com",
-        "company": "Entreprise",
-        "companyPlaceholder": "Nom de votre entreprise",
         "phone": "Numéro de Téléphone",
         "phonePlaceholder": "+33 1 23 45 67 89",
         "message": "Message",
         "messagePlaceholder": "Parlez-nous de vos besoins en gestion d'inventaire...",
         "submit": "Envoyer le Message"
+      },
+      "whatsapp": {
+        "title": "Contacter sur WhatsApp",
+        "description": "Obtenez une assistance instantanée via WhatsApp",
+        "details": "Discutez directement avec notre équipe sur WhatsApp pour des réponses rapides à vos questions.",
+        "button": "Discuter sur WhatsApp",
+        "availability": "Disponible du lundi au samedi, 9h00 - 18h00"
       },
       "info": {
         "title": "Informations de Contact",

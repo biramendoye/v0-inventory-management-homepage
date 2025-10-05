@@ -142,19 +142,22 @@
       "form": {
         "title": "أرسل لنا رسالة",
         "description": "املأ النموذج أدناه وسنرد خلال 24 ساعة.",
-        "firstName": "الاسم الأول",
-        "firstNamePlaceholder": "أحمد",
-        "lastName": "اسم العائلة",
-        "lastNamePlaceholder": "محمد",
+        "name": "الاسم الكامل",
+        "namePlaceholder": "أحمد محمد",
         "email": "البريد الإلكتروني",
         "emailPlaceholder": "ahmed@company.com",
-        "company": "الشركة",
-        "companyPlaceholder": "اسم شركتك",
         "phone": "رقم الهاتف",
-        "phonePlaceholder": "+212 5 12 34 56 78",
+        "phonePlaceholder": "+212 6 00 00 00 00",
         "message": "الرسالة",
         "messagePlaceholder": "أخبرنا عن احتياجات إدارة المخزون الخاصة بك...",
         "submit": "إرسال الرسالة"
+      },
+      "whatsapp": {
+        "title": "التواصل عبر واتساب",
+        "description": "احصل على دعم فوري عبر واتساب",
+        "details": "تحدث مباشرة مع فريقنا على واتساب للحصول على إجابات سريعة لأسئلتك.",
+        "button": "الدردشة على واتساب",
+        "availability": "متاح من الاثنين إلى السبت، 9:00 صباحًا - 6:00 مساءً"
       },
       "info": {
         "title": "معلومات الاتصال",

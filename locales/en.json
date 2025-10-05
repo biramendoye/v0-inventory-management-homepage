@@ -142,19 +142,22 @@
       "form": {
         "title": "Send Us a Message",
         "description": "Fill out the form below and we'll respond within 24 hours.",
-        "firstName": "First Name",
-        "firstNamePlaceholder": "John",
-        "lastName": "Last Name",
-        "lastNamePlaceholder": "Doe",
+        "name": "Full Name",
+        "namePlaceholder": "John Doe",
         "email": "Email",
         "emailPlaceholder": "john@company.com",
-        "company": "Company",
-        "companyPlaceholder": "Your company name",
         "phone": "Phone Number",
         "phonePlaceholder": "+1 234 567 8900",
         "message": "Message",
         "messagePlaceholder": "Tell us about your inventory management needs...",
         "submit": "Send Message"
+      },
+      "whatsapp": {
+        "title": "Contact on WhatsApp",
+        "description": "Get instant support through WhatsApp",
+        "details": "Chat with our team directly on WhatsApp for quick responses to your questions.",
+        "button": "Chat on WhatsApp",
+        "availability": "Available Monday - Saturday, 9:00 AM - 6:00 PM"
       },
       "info": {
         "title": "Contact Information",

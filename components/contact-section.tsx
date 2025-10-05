@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function ContactSection() {
@@ -28,23 +28,13 @@ export function ContactSection() {
             </CardHeader>
             <CardContent>
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">{t("landing.contact.form.firstName")}</Label>
-                    <Input id="firstName" placeholder={t("landing.contact.form.firstNamePlaceholder")} />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">{t("landing.contact.form.lastName")}</Label>
-                    <Input id="lastName" placeholder={t("landing.contact.form.lastNamePlaceholder")} />
-                  </div>
+                <div className="space-y-2">
+                  <Label htmlFor="name">{t("landing.contact.form.name")}</Label>
+                  <Input id="name" placeholder={t("landing.contact.form.namePlaceholder")} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">{t("landing.contact.form.email")}</Label>
                   <Input id="email" type="email" placeholder={t("landing.contact.form.emailPlaceholder")} />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="company">{t("landing.contact.form.company")}</Label>
-                  <Input id="company" placeholder={t("landing.contact.form.companyPlaceholder")} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">{t("landing.contact.form.phone")}</Label>
@@ -52,7 +42,7 @@ export function ContactSection() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">{t("landing.contact.form.message")}</Label>
-                  <Textarea id="message" placeholder={t("landing.contact.form.messagePlaceholder")} rows={4} />
+                  <Textarea id="message" placeholder={t("landing.contact.form.messagePlaceholder")} rows={5} />
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                   {t("landing.contact.form.submit")}
@@ -61,63 +51,26 @@ export function ContactSection() {
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>{t("landing.contact.info.title")}</CardTitle>
-                <CardDescription>{t("landing.contact.info.description")}</CardDescription>
+          {/* WhatsApp Contact */}
+          <div className="flex items-center justify-center">
+            <Card className="w-full">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
+                  <MessageCircle className="h-10 w-10 text-green-600" />
+                </div>
+                <CardTitle className="text-2xl">{t("landing.contact.whatsapp.title")}</CardTitle>
+                <CardDescription className="text-base">{t("landing.contact.whatsapp.description")}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-foreground">{t("landing.contact.info.email.title")}</h4>
-                    <p className="text-muted-foreground">{t("landing.contact.info.email.sales")}</p>
-                    <p className="text-muted-foreground">{t("landing.contact.info.email.support")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-foreground">{t("landing.contact.info.phone.title")}</h4>
-                    <p className="text-muted-foreground">{t("landing.contact.info.phone.main")}</p>
-                    <p className="text-muted-foreground">{t("landing.contact.info.phone.secondary")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-foreground">{t("landing.contact.info.address.title")}</h4>
-                    <p className="text-muted-foreground">
-                      {t("landing.contact.info.address.line1")}
-                      <br />
-                      {t("landing.contact.info.address.line2")}
-                      <br />
-                      {t("landing.contact.info.address.line3")}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-foreground">{t("landing.contact.info.hours.title")}</h4>
-                    <p className="text-muted-foreground">{t("landing.contact.info.hours.weekdays")}</p>
-                    <p className="text-muted-foreground">{t("landing.contact.info.hours.saturday")}</p>
-                    <p className="text-muted-foreground">{t("landing.contact.info.hours.sunday")}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>{t("landing.contact.demo.title")}</CardTitle>
-                <CardDescription>{t("landing.contact.demo.description")}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{t("landing.contact.demo.details")}</p>
-                <Button className="w-full bg-primary hover:bg-primary/90">{t("landing.contact.demo.button")}</Button>
+              <CardContent className="space-y-4">
+                <p className="text-center text-muted-foreground">{t("landing.contact.whatsapp.details")}</p>
+                <Button
+                  className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-6"
+                  onClick={() => window.open("https://wa.me/212600000000", "_blank")}
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  {t("landing.contact.whatsapp.button")}
+                </Button>
+                <p className="text-center text-sm text-muted-foreground">{t("landing.contact.whatsapp.availability")}</p>
               </CardContent>
             </Card>
           </div>

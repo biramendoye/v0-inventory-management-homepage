@@ -142,19 +142,22 @@
       "form": {
         "title": "Envíanos un Mensaje",
         "description": "Completa el formulario a continuación y te responderemos en 24 horas.",
-        "firstName": "Nombre",
-        "firstNamePlaceholder": "Juan",
-        "lastName": "Apellido",
-        "lastNamePlaceholder": "Pérez",
+        "name": "Nombre Completo",
+        "namePlaceholder": "Juan Pérez",
         "email": "Correo",
         "emailPlaceholder": "juan@empresa.com",
-        "company": "Empresa",
-        "companyPlaceholder": "Nombre de tu empresa",
         "phone": "Número de Teléfono",
         "phonePlaceholder": "+34 912 345 678",
         "message": "Mensaje",
         "messagePlaceholder": "Cuéntanos sobre tus necesidades de gestión de inventario...",
         "submit": "Enviar Mensaje"
+      },
+      "whatsapp": {
+        "title": "Contactar por WhatsApp",
+        "description": "Obtén soporte instantáneo a través de WhatsApp",
+        "details": "Chatea directamente con nuestro equipo en WhatsApp para respuestas rápidas a tus preguntas.",
+        "button": "Chatear en WhatsApp",
+        "availability": "Disponible de lunes a sábado, 9:00 AM - 6:00 PM"
       },
       "info": {
         "title": "Información de Contacto",
