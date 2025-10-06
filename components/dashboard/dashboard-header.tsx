@@ -48,36 +48,8 @@ export function DashboardHeader() {
           <h1 className="text-xl font-playfair font-bold text-white">Gestion De Stock</h1>
         </Link>
 
-        {/* Right side - Language Selector, Notifications and User Profile */}
+        {/* Notifications and User Profile */}
         <div className="flex items-center gap-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="gap-2 text-white hover:bg-white/20">
-                <Languages className="h-4 w-4" />
-                <span className="text-sm">{languageFlags[language]}</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Language / Langue / Idioma / اللغة</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => setLanguage("fr")} className={language === "fr" ? "bg-accent" : ""}>
-                <span className="mr-2">🇫🇷</span>
-                Français
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("en")} className={language === "en" ? "bg-accent" : ""}>
-                <span className="mr-2">🇬🇧</span>
-                English
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("es")} className={language === "es" ? "bg-accent" : ""}>
-                <span className="mr-2">🇪🇸</span>
-                Español
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("ar")} className={language === "ar" ? "bg-accent" : ""}>
-                <span className="mr-2">🇸🇦</span>
-                العربية
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
 
           <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
             <Bell className="h-5 w-5" />

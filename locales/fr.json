@@ -151,7 +151,10 @@
         "phonePlaceholder": "+33 1 23 45 67 89",
         "message": "Message",
         "messagePlaceholder": "Parlez-nous de vos besoins en gestion d'inventaire...",
-        "submit": "Envoyer le Message"
+        "submit": "Envoyer le Message",
+        "submitting": "Envoi en cours...",
+        "success": "Message envoyé avec succès !",
+        "error": "Échec de l'envoi du message. Veuillez réessayer."
       },
       "whatsapp": {
         "title": "Contacter sur WhatsApp",
@@ -458,6 +461,7 @@
   "sales": {
     "title": "Gestion des ventes",
     "newSale": "Nouvelle vente/devis",
+    "newQuotation": "Nouveau devis",
     "invoiceNumber": "N° facture",
     "customer": "Client",
     "customerName": "Nom du client",
@@ -489,6 +493,12 @@
     "unitPrice": "Prix unitaire",
     "amount": "Montant",
     "pdfGenerationError": "Erreur lors de la génération du PDF de la facture",
+    "quotation": "Devis",
+    "quotations": "Devis",
+    "validUntil": "Valide jusqu'au",
+    "documentType": "Type de document",
+    "generateQuotation": "Générer le devis",
+    "viewQuotation": "Voir le devis",
     "invoiceViewer": {
       "title": "Facture",
       "sendByEmail": "Envoyer par Email",

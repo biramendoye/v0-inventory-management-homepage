@@ -42,17 +42,22 @@ interface Sale {
   total: number;
   status: "paid" | "pending" | "draft";
   pdfUrl: string | null;
+  documentType?: "sale" | "quotation";
+  validUntil?: string;
 }
 
 const mockSales: Sale[] = [
   /* {
-    id: "INV-001",
-    customer: "Entreprise Martin",
-    email: "contact@martin.fr",
-    date: "2024-01-15",
-    total: 1250.0,
-    status: "paid",
+    id: "QUO-005",
+    customer: "Entreprise Leroy",
+    email: "service@leroy.fr",
+    date: "2024-01-08",
+    total: 1450.0,
+    status: "draft",
     pdfUrl: null,
+    documentType: "quotation",
+    validUntil: "2024-02-08",
+    documentType: "sale",
   },*/
 ];
 
@@ -62,6 +67,7 @@ export function SalesContent() {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [dateFilter, setDateFilter] = useState("all");
+  const [documentTypeFilter, setDocumentTypeFilter] = useState("all");
   const [isNewSaleOpen, setIsNewSaleOpen] = useState(false);
   const [selectedInvoice, setSelectedInvoice] = useState<any>(null);
   const [isInvoiceViewerOpen, setIsInvoiceViewerOpen] = useState(false);
@@ -79,19 +85,37 @@ export function SalesContent() {
           new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)) ||
       (dateFilter === "month" &&
         new Date(sale.date) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+    const matchesDocumentType =
+      documentTypeFilter === "all" ||
+      (documentTypeFilter === "sales" &&
+        (!sale.documentType || sale.documentType === "sale")) ||
+      (documentTypeFilter === "quotations" &&
+        sale.documentType === "quotation");
 
-    return matchesSearch && matchesStatus && matchesDate;
+    return matchesSearch && matchesStatus && matchesDate && matchesDocumentType;
   });
 
   const handleNewSale = (saleData: any) => {
+    const documentId =
+      saleData.documentType === "quotation"
+        ? saleData.quotationNumber || `QUO-${Date.now().toString().slice(-6)}`
+        : saleData.invoiceNumber || `INV-${Date.now().toString().slice(-6)}`;
+
     const newSale: Sale = {
-      id: saleData.invoiceNumber || `INV-${Date.now().toString().slice(-6)}`,
+      id: documentId,
       customer: saleData.customer.name,
       email: saleData.customer.email,
       date: new Date().toISOString().split("T")[0],
       total: saleData.grandTotal,
-      status: saleData.status === "confirmed" ? "pending" : "draft",
+      status:
+        saleData.status === "confirmed"
+          ? saleData.documentType === "quotation"
+            ? "draft"
+            : "pending"
+          : "draft",
       pdfUrl: saleData.pdfUrl || null,
+      documentType: saleData.documentType || "sale",
+      validUntil: saleData.validUntil,
     };
     setSales([newSale, ...sales]);
   };
@@ -211,8 +235,8 @@ export function SalesContent() {
           </h1>
           <p className="text-gray-600 mt-1">
             {t("sales.title") === "Sales Management"
-              ? "Manage your sales and invoices"
-              : "Gérez vos ventes et factures"}
+              ? "Manage your sales, quotations and invoices"
+              : "Gérez vos ventes, devis et factures"}
           </p>
         </div>
         <Button
@@ -324,6 +348,19 @@ export function SalesContent() {
                   <SelectItem value="pending">{t("sales.pending")}</SelectItem>
                 </SelectContent>
               </Select>
+              <Select
+                value={documentTypeFilter}
+                onValueChange={setDocumentTypeFilter}
+              >
+                <SelectTrigger className="w-full sm:w-32 lg:w-36 max-w-xs">
+                  <SelectValue placeholder="Document Type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Documents</SelectItem>
+                  <SelectItem value="sales">Sales Only</SelectItem>
+                  <SelectItem value="quotations">Quotations Only</SelectItem>
+                </SelectContent>
+              </Select>
               <Select value={dateFilter} onValueChange={setDateFilter}>
                 <SelectTrigger className="w-full sm:w-32 lg:w-36 max-w-xs">
                   <SelectValue
@@ -356,7 +393,8 @@ export function SalesContent() {
             <Table className="min-w-full">
               <TableHeader>
                 <TableRow>
-                  <TableHead>{t("sales.invoiceNumber")}</TableHead>
+                  <TableHead>Document ID</TableHead>
+                  <TableHead>Type</TableHead>
                   <TableHead>{t("sales.customer")}</TableHead>
                   <TableHead>{t("common.date")}</TableHead>
                   <TableHead>{t("common.total")}</TableHead>
@@ -368,6 +406,30 @@ export function SalesContent() {
                 {filteredSales.map((sale) => (
                   <TableRow key={sale.id}>
                     <TableCell className="font-medium">{sale.id}</TableCell>
+                    <TableCell>
+                      <Badge
+                        variant={
+                          sale.documentType === "quotation"
+                            ? "secondary"
+                            : "default"
+                        }
+                        className={
+                          sale.documentType === "quotation"
+                            ? "bg-blue-100 text-blue-800"
+                            : ""
+                        }
+                      >
+                        {sale.documentType === "quotation" ? "Quote" : "Sale"}
+                      </Badge>
+                      {sale.documentType === "quotation" && sale.validUntil && (
+                        <div className="text-xs text-gray-500 mt-1">
+                          Valid until:{" "}
+                          {new Date(sale.validUntil).toLocaleDateString(
+                            "fr-FR",
+                          )}
+                        </div>
+                      )}
+                    </TableCell>
                     <TableCell>
                       <div>
                         <div className="font-medium">{sale.customer}</div>
@@ -385,7 +447,17 @@ export function SalesContent() {
                     <TableCell>
                       <Badge
                         variant={
-                          sale.status === "paid" ? "default" : "secondary"
+                          sale.status === "paid"
+                            ? "default"
+                            : sale.status === "pending"
+                              ? "secondary"
+                              : "outline"
+                        }
+                        className={
+                          sale.status === "draft" &&
+                          sale.documentType === "quotation"
+                            ? "bg-blue-50 text-blue-700"
+                            : ""
                         }
                       >
                         {t(`sales.${sale.status}`)}
@@ -399,8 +471,8 @@ export function SalesContent() {
                           onClick={() => handleViewInvoice(sale)}
                           title={
                             sale.pdfUrl
-                              ? "View PDF Invoice"
-                              : "View Invoice Details"
+                              ? `View PDF ${sale.documentType === "quotation" ? "Quotation" : "Invoice"}`
+                              : `View ${sale.documentType === "quotation" ? "Quotation" : "Invoice"} Details`
                           }
                         >
                           {sale.pdfUrl ? (
@@ -413,7 +485,7 @@ export function SalesContent() {
                           variant="ghost"
                           size="sm"
                           onClick={() => handleDownloadPDF(sale)}
-                          title="Download PDF Invoice"
+                          title={`Download PDF ${sale.documentType === "quotation" ? "Quotation" : "Invoice"}`}
                         >
                           <Download className="h-4 w-4" />
                         </Button>

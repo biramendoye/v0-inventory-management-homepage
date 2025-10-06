@@ -147,10 +147,13 @@
         "email": "Email",
         "emailPlaceholder": "john@company.com",
         "phone": "Phone Number",
-        "phonePlaceholder": "+1 234 567 8900",
+        "phonePlaceholder": "+33 1 23 45 67 89",
         "message": "Message",
         "messagePlaceholder": "Tell us about your inventory management needs...",
-        "submit": "Send Message"
+        "submit": "Send Message",
+        "submitting": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Failed to send message. Please try again."
       },
       "whatsapp": {
         "title": "Contact on WhatsApp",
@@ -456,7 +459,8 @@
   },
   "sales": {
     "title": "Sales Management",
-    "newSale": "New Sale/quote",
+    "newSale": "New Sale/Quote",
+    "newQuotation": "New Quotation",
     "invoiceNumber": "Invoice Number",
     "customer": "Customer",
     "customerName": "Customer Name",
@@ -487,6 +491,12 @@
     "itemDescription": "Item Description",
     "unitPrice": "Unit Price",
     "amount": "Amount",
+    "quotation": "Quotation",
+    "quotations": "Quotations",
+    "validUntil": "Valid Until",
+    "documentType": "Document Type",
+    "generateQuotation": "Generate Quotation",
+    "viewQuotation": "View Quotation",
     "invoiceViewer": {
       "title": "Invoice",
       "sendByEmail": "Send by Email",

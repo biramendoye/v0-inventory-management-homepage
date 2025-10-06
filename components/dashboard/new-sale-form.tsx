@@ -112,8 +112,11 @@ interface ExtendedSaleData {
   status: string;
   date: string;
   invoiceNumber?: string;
+  quotationNumber?: string;
   pdfUrl?: string;
   currency?: string;
+  documentType: "sale" | "quotation";
+  validUntil?: string;
 }
 
 export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
@@ -137,6 +140,10 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     null,
   );
   const [currency, setCurrency] = useState("EUR");
+  const [documentType, setDocumentType] = useState<"sale" | "quotation">(
+    "sale",
+  );
+  const [validUntil, setValidUntil] = useState("");
 
   const filteredProducts = mockProducts.filter(
     (product) =>
@@ -242,6 +249,8 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
       status: "draft",
       date: new Date().toISOString(),
       currency,
+      documentType,
+      validUntil: documentType === "quotation" ? validUntil : undefined,
     };
     onSave(saleData);
     resetForm();
@@ -256,7 +265,10 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     setIsGeneratingPdf(true);
     setPdfGenerationError(null);
 
-    const invoiceNumber = `INV-${Date.now().toString().slice(-6)}`;
+    const documentNumber =
+      documentType === "quotation"
+        ? `QUO-${Date.now().toString().slice(-6)}`
+        : `INV-${Date.now().toString().slice(-6)}`;
 
     const saleData: ExtendedSaleData = {
       customer,
@@ -268,8 +280,12 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
       notes,
       status: "confirmed",
       date: new Date().toISOString(),
-      invoiceNumber,
+      invoiceNumber: documentType === "sale" ? documentNumber : undefined,
+      quotationNumber:
+        documentType === "quotation" ? documentNumber : undefined,
       currency,
+      documentType,
+      validUntil: documentType === "quotation" ? validUntil : undefined,
     };
 
     try {
@@ -346,6 +362,8 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     setErrors({});
     setIsGeneratingPdf(false);
     setPdfGenerationError(null);
+    setDocumentType("sale");
+    setValidUntil("");
   };
 
   const getStatusText = (status: string) => {
@@ -367,11 +385,87 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
         <DialogHeader>
           <div className="flex items-center gap-3">
             <ShoppingCart className="h-6 w-6 text-amber-600" />
-            <DialogTitle className="text-xl">{t("sales.newSale")}</DialogTitle>
+            <DialogTitle className="text-xl">
+              {documentType === "quotation"
+                ? "New Quotation"
+                : t("sales.newSale")}
+            </DialogTitle>
           </div>
         </DialogHeader>
 
         <div className="space-y-4 overflow-y-auto overflow-x-hidden flex-1 px-2">
+          {/* Document Type Selection */}
+          <Card className="border-l-4 border-l-blue-500">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center gap-2 text-base">
+                <FileText className="h-4 w-4 text-blue-600" />
+                Document Type
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex gap-4">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="documentType"
+                    value="sale"
+                    checked={documentType === "sale"}
+                    onChange={(e) => {
+                      setDocumentType(e.target.value as "sale" | "quotation");
+                      if (e.target.value === "sale") {
+                        setValidUntil("");
+                      } else {
+                        // Set default validity to 30 days from now
+                        const futureDate = new Date();
+                        futureDate.setDate(futureDate.getDate() + 30);
+                        setValidUntil(futureDate.toISOString().split("T")[0]);
+                      }
+                    }}
+                    className="w-4 h-4 text-amber-600"
+                  />
+                  <span className="text-sm font-medium">Invoice (Sale)</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="documentType"
+                    value="quotation"
+                    checked={documentType === "quotation"}
+                    onChange={(e) => {
+                      setDocumentType(e.target.value as "sale" | "quotation");
+                      if (e.target.value === "quotation") {
+                        // Set default validity to 30 days from now
+                        const futureDate = new Date();
+                        futureDate.setDate(futureDate.getDate() + 30);
+                        setValidUntil(futureDate.toISOString().split("T")[0]);
+                      }
+                    }}
+                    className="w-4 h-4 text-blue-600"
+                  />
+                  <span className="text-sm font-medium">Quotation</span>
+                </label>
+              </div>
+              {documentType === "quotation" && (
+                <div className="mt-4 space-y-2">
+                  <Label htmlFor="validUntil" className="text-sm">
+                    Valid Until
+                  </Label>
+                  <Input
+                    id="validUntil"
+                    type="date"
+                    value={validUntil}
+                    onChange={(e) => setValidUntil(e.target.value)}
+                    className="w-full"
+                    min={new Date().toISOString().split("T")[0]}
+                  />
+                  <p className="text-xs text-gray-500">
+                    This quotation will be valid until the specified date
+                  </p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+
           {/* Customer Information */}
           <Card className="border-l-4 border-l-amber-500">
             <CardHeader className="pb-3">
@@ -765,7 +859,11 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
           <Button
             onClick={handleConfirmSale}
             size="sm"
-            className="bg-amber-600 hover:bg-amber-700 gap-2"
+            className={
+              documentType === "quotation"
+                ? "bg-blue-600 hover:bg-blue-700 gap-2"
+                : "bg-amber-600 hover:bg-amber-700 gap-2"
+            }
             disabled={isGeneratingPdf}
           >
             {isGeneratingPdf ? (
@@ -775,10 +873,16 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
               </>
             ) : (
               <>
-                <ShoppingCart className="h-4 w-4" />
-                {t("sales.newSale") === "New Sale"
-                  ? "Confirm Sale"
-                  : "Confirmer la Vente"}
+                {documentType === "quotation" ? (
+                  <FileText className="h-4 w-4" />
+                ) : (
+                  <ShoppingCart className="h-4 w-4" />
+                )}
+                {documentType === "quotation"
+                  ? "Generate Quotation"
+                  : t("sales.newSale") === "New Sale"
+                    ? "Confirm Sale"
+                    : "Confirmer la Vente"}
               </>
             )}
           </Button>

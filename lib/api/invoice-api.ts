@@ -22,6 +22,8 @@ export interface InvoiceRequest {
   currency: 'EUR' | 'USD' | 'GBP'
   vat_rate: number
   countryCode?: string
+  document_type?: 'invoice' | 'quotation'
+  valid_until?: string
 }
 
 export interface InvoiceResponse {
@@ -141,6 +143,9 @@ export class InvoiceApiService {
 // Helper function to convert sale form data to invoice API format
 export function convertSaleDataToInvoiceRequest(saleData: any): InvoiceRequest {
   const countryCode = saleData.customer.countryCode || 'FR';
+  const documentId = saleData.documentType === 'quotation'
+    ? saleData.quotationNumber
+    : saleData.invoiceNumber;
 
   return {
     client: {
@@ -157,11 +162,13 @@ export function convertSaleDataToInvoiceRequest(saleData: any): InvoiceRequest {
       price: item.unitPrice,
       quantity: item.quantity,
     })),
-    invoice_id: saleData.invoiceNumber,
+    invoice_id: documentId,
     payment_method: 'WIRE', // Default to wire transfer, make this configurable
     currency: saleData.currency || 'EUR', // Use customer's country currency
     vat_rate: saleData.taxRate,
     countryCode: countryCode,
+    document_type: saleData.documentType === 'quotation' ? 'quotation' : 'invoice',
+    valid_until: saleData.documentType === 'quotation' ? saleData.validUntil : undefined,
   }
 }
 

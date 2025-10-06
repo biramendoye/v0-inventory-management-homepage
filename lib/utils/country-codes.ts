@@ -17,6 +17,7 @@ export interface Country {
 
 export const COUNTRIES: Country[] = [
   { code: "FR", name: "France", flag: "🇫🇷", currency: "EUR", phonePrefix: "+33" },
+  {code: "SN", name: "Senegal", flag: "🇸🇳", currency: "XOF", phonePrefix: "+221"},
   { code: "ES", name: "España", flag: "🇪🇸", currency: "EUR", phonePrefix: "+34" },
   { code: "GB", name: "United Kingdom", flag: "🇬🇧", currency: "GBP", phonePrefix: "+44" },
   { code: "DE", name: "Deutschland", flag: "🇩🇪", currency: "EUR", phonePrefix: "+49" },

@@ -20,6 +20,19 @@ body {
     box-sizing: border-box;
 }
 
+/* Header layout constraints */
+header {
+    overflow: visible !important;
+}
+
+header .container {
+    overflow: visible !important;
+}
+
+header .flex {
+    overflow: visible !important;
+}
+
 *,
 *::before,
 *::after {
@@ -107,6 +120,64 @@ textarea,
 button {
     max-width: 100%;
     box-sizing: border-box;
+}
+
+/* Radix UI Dropdown Portal Fixes */
+[data-radix-popper-content-wrapper] {
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+[data-radix-dropdown-menu-portal] {
+    z-index: 9999 !important;
+}
+
+[data-radix-dropdown-menu-content] {
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 6px !important;
+    min-width: 160px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    position: fixed !important;
+}
+
+[data-radix-dropdown-menu-item] {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+    background: white !important;
+}
+
+[data-radix-dropdown-menu-item]:hover {
+    background-color: #f3f4f6 !important;
+}
+
+/* Header dropdown specific styling */
+.header-language-dropdown [data-radix-dropdown-menu-content] {
+    z-index: 99999 !important;
+    position: fixed !important;
+    transform: translateX(-50%) !important;
+}
+
+/* Ensure all dropdown content is visible */
+[data-state="open"] > [data-radix-dropdown-menu-content],
+[data-state="open"][data-radix-dropdown-menu-content] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+}
+
+/* Override any hiding styles */
+.sticky [data-radix-dropdown-menu-content] {
+    z-index: 99999 !important;
 }
 
 /* Additional desktop constraints */

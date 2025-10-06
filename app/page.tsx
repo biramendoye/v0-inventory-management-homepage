@@ -12,9 +12,9 @@ import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden max-w-[100vw]">
+    <div className="min-h-screen bg-background overflow-x-hidden max-w-[100vw] relative">
       <Header />
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden overflow-y-visible">
         <div className="max-w-[calc(100vw-2rem)] mx-auto px-4 lg:px-8">
           <HeroSection />
           <FeaturesSection />

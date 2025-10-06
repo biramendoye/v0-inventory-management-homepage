@@ -142,24 +142,31 @@ startxref
 
   // Helper to create a more realistic demo PDF with actual invoice data
   static generateDetailedDemoPDF(invoiceData: InvoiceRequest): string {
-    // Create HTML content for the invoice
+    // Determine document type and styling
+    const isQuotation = invoiceData.document_type === 'quotation';
+    const documentTitle = isQuotation ? 'DEVIS' : 'FACTURE';
+    const documentColor = isQuotation ? '#2563eb' : '#00A6D6';
+
+    // Create HTML content for the document
     const htmlContent = `
       <!DOCTYPE html>
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Invoice ${invoiceData.invoice_id}</title>
+        <title>${isQuotation ? 'Quotation' : 'Invoice'} ${invoiceData.invoice_id}</title>
         <style>
           body { font-family: Arial, sans-serif; margin: 40px; }
           .header { display: flex; justify-content: space-between; margin-bottom: 30px; }
-          .company { color: #00A6D6; }
-          .invoice-details { background: #f8f9fa; padding: 20px; margin: 20px 0; }
+          .company { color: ${documentColor}; }
+          .document-details { background: #f8f9fa; padding: 20px; margin: 20px 0; }
           .client-details { margin: 20px 0; }
           table { width: 100%; border-collapse: collapse; margin: 20px 0; }
           th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
           th { background-color: #f8f9fa; font-weight: bold; }
           .total-row { font-weight: bold; background-color: #f8f9fa; }
           .footer { margin-top: 40px; text-align: center; color: #666; }
+          .quotation-notice { background: #dbeafe; border: 1px solid #93c5fd; padding: 15px; margin: 20px 0; border-radius: 5px; }
+          .validity { color: #dc2626; font-weight: bold; }
         </style>
       </head>
       <body>
@@ -170,11 +177,17 @@ startxref
             <p>123 Rue de l'Entreprise<br>75001 Paris, France</p>
           </div>
           <div>
-            <h2>FACTURE</h2>
+            <h2>${documentTitle}</h2>
             <p><strong>N°:</strong> ${invoiceData.invoice_id}</p>
             <p><strong>Date:</strong> ${new Date().toLocaleDateString('fr-FR')}</p>
+            ${isQuotation && invoiceData.valid_until ? `<p class="validity"><strong>Valable jusqu'au:</strong> ${new Date(invoiceData.valid_until).toLocaleDateString('fr-FR')}</p>` : ''}
           </div>
         </div>
+
+        ${isQuotation ? `<div class="quotation-notice">
+          <strong>🔹 DEVIS</strong> - Ce document est un devis et ne constitue pas une facture.
+          Les prix indiqués sont valables jusqu'à la date mentionnée ci-dessus.
+        </div>` : ''}
 
         <div class="client-details">
           <h3>Facturer à:</h3>
@@ -226,14 +239,20 @@ startxref
         </div>
 
         <div style="margin-top: 40px;">
-          <h4>Conditions de paiement:</h4>
-          <p>Mode de paiement: ${invoiceData.payment_method === 'WIRE' ? 'Virement bancaire' : invoiceData.payment_method}</p>
+          <h4>${isQuotation ? 'Conditions du devis:' : 'Conditions de paiement:'}</h4>
+          ${isQuotation ? `
+            <p><strong>Validité:</strong> Ce devis est valable jusqu'au ${invoiceData.valid_until ? new Date(invoiceData.valid_until).toLocaleDateString('fr-FR') : '30 jours'}</p>
+            <p><strong>Conditions:</strong> Prix fermes et définitifs sous réserve d'acceptation dans les délais</p>
+            <p><strong>Livraison:</strong> À définir selon acceptation du devis</p>
+          ` : `
+            <p>Mode de paiement: ${invoiceData.payment_method === 'WIRE' ? 'Virement bancaire' : invoiceData.payment_method}</p>
+            <p>Paiement à effectuer sous 30 jours</p>
+          `}
           <p>Pays de facturation: ${invoiceData.countryCode || 'FR'}</p>
-          <p>Paiement à effectuer sous 30 jours</p>
         </div>
 
         <div class="footer">
-          <p>Merci de votre confiance • FIBEM STOCK • www.fibemstock.fr</p>
+          <p>${isQuotation ? 'Merci de votre intérêt' : 'Merci de votre confiance'} • FIBEM STOCK • www.fibemstock.fr</p>
         </div>
       </body>
       </html>
