@@ -409,7 +409,24 @@
     "quickActions": "Quick Actions",
     "addProduct": "Add Product",
     "viewReports": "View Reports",
-    "manageStock": "Manage Stock"
+    "manageStock": "Manage Stock",
+    "realTime": {
+      "title": "Real-Time Tracking",
+      "description": "Monitor your inventory changes as they happen",
+      "live": "Live",
+      "stockMovements": "Stock Movements",
+      "pendingOrders": "Pending Orders",
+      "recentUpdates": "Recent Updates",
+      "today": "Today",
+      "processing": "Processing",
+      "lastHour": "Last hour",
+      "activity1": "Stock updated: Samsung Galaxy S24 (+15 units)",
+      "activity2": "New order received: iPhone 15 Pro (3 units)",
+      "activity3": "Low stock alert: MacBook Air M2",
+      "justNow": "Just now",
+      "twoMinutesAgo": "2 minutes ago",
+      "fiveMinutesAgo": "5 minutes ago"
+    }
   },
   "products": {
     "title": "Product Management",

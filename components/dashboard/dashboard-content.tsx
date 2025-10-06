@@ -1,8 +1,9 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Package, AlertTriangle, TrendingUp, Users } from "lucide-react"
+import { Package, AlertTriangle, TrendingUp, Users, Activity } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { Badge } from "@/components/ui/badge"
 
 export function DashboardContent() {
   const { t } = useLanguage()
@@ -75,6 +76,79 @@ export function DashboardContent() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Real-Time Tracking */}
+      <Card>
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Activity className="h-5 w-5 text-primary" />
+              <CardTitle>{t("dashboard.realTime.title")}</CardTitle>
+            </div>
+            <Badge variant="outline" className="gap-1">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              {t("dashboard.realTime.live")}
+            </Badge>
+          </div>
+          <CardDescription>{t("dashboard.realTime.description")}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="flex flex-col space-y-1 p-4 border rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">{t("dashboard.realTime.stockMovements")}</span>
+                <span className="text-2xl font-bold">147</span>
+                <span className="text-xs text-green-600">{t("dashboard.realTime.today")}</span>
+              </div>
+              <div className="flex flex-col space-y-1 p-4 border rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">{t("dashboard.realTime.pendingOrders")}</span>
+                <span className="text-2xl font-bold">8</span>
+                <span className="text-xs text-amber-600">{t("dashboard.realTime.processing")}</span>
+              </div>
+              <div className="flex flex-col space-y-1 p-4 border rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">{t("dashboard.realTime.recentUpdates")}</span>
+                <span className="text-2xl font-bold">23</span>
+                <span className="text-xs text-blue-600">{t("dashboard.realTime.lastHour")}</span>
+              </div>
+            </div>
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                <div className="flex h-2 w-2 mt-2">
+                  <span className="animate-ping absolute h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative rounded-full h-2 w-2 bg-blue-500"></span>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">{t("dashboard.realTime.activity1")}</p>
+                  <p className="text-xs text-muted-foreground">{t("dashboard.realTime.justNow")}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                <div className="flex h-2 w-2 mt-2">
+                  <span className="animate-ping absolute h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative rounded-full h-2 w-2 bg-green-500"></span>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">{t("dashboard.realTime.activity2")}</p>
+                  <p className="text-xs text-muted-foreground">{t("dashboard.realTime.twoMinutesAgo")}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                <div className="flex h-2 w-2 mt-2">
+                  <span className="animate-ping absolute h-2 w-2 rounded-full bg-amber-400 opacity-75"></span>
+                  <span className="relative rounded-full h-2 w-2 bg-amber-500"></span>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">{t("dashboard.realTime.activity3")}</p>
+                  <p className="text-xs text-muted-foreground">{t("dashboard.realTime.fiveMinutesAgo")}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Recent Activity */}
       <div className="grid gap-4 md:grid-cols-2">

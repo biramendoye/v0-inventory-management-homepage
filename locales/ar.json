@@ -356,6 +356,23 @@
     "addProduct": "إضافة منتج",
     "viewReports": "عرض التقارير",
     "manageStock": "إدارة المخزون",
+    "realTime": {
+      "title": "التتبع في الوقت الفعلي",
+      "description": "راقب تغييرات مخزونك مباشرة",
+      "live": "مباشر",
+      "stockMovements": "حركات المخزون",
+      "pendingOrders": "الطلبات المعلقة",
+      "recentUpdates": "التحديثات الأخيرة",
+      "today": "اليوم",
+      "processing": "قيد المعالجة",
+      "lastHour": "آخر ساعة",
+      "activity1": "تم تحديث المخزون: Samsung Galaxy S24 (+15 وحدة)",
+      "activity2": "تم استلام طلب جديد: iPhone 15 Pro (3 وحدات)",
+      "activity3": "تنبيه مخزون منخفض: MacBook Air M2",
+      "justNow": "الآن",
+      "twoMinutesAgo": "منذ دقيقتين",
+      "fiveMinutesAgo": "منذ 5 دقائق"
+    },
     "lowStockAlerts": {
       "title": "تنبيهات المخزون المنخفض",
       "noAlerts": "لا توجد تنبيهات مخزون منخفض",

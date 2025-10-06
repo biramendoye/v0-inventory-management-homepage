@@ -410,7 +410,24 @@
     "quickActions": "Actions rapides",
     "addProduct": "Ajouter un produit",
     "viewReports": "Voir les rapports",
-    "manageStock": "Gérer le stock"
+    "manageStock": "Gérer le stock",
+    "realTime": {
+      "title": "Suivi en Temps Réel",
+      "description": "Surveillez les changements de votre inventaire en direct",
+      "live": "En direct",
+      "stockMovements": "Mouvements de Stock",
+      "pendingOrders": "Commandes en Attente",
+      "recentUpdates": "Mises à Jour Récentes",
+      "today": "Aujourd'hui",
+      "processing": "En cours",
+      "lastHour": "Dernière heure",
+      "activity1": "Stock mis à jour: Samsung Galaxy S24 (+15 unités)",
+      "activity2": "Nouvelle commande reçue: iPhone 15 Pro (3 unités)",
+      "activity3": "Alerte stock faible: MacBook Air M2",
+      "justNow": "À l'instant",
+      "twoMinutesAgo": "Il y a 2 minutes",
+      "fiveMinutesAgo": "Il y a 5 minutes"
+    }
   },
   "products": {
     "title": "Gestion des produits",
