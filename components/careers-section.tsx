@@ -53,7 +53,7 @@ export function CareersSection() {
                   <Badge variant="secondary" className="text-xs">
                     {t(job.departmentKey)}
                   </Badge>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs ">
                     {t(job.typeKey)}
                   </Badge>
                 </div>

@@ -1,11 +1,18 @@
-"use client"
+"use client";
 
-import { Package, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
-import Link from "next/link"
+import {
+  Package,
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
+import Link from "next/link";
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const footerLinks = {
     product: [
@@ -32,22 +39,24 @@ export function Footer() {
       { name: t("landing.footer.legal.cookies"), href: "#cookies" },
       { name: t("landing.footer.legal.gdpr"), href: "#gdpr" },
     ],
-  }
+  };
 
   return (
-    <footer className="bg-[#00A6D6] text-white">
+    <footer className="brand-footer bg-[#00A6D6] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#FFD700]">
                 <Package className="h-5 w-5 text-[#00A6D6]" />
               </div>
               <span className="text-xl font-bold">FIBEM</span>
             </div>
 
-            <p className="text-white/90 text-pretty max-w-md">{t("landing.footer.description")}</p>
+            <p className="text-white/90 text-pretty max-w-md">
+              {t("landing.footer.description")}
+            </p>
 
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
@@ -89,11 +98,16 @@ export function Footer() {
           {/* Links */}
           <div className="grid grid-cols-2 lg:grid-cols-3 lg:col-span-3 gap-8">
             <div>
-              <h3 className="font-semibold mb-4">{t("landing.footer.product.title")}</h3>
+              <h3 className="font-semibold mb-4">
+                {t("landing.footer.product.title")}
+              </h3>
               <ul className="space-y-2">
                 {footerLinks.product.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-sm text-white/80 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/80 hover:text-black hover:bg-[#FFD700] px-2 py-1 rounded transition-all duration-300"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -102,11 +116,16 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">{t("landing.footer.company.title")}</h3>
+              <h3 className="font-semibold mb-4">
+                {t("landing.footer.company.title")}
+              </h3>
               <ul className="space-y-2">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-sm text-white/80 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/80 hover:text-black hover:bg-[#FFD700] px-2 py-1 rounded transition-all duration-300"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -115,11 +134,16 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">{t("landing.footer.support.title")}</h3>
+              <h3 className="font-semibold mb-4">
+                {t("landing.footer.support.title")}
+              </h3>
               <ul className="space-y-2">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-sm text-white/80 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/80 hover:text-black hover:bg-[#FFD700] px-2 py-1 rounded transition-all duration-300"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -137,17 +161,19 @@ export function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-white/80 hover:text-white transition-colors"
+                  className="text-sm text-white/80 hover:text-black hover:bg-[#FFD700] px-2 py-1 rounded transition-all duration-300"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
 
-            <p className="text-sm text-white/80">{t("landing.footer.copyright")}</p>
+            <p className="text-sm text-white/80">
+              {t("landing.footer.copyright")}
+            </p>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

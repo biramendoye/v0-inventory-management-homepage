@@ -18,7 +18,6 @@ export default function HomePage() {
         <div className="max-w-[calc(100vw-2rem)] mx-auto px-4 lg:px-8">
           <HeroSection />
           <FeaturesSection />
-          <LowStockAlertsSection />
           <PricingSection />
           <ContactSection />
           <CareersSection />

@@ -240,7 +240,7 @@ export function SalesContent() {
           </p>
         </div>
         <Button
-          className="bg-amber-600 hover:bg-amber-700"
+          className="bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black transition-all duration-300 shadow-lg font-medium"
           onClick={() => setIsNewSaleOpen(true)}
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -415,8 +415,8 @@ export function SalesContent() {
                         }
                         className={
                           sale.documentType === "quotation"
-                            ? "bg-blue-100 text-blue-800"
-                            : ""
+                            ? "bg-[#00A6D6]/10 text-[#00A6D6] border-[#00A6D6]"
+                            : "bg-[#FFD700] text-black font-medium"
                         }
                       >
                         {sale.documentType === "quotation" ? "Quote" : "Sale"}
@@ -456,8 +456,10 @@ export function SalesContent() {
                         className={
                           sale.status === "draft" &&
                           sale.documentType === "quotation"
-                            ? "bg-blue-50 text-blue-700"
-                            : ""
+                            ? "bg-[#00A6D6]/10 text-[#00A6D6] border-[#00A6D6]"
+                            : sale.status === "paid"
+                              ? "bg-[#FFD700] text-black font-medium"
+                              : ""
                         }
                       >
                         {t(`sales.${sale.status}`)}
@@ -468,6 +470,7 @@ export function SalesContent() {
                         <Button
                           variant="ghost"
                           size="sm"
+                          className="text-[#00A6D6] hover:bg-[#FFD700] hover:text-black transition-all duration-300"
                           onClick={() => handleViewInvoice(sale)}
                           title={
                             sale.pdfUrl
@@ -484,6 +487,7 @@ export function SalesContent() {
                         <Button
                           variant="ghost"
                           size="sm"
+                          className="text-[#00A6D6] hover:bg-[#FFD700] hover:text-black transition-all duration-300"
                           onClick={() => handleDownloadPDF(sale)}
                           title={`Download PDF ${sale.documentType === "quotation" ? "Quotation" : "Invoice"}`}
                         >
@@ -493,6 +497,7 @@ export function SalesContent() {
                           <Button
                             variant="ghost"
                             size="sm"
+                            className="text-[#00A6D6] hover:bg-[#FFD700] hover:text-black transition-all duration-300"
                             onClick={() =>
                               sale.pdfUrl && window.open(sale.pdfUrl, "_blank")
                             }

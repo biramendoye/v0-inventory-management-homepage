@@ -35,7 +35,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-[#00A6D6] backdrop-blur">
+    <header className="brand-header sticky top-0 z-50 w-full border-b border-white/20 backdrop-blur">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between overflow-visible">
           <Link
@@ -60,17 +60,17 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="relative text-sm font-medium text-white/90 hover:text-primary transition-all duration-300 ease-in-out px-3 py-2 rounded-md hover:bg-white/10 hover:shadow-sm group"
+                className="relative text-sm font-medium text-white/90 hover:text-black transition-all duration-300 ease-in-out px-3 py-2 rounded-md hover:bg-[#FFD700] hover:shadow-lg group"
               >
                 {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#FFD700] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full"></span>
               </a>
             ))}
 
             <Button
               variant="ghost"
               size="sm"
-              className="gap-2 text-white hover:bg-primary/20 hover:text-primary transition-all duration-300"
+              className="gap-2 text-white hover:bg-[#FFD700] hover:text-black transition-all duration-300 border border-white/20 hover:border-[#FFD700]"
               onClick={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 setButtonPosition({
@@ -150,7 +150,7 @@ export function Header() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-white text-[#00A6D6] hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+                  className="border-white text-black hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] transition-all duration-300 font-medium"
                 >
                   {t("landing.header.dashboard")}
                 </Button>
@@ -159,7 +159,7 @@ export function Header() {
                 <Button
                   variant="default"
                   size="sm"
-                  className="bg-white text-[#00A6D6] hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="bg-[#FF0000] text-white hover:bg-[#FFD700] hover:text-black transition-all duration-300 shadow-md hover:shadow-xl font-medium"
                 >
                   {t("landing.header.login")}
                 </Button>
@@ -173,7 +173,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-white hover:bg-primary/20 hover:text-primary transition-all duration-300"
+                className="text-white hover:bg-[#FFD700] hover:text-black transition-all duration-300 border border-white/20 hover:border-[#FFD700]"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">
@@ -187,7 +187,7 @@ export function Header() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-all duration-300 px-3 py-2 rounded-md hover:bg-primary/10"
+                    className="text-sm font-medium text-muted-foreground hover:text-black transition-all duration-300 px-3 py-2 rounded-md hover:bg-[#FFD700]"
                   >
                     {item.name}
                   </a>

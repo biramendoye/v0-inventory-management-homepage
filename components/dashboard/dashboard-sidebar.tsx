@@ -52,7 +52,7 @@ export function DashboardSidebar() {
   return (
     <div
       className={cn(
-        "border-r bg-white transition-all duration-300 flex-shrink-0",
+        "brand-sidebar border-r bg-[#00A6D6] transition-all duration-300 flex-shrink-0 border-white/20",
         collapsed ? "w-16" : "w-64",
         "hidden md:block min-h-screen",
       )}
@@ -68,7 +68,7 @@ export function DashboardSidebar() {
             variant="ghost"
             size="icon"
             onClick={() => setCollapsed(!collapsed)}
-            className="hidden md:flex"
+            className="hidden md:flex text-white hover:bg-[#FFD700] hover:text-black transition-all duration-300 border border-white/20 hover:border-[#FFD700]"
           >
             {collapsed ? (
               <ChevronRight className="h-4 w-4" />
@@ -84,10 +84,13 @@ export function DashboardSidebar() {
             <Button
               key={item.href}
               asChild
-              variant={pathname === item.href ? "default" : "ghost"}
+              variant="ghost"
               className={cn(
-                "w-full justify-start gap-3 h-10",
+                "w-full justify-start gap-3 h-10 text-white transition-all duration-300",
                 collapsed ? "px-2 justify-center" : "px-3",
+                pathname === item.href
+                  ? "bg-[#FFD700] text-black font-semibold shadow-lg border border-[#FFD700]"
+                  : "hover:bg-[#FFD700] hover:text-black border border-transparent hover:border-[#FFD700]",
               )}
             >
               <Link href={item.href}>

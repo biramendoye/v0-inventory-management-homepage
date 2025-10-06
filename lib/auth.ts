@@ -5,6 +5,8 @@ export interface User {
   email: string
   name: string
   company: string
+  role: string
+  avatar?: string
 }
 
 // Dummy credentials for testing
@@ -15,6 +17,8 @@ const DUMMY_USERS = [
     password: "admin123",
     name: "Jean Dupont",
     company: "FIBEM",
+    role: "Administrator",
+    avatar: null,
   },
   {
     id: "2",
@@ -22,13 +26,22 @@ const DUMMY_USERS = [
     password: "demo123",
     name: "Marie Martin",
     company: "FIBEM",
+    role: "Manager",
+    avatar: null,
   },
 ]
 
 export function login(email: string, password: string): User | null {
   const user = DUMMY_USERS.find((u) => u.email === email && u.password === password)
   if (user) {
-    const userData = { id: user.id, email: user.email, name: user.name, company: user.company }
+    const userData = {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      company: user.company,
+      role: user.role,
+      avatar: user.avatar
+    }
     localStorage.setItem("user", JSON.stringify(userData))
     return userData
   }

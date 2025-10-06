@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Play } from "lucide-react"
-import Link from "next/link"
-import { useLanguage } from "@/contexts/language-context"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
+import { useLanguage } from "@/contexts/language-context";
 
 export function HeroSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section className="relative py-20 lg:py-32">
@@ -16,9 +16,14 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-balance leading-tight">
-                {t("landing.hero.title")} <span className="text-primary">{t("landing.hero.titleHighlight")}</span>
+                {t("landing.hero.title")}{" "}
+                <span className="text-primary">
+                  {t("landing.hero.titleHighlight")}
+                </span>
               </h1>
-              <p className="text-lg text-muted-foreground text-pretty max-w-2xl">{t("landing.hero.description")}</p>
+              <p className="text-lg text-muted-foreground text-pretty max-w-2xl">
+                {t("landing.hero.description")}
+              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -28,10 +33,19 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="text-base bg-transparent">
-                <Play className="mr-2 h-4 w-4" />
-                {t("landing.hero.ctaSecondary")}
-              </Button>
+              <Link
+                target="_blank"
+                href="https://www.youtube.com/channel/UC1ro5Fjh6Se9pMQ_kc-QzBw"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-base bg-transparent"
+                >
+                  <Play className="mr-2 h-4 w-4" />
+                  {t("landing.hero.ctaSecondary")}
+                </Button>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-8 text-sm text-muted-foreground">
@@ -61,5 +75,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

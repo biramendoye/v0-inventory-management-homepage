@@ -395,10 +395,10 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
 
         <div className="space-y-4 overflow-y-auto overflow-x-hidden flex-1 px-2">
           {/* Document Type Selection */}
-          <Card className="border-l-4 border-l-blue-500">
+          <Card className="border-l-4 border-l-[#00A6D6]">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <FileText className="h-4 w-4 text-blue-600" />
+                <FileText className="h-4 w-4 text-[#00A6D6]" />
                 Document Type
               </CardTitle>
             </CardHeader>
@@ -421,7 +421,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                         setValidUntil(futureDate.toISOString().split("T")[0]);
                       }
                     }}
-                    className="w-4 h-4 text-amber-600"
+                    className="w-4 h-4 text-[#00A6D6]"
                   />
                   <span className="text-sm font-medium">Invoice (Sale)</span>
                 </label>
@@ -440,7 +440,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                         setValidUntil(futureDate.toISOString().split("T")[0]);
                       }
                     }}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-[#00A6D6]"
                   />
                   <span className="text-sm font-medium">Quotation</span>
                 </label>
@@ -467,10 +467,10 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
           </Card>
 
           {/* Customer Information */}
-          <Card className="border-l-4 border-l-amber-500">
+          <Card className="border-l-4 border-l-[#00A6D6]">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <User className="h-4 w-4 text-amber-600" />
+                <User className="h-4 w-4 text-[#00A6D6]" />
                 {t("sales.customer") === "Customer"
                   ? "Customer Information"
                   : "Informations Client"}
@@ -604,11 +604,11 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
           </Card>
 
           {/* Product Selection */}
-          <Card className="border-l-4 border-l-blue-500">
+          <Card className="border-l-4 border-l-[#00A6D6]">
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2 text-base">
-                  <ShoppingCart className="h-4 w-4 text-blue-600" />
+                  <ShoppingCart className="h-4 w-4 text-[#00A6D6]" />
                   {t("sales.selectProduct") === "Select Product"
                     ? "Product Selection"
                     : "Sélection des Produits"}
@@ -617,7 +617,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                   onClick={() => setShowProductSelector(true)}
                   variant="outline"
                   size="sm"
-                  className="gap-2 hover:bg-blue-50"
+                  className="gap-2 border-[#00A6D6] text-[#00A6D6] hover:bg-[#00A6D6] hover:text-white transition-all duration-300"
                 >
                   <Plus className="h-4 w-4" />
                   {t("sales.addItem")}
@@ -692,7 +692,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                                 <Button
                                   variant="outline"
                                   size="icon"
-                                  className="h-7 w-7 bg-transparent hover:bg-red-50"
+                                  className="h-7 w-7 bg-transparent border-gray-300 hover:bg-[#FFD700] hover:border-[#FFD700] hover:text-black transition-all duration-300"
                                   onClick={() =>
                                     updateQuantity(
                                       item.product.id,
@@ -717,7 +717,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                                 <Button
                                   variant="outline"
                                   size="icon"
-                                  className="h-7 w-7 bg-transparent hover:bg-green-50"
+                                  className="h-7 w-7 bg-transparent border-gray-300 hover:bg-[#FFD700] hover:border-[#FFD700] hover:text-black transition-all duration-300"
                                   onClick={() =>
                                     updateQuantity(
                                       item.product.id,
@@ -751,7 +751,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => removeProduct(item.product.id)}
-                                className="text-red-600 hover:text-red-700 hover:bg-red-50 h-7 w-7"
+                                className="text-[#FF0000] hover:text-white hover:bg-[#FF0000] h-7 w-7 transition-all duration-300"
                               >
                                 <X className="h-3 w-3" />
                               </Button>
@@ -767,10 +767,10 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
           </Card>
 
           {/* Notes Section */}
-          <Card className="border-l-4 border-l-green-500">
+          <Card className="border-l-4 border-l-[#00A6D6]">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <AlertCircle className="h-4 w-4 text-green-600" />
+                <AlertCircle className="h-4 w-4 text-[#00A6D6]" />
                 {t("common.notes") === "Notes"
                   ? "Notes and Comments"
                   : "Notes et Commentaires"}
@@ -794,7 +794,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
           <Card className="border-l-4 border-l-purple-500">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <Calculator className="h-4 w-4 text-purple-600" />
+                <Calculator className="h-4 w-4 text-[#00A6D6]" />
                 {t("common.total") === "Total" ? "Summary" : "Récapitulatif"}
               </CardTitle>
             </CardHeader>
@@ -823,7 +823,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                   <Separator />
                   <div className="flex justify-between text-lg font-bold text-gray-900">
                     <span>{t("common.total").toUpperCase()}:</span>
-                    <span className="text-amber-600">
+                    <span className="text-[#00A6D6] font-bold">
                       {currency === "EUR"
                         ? "€"
                         : currency === "USD"
@@ -842,14 +842,19 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
 
         {/* Action Buttons */}
         <div className="flex justify-end gap-3 pt-4 border-t mt-4">
-          <Button variant="outline" onClick={onClose} size="sm">
+          <Button
+            variant="outline"
+            onClick={onClose}
+            size="sm"
+            className="border-gray-300 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+          >
             {t("common.cancel")}
           </Button>
           <Button
             variant="outline"
             onClick={handleSaveDraft}
             size="sm"
-            className="gap-2 bg-transparent"
+            className="gap-2 bg-transparent border-[#00A6D6] text-[#00A6D6] hover:bg-[#00A6D6] hover:text-white transition-all duration-300"
           >
             <AlertCircle className="h-4 w-4" />
             {t("sales.draft") === "Draft"
@@ -861,8 +866,8 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
             size="sm"
             className={
               documentType === "quotation"
-                ? "bg-blue-600 hover:bg-blue-700 gap-2"
-                : "bg-amber-600 hover:bg-amber-700 gap-2"
+                ? "bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black gap-2 transition-all duration-300 shadow-lg font-medium"
+                : "bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black gap-2 transition-all duration-300 shadow-lg font-medium"
             }
             disabled={isGeneratingPdf}
           >

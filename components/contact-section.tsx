@@ -194,8 +194,7 @@ export function ContactSection() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90"
-                  disabled={isSubmitting}
+                  className="w-full bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black transition-all duration-300 shadow-lg font-medium"
                 >
                   {isSubmitting
                     ? t("landing.contact.form.submitting") || "Sending..."
@@ -206,8 +205,8 @@ export function ContactSection() {
                     className={`text-center text-sm p-3 rounded-md ${
                       submitMessage.includes("success") ||
                       submitMessage.includes("succès")
-                        ? "bg-green-50 text-green-700 border border-green-200"
-                        : "bg-red-50 text-red-700 border border-red-200"
+                        ? "bg-[#FFD700]/20 text-black border border-[#FFD700] font-medium"
+                        : "bg-[#FF0000]/10 text-[#FF0000] border border-[#FF0000] font-medium"
                     }`}
                   >
                     {submitMessage}
@@ -221,8 +220,8 @@ export function ContactSection() {
           <div className="flex items-center justify-center">
             <Card className="w-full">
               <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
-                  <MessageCircle className="h-10 w-10 text-green-600" />
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#FFD700]/20">
+                  <MessageCircle className="h-10 w-10 text-[#00A6D6]" />
                 </div>
                 <CardTitle className="text-2xl">
                   {t("landing.contact.whatsapp.title")}
@@ -236,9 +235,9 @@ export function ContactSection() {
                   {t("landing.contact.whatsapp.details")}
                 </p>
                 <Button
-                  className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-6"
+                  className="w-full bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black text-white text-lg py-6 transition-all duration-300 shadow-lg font-medium"
                   onClick={() =>
-                    window.open("https://wa.me/33605511432", "_blank")
+                    window.open("https://wa.me/212600000000", "_blank")
                   }
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
