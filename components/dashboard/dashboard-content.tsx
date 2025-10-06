@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Package, AlertTriangle, TrendingUp, Users, Activity } from "lucide-react"
+import { Package, TriangleAlert as AlertTriangle, TrendingUp, Users, Activity } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { Badge } from "@/components/ui/badge"
 
