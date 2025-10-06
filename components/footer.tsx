@@ -1,6 +1,6 @@
 "use client"
 
-import { Package, Mail, Phone, MapPin } from "lucide-react"
+import { Package, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import Link from "next/link"
 
@@ -62,6 +62,27 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-white" />
                 <span>{t("landing.footer.phone")}</span>
               </div>
+            </div>
+
+            <div className="flex items-center space-x-4 pt-2">
+              <a
+                href="https://www.instagram.com/sen.fibemfrance/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5 text-white" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sen-fibem-france-953349213/?originalSubdomain=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5 text-white" />
+              </a>
             </div>
           </div>
 
