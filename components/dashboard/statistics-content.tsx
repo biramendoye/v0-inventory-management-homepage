@@ -215,7 +215,7 @@ export function StatisticsContent() {
           </div>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-[350px]">
+          <div className="h-[350px]">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={revenueData}>
                 <defs>
@@ -256,7 +256,7 @@ export function StatisticsContent() {
                 />
               </AreaChart>
             </ResponsiveContainer>
-          </ChartContainer>
+          </div>
         </CardContent>
       </Card>
 
@@ -271,7 +271,7 @@ export function StatisticsContent() {
             <CardDescription>Commandes et revenus par jour de la semaine</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px]">
+            <div className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={weeklyActivityData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
@@ -284,7 +284,7 @@ export function StatisticsContent() {
                   <Bar dataKey="orders" fill="#FFD700" radius={[8, 8, 0, 0]} name="Commandes" />
                 </BarChart>
               </ResponsiveContainer>
-            </ChartContainer>
+            </div>
           </CardContent>
         </Card>
 
@@ -297,7 +297,7 @@ export function StatisticsContent() {
             <CardDescription>Distribution des ventes par catégorie</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="h-[300px] flex items-center justify-center">
+            <div className="h-[240px]">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -305,7 +305,7 @@ export function StatisticsContent() {
                     cx="50%"
                     cy="50%"
                     innerRadius={60}
-                    outerRadius={100}
+                    outerRadius={90}
                     dataKey="value"
                     label={({ name, value }) => `${name}: ${value}%`}
                     labelLine={true}
@@ -346,17 +346,19 @@ export function StatisticsContent() {
             <CardDescription>Top 5 des meilleures ventes ce mois</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px]">
+            <div className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={bestSellingProducts} layout="horizontal">
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis type="number" />
-                  <YAxis dataKey="name" type="category" width={120} />
-                  <ChartTooltip content={<ChartTooltipContent />} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+                  <XAxis type="number" stroke="#888888" />
+                  <YAxis dataKey="name" type="category" width={120} stroke="#888888" />
+                  <Tooltip
+                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
+                  />
                   <Bar dataKey="sales" fill="#FFD700" name="Ventes" />
                 </BarChart>
               </ResponsiveContainer>
-            </ChartContainer>
+            </div>
           </CardContent>
         </Card>
 
