@@ -12,23 +12,35 @@ import {
   LineChart,
   Pie,
   PieChart,
+  Area,
+  AreaChart,
   Cell,
   ResponsiveContainer,
   XAxis,
   YAxis,
   CartesianGrid,
   Legend,
+  Tooltip,
 } from "recharts"
-import { TrendingUp, TrendingDown, Package, AlertTriangle, Users, Euro } from "lucide-react"
+import { TrendingUp, TrendingDown, Package, AlertTriangle, Users, Euro, ShoppingCart, DollarSign, BarChart3, Activity } from "lucide-react"
 
 // Mock data for charts
 const stockAvailabilityData = [
-  { month: "Jan", stock: 1200, sold: 800 },
-  { month: "Fév", stock: 1100, sold: 900 },
-  { month: "Mar", stock: 1300, sold: 750 },
-  { month: "Avr", stock: 1250, sold: 850 },
-  { month: "Mai", stock: 1400, sold: 950 },
-  { month: "Jun", stock: 1350, sold: 800 },
+  { month: "Jan", stock: 1200, sold: 800, revenue: 92000 },
+  { month: "Fév", stock: 1100, sold: 900, revenue: 105000 },
+  { month: "Mar", stock: 1300, sold: 750, revenue: 88000 },
+  { month: "Avr", stock: 1250, sold: 850, revenue: 98000 },
+  { month: "Mai", stock: 1400, sold: 950, revenue: 112000 },
+  { month: "Jun", stock: 1350, sold: 800, revenue: 95000 },
+]
+
+const revenueData = [
+  { month: "Jan", revenue: 92000, profit: 18400, orders: 156 },
+  { month: "Fév", revenue: 105000, profit: 21000, orders: 178 },
+  { month: "Mar", revenue: 88000, profit: 17600, orders: 145 },
+  { month: "Avr", revenue: 98000, profit: 19600, orders: 163 },
+  { month: "Mai", revenue: 112000, profit: 22400, orders: 189 },
+  { month: "Jun", revenue: 95000, profit: 19000, orders: 158 },
 ]
 
 const bestSellingProducts = [
@@ -54,9 +66,19 @@ const supplierPerformance = [
 ]
 
 const categoryDistribution = [
-  { name: "Ordinateurs", value: 35, color: "#FFD700" },
-  { name: "Téléphones", value: 40, color: "#00FFFF" },
-  { name: "Tablettes", value: 25, color: "#333333" },
+  { name: "Ordinateurs", value: 35, sales: 156, color: "#00A6D6" },
+  { name: "Téléphones", value: 40, sales: 178, color: "#FFD700" },
+  { name: "Tablettes", value: 25, sales: 112, color: "#FF6B6B" },
+]
+
+const weeklyActivityData = [
+  { day: "Lun", orders: 45, revenue: 12400 },
+  { day: "Mar", orders: 52, revenue: 14800 },
+  { day: "Mer", orders: 48, revenue: 13200 },
+  { day: "Jeu", orders: 61, revenue: 16500 },
+  { day: "Ven", orders: 55, revenue: 15100 },
+  { day: "Sam", orders: 35, revenue: 9800 },
+  { day: "Dim", orders: 28, revenue: 7900 },
 ]
 
 const chartConfig = {
@@ -94,112 +116,224 @@ export function StatisticsContent() {
 
       {/* KPI Overview */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="border-l-4 border-l-[#00A6D6] hover:shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Chiffre d'Affaires</CardTitle>
-            <Euro className="h-4 w-4 text-muted-foreground" />
+            <div className="h-10 w-10 rounded-full bg-[#00A6D6]/10 flex items-center justify-center">
+              <Euro className="h-5 w-5 text-[#00A6D6]" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">€497,677</div>
-            <div className="flex items-center text-xs text-green-600">
-              <TrendingUp className="mr-1 h-3 w-3" />
-              +12.5% vs mois dernier
+            <div className="text-3xl font-bold text-[#00A6D6]">€497,677</div>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="bg-green-100 text-green-700 hover:bg-green-100">
+                <TrendingUp className="mr-1 h-3 w-3" />
+                +12.5%
+              </Badge>
+              <span className="text-xs text-muted-foreground">vs mois dernier</span>
             </div>
+            <Progress value={85} className="h-1.5 mt-3" />
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-l-4 border-l-[#FFD700] hover:shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Produits Vendus</CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
+            <div className="h-10 w-10 rounded-full bg-[#FFD700]/10 flex items-center justify-center">
+              <Package className="h-5 w-5 text-[#FFD700]" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">418</div>
-            <div className="flex items-center text-xs text-green-600">
-              <TrendingUp className="mr-1 h-3 w-3" />
-              +8.2% vs mois dernier
+            <div className="text-3xl font-bold text-[#FFD700]">418</div>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="bg-green-100 text-green-700 hover:bg-green-100">
+                <TrendingUp className="mr-1 h-3 w-3" />
+                +8.2%
+              </Badge>
+              <span className="text-xs text-muted-foreground">vs mois dernier</span>
             </div>
+            <Progress value={72} className="h-1.5 mt-3" />
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-l-4 border-l-purple-500 hover:shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Taux de Rotation</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Commandes Totales</CardTitle>
+            <div className="h-10 w-10 rounded-full bg-purple-500/10 flex items-center justify-center">
+              <ShoppingCart className="h-5 w-5 text-purple-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">2.4x</div>
-            <div className="flex items-center text-xs text-red-600">
-              <TrendingDown className="mr-1 h-3 w-3" />
-              -3.1% vs mois dernier
+            <div className="text-3xl font-bold text-purple-600">989</div>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="bg-green-100 text-green-700 hover:bg-green-100">
+                <TrendingUp className="mr-1 h-3 w-3" />
+                +15.3%
+              </Badge>
+              <span className="text-xs text-muted-foreground">vs mois dernier</span>
             </div>
+            <Progress value={90} className="h-1.5 mt-3" />
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Satisfaction Fournisseurs</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Marge Moyenne</CardTitle>
+            <div className="h-10 w-10 rounded-full bg-green-500/10 flex items-center justify-center">
+              <DollarSign className="h-5 w-5 text-green-600" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">4.6/5</div>
-            <div className="flex items-center text-xs text-green-600">
-              <TrendingUp className="mr-1 h-3 w-3" />
-              +0.2 vs mois dernier
+            <div className="text-3xl font-bold text-green-600">20%</div>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="bg-green-100 text-green-700 hover:bg-green-100">
+                <TrendingUp className="mr-1 h-3 w-3" />
+                +2.1%
+              </Badge>
+              <span className="text-xs text-muted-foreground">vs mois dernier</span>
             </div>
+            <Progress value={65} className="h-1.5 mt-3" />
           </CardContent>
         </Card>
       </div>
 
+      {/* Revenue Chart - Full Width */}
+      <Card className="border-t-4 border-t-[#00A6D6]">
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <BarChart3 className="h-5 w-5 text-[#00A6D6]" />
+                Évolution du Chiffre d'Affaires
+              </CardTitle>
+              <CardDescription>Revenus et profits mensuels sur 6 mois</CardDescription>
+            </div>
+            <Badge variant="outline" className="gap-1">
+              <Activity className="h-3 w-3" />
+              Tendance positive
+            </Badge>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer config={chartConfig} className="h-[350px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={revenueData}>
+                <defs>
+                  <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#00A6D6" stopOpacity={0.8}/>
+                    <stop offset="95%" stopColor="#00A6D6" stopOpacity={0.1}/>
+                  </linearGradient>
+                  <linearGradient id="colorProfit" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#FFD700" stopOpacity={0.8}/>
+                    <stop offset="95%" stopColor="#FFD700" stopOpacity={0.1}/>
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+                <XAxis dataKey="month" stroke="#888888" />
+                <YAxis stroke="#888888" />
+                <Tooltip
+                  contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
+                  formatter={(value: number) => `€${value.toLocaleString()}`}
+                />
+                <Legend />
+                <Area
+                  type="monotone"
+                  dataKey="revenue"
+                  stroke="#00A6D6"
+                  fillOpacity={1}
+                  fill="url(#colorRevenue)"
+                  strokeWidth={3}
+                  name="Revenus"
+                />
+                <Area
+                  type="monotone"
+                  dataKey="profit"
+                  stroke="#FFD700"
+                  fillOpacity={1}
+                  fill="url(#colorProfit)"
+                  strokeWidth={3}
+                  name="Profits"
+                />
+              </AreaChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </CardContent>
+      </Card>
+
       {/* Charts Row 1 */}
       <div className="grid gap-4 md:grid-cols-2">
-        <Card>
+        <Card className="border-t-4 border-t-[#FFD700]">
           <CardHeader>
-            <CardTitle>Évolution du Stock</CardTitle>
-            <CardDescription>Stock disponible vs produits vendus sur 6 mois</CardDescription>
+            <CardTitle className="flex items-center gap-2">
+              <Package className="h-5 w-5 text-[#FFD700]" />
+              Activité Hebdomadaire
+            </CardTitle>
+            <CardDescription>Commandes et revenus par jour de la semaine</CardDescription>
           </CardHeader>
           <CardContent>
             <ChartContainer config={chartConfig} className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={stockAvailabilityData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="month" />
-                  <YAxis />
-                  <ChartTooltip content={<ChartTooltipContent />} />
+                <BarChart data={weeklyActivityData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+                  <XAxis dataKey="day" stroke="#888888" />
+                  <YAxis stroke="#888888" />
+                  <Tooltip
+                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
+                  />
                   <Legend />
-                  <Line type="monotone" dataKey="stock" stroke="#FFD700" strokeWidth={2} name="Stock" />
-                  <Line type="monotone" dataKey="sold" stroke="#00FFFF" strokeWidth={2} name="Vendus" />
-                </LineChart>
+                  <Bar dataKey="orders" fill="#FFD700" radius={[8, 8, 0, 0]} name="Commandes" />
+                </BarChart>
               </ResponsiveContainer>
             </ChartContainer>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-t-4 border-t-[#FF6B6B]">
           <CardHeader>
-            <CardTitle>Répartition par Catégorie</CardTitle>
-            <CardDescription>Distribution des produits par catégorie</CardDescription>
+            <CardTitle className="flex items-center gap-2">
+              <Package className="h-5 w-5 text-[#FF6B6B]" />
+              Répartition par Catégorie
+            </CardTitle>
+            <CardDescription>Distribution des ventes par catégorie</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px]">
+            <div className="h-[300px] flex items-center justify-center">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={categoryDistribution}
                     cx="50%"
                     cy="50%"
-                    outerRadius={80}
+                    innerRadius={60}
+                    outerRadius={100}
                     dataKey="value"
                     label={({ name, value }) => `${name}: ${value}%`}
+                    labelLine={true}
                   >
                     {categoryDistribution.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
-                  <ChartTooltip />
+                  <Tooltip
+                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
+                    formatter={(value: number, name: string, props: any) => [
+                      `${value}% (${props.payload.sales} ventes)`,
+                      name
+                    ]}
+                  />
                 </PieChart>
               </ResponsiveContainer>
-            </ChartContainer>
+            </div>
+            <div className="grid grid-cols-3 gap-2 mt-4">
+              {categoryDistribution.map((cat, idx) => (
+                <div key={idx} className="flex flex-col items-center p-2 bg-muted/50 rounded-lg">
+                  <div className="h-3 w-3 rounded-full mb-1" style={{ backgroundColor: cat.color }} />
+                  <span className="text-xs font-medium">{cat.name}</span>
+                  <span className="text-lg font-bold">{cat.sales}</span>
+                  <span className="text-xs text-muted-foreground">ventes</span>
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </div>
