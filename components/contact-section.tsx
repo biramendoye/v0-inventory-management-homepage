@@ -237,7 +237,7 @@ export function ContactSection() {
                 <Button
                   className="w-full bg-[#00A6D6] hover:bg-[#FFD700] hover:text-black text-white text-lg py-6 transition-all duration-300 shadow-lg font-medium"
                   onClick={() =>
-                    window.open("https://wa.me/212600000000", "_blank")
+                    window.open("https://wa.me/33605511432", "_blank")
                   }
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
