@@ -115,8 +115,9 @@ interface ExtendedSaleData {
   quotationNumber?: string;
   pdfUrl?: string;
   currency?: string;
-  documentType: "sale" | "quotation";
+  documentType: "sale" | "quotation" | "creditNote";
   validUntil?: string;
+  isCreditNote?: boolean;
 }
 
 export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
@@ -140,10 +141,11 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     null,
   );
   const [currency, setCurrency] = useState("EUR");
-  const [documentType, setDocumentType] = useState<"sale" | "quotation">(
+  const [documentType, setDocumentType] = useState<"sale" | "quotation" | "creditNote">(
     "sale",
   );
   const [validUntil, setValidUntil] = useState("");
+  const [isCreditNote, setIsCreditNote] = useState(false);
 
   const filteredProducts = mockProducts.filter(
     (product) =>
@@ -251,6 +253,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
       currency,
       documentType,
       validUntil: documentType === "quotation" ? validUntil : undefined,
+      isCreditNote: documentType === "creditNote",
     };
     onSave(saleData);
     resetForm();
@@ -268,7 +271,9 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     const documentNumber =
       documentType === "quotation"
         ? `QUO-${Date.now().toString().slice(-6)}`
-        : `INV-${Date.now().toString().slice(-6)}`;
+        : documentType === "creditNote"
+          ? `CN-${Date.now().toString().slice(-6)}`
+          : `INV-${Date.now().toString().slice(-6)}`;
 
     const saleData: ExtendedSaleData = {
       customer,
@@ -280,12 +285,13 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
       notes,
       status: "confirmed",
       date: new Date().toISOString(),
-      invoiceNumber: documentType === "sale" ? documentNumber : undefined,
+      invoiceNumber: documentType === "sale" ? documentNumber : documentType === "creditNote" ? documentNumber : undefined,
       quotationNumber:
         documentType === "quotation" ? documentNumber : undefined,
       currency,
       documentType,
       validUntil: documentType === "quotation" ? validUntil : undefined,
+      isCreditNote: documentType === "creditNote",
     };
 
     try {
@@ -364,6 +370,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
     setPdfGenerationError(null);
     setDocumentType("sale");
     setValidUntil("");
+    setIsCreditNote(false);
   };
 
   const getStatusText = (status: string) => {
@@ -388,7 +395,9 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
             <DialogTitle className="text-xl">
               {documentType === "quotation"
                 ? "New Quotation"
-                : t("sales.newSale")}
+                : documentType === "creditNote"
+                  ? "New Credit Note (Avoir)"
+                  : t("sales.newSale")}
             </DialogTitle>
           </div>
         </DialogHeader>
@@ -403,7 +412,7 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="radio"
@@ -411,15 +420,8 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                     value="sale"
                     checked={documentType === "sale"}
                     onChange={(e) => {
-                      setDocumentType(e.target.value as "sale" | "quotation");
-                      if (e.target.value === "sale") {
-                        setValidUntil("");
-                      } else {
-                        // Set default validity to 30 days from now
-                        const futureDate = new Date();
-                        futureDate.setDate(futureDate.getDate() + 30);
-                        setValidUntil(futureDate.toISOString().split("T")[0]);
-                      }
+                      setDocumentType(e.target.value as "sale" | "quotation" | "creditNote");
+                      setValidUntil("");
                     }}
                     className="w-4 h-4 text-[#00A6D6]"
                   />
@@ -432,9 +434,8 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                     value="quotation"
                     checked={documentType === "quotation"}
                     onChange={(e) => {
-                      setDocumentType(e.target.value as "sale" | "quotation");
+                      setDocumentType(e.target.value as "sale" | "quotation" | "creditNote");
                       if (e.target.value === "quotation") {
-                        // Set default validity to 30 days from now
                         const futureDate = new Date();
                         futureDate.setDate(futureDate.getDate() + 30);
                         setValidUntil(futureDate.toISOString().split("T")[0]);
@@ -443,6 +444,21 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
                     className="w-4 h-4 text-[#00A6D6]"
                   />
                   <span className="text-sm font-medium">Quotation</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="documentType"
+                    value="creditNote"
+                    checked={documentType === "creditNote"}
+                    onChange={(e) => {
+                      setDocumentType(e.target.value as "sale" | "quotation" | "creditNote");
+                      setValidUntil("");
+                      setIsCreditNote(true);
+                    }}
+                    className="w-4 h-4 text-red-600"
+                  />
+                  <span className="text-sm font-medium text-red-600">Credit Note (Avoir)</span>
                 </label>
               </div>
               {documentType === "quotation" && (
@@ -880,14 +896,18 @@ export function NewSaleForm({ isOpen, onClose, onSave }: NewSaleFormProps) {
               <>
                 {documentType === "quotation" ? (
                   <FileText className="h-4 w-4" />
+                ) : documentType === "creditNote" ? (
+                  <FileText className="h-4 w-4" />
                 ) : (
                   <ShoppingCart className="h-4 w-4" />
                 )}
                 {documentType === "quotation"
                   ? "Generate Quotation"
-                  : t("sales.newSale") === "New Sale"
-                    ? "Confirm Sale"
-                    : "Confirmer la Vente"}
+                  : documentType === "creditNote"
+                    ? "Generate Credit Note"
+                    : t("sales.newSale") === "New Sale"
+                      ? "Confirm Sale"
+                      : "Confirmer la Vente"}
               </>
             )}
           </Button>
