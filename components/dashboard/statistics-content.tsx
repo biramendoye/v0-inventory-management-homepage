@@ -4,46 +4,96 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import {
-  Bar,
-  BarChart,
-  Line,
-  LineChart,
-  Pie,
-  PieChart,
-  Area,
-  AreaChart,
-  Cell,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Legend,
-  Tooltip,
-} from "recharts"
 import { TrendingUp, TrendingDown, Package, AlertTriangle, Users, Euro, ShoppingCart, DollarSign, BarChart3, Activity } from "lucide-react"
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+} from 'chart.js'
+import { Line, Bar, Doughnut } from 'react-chartjs-2'
 
-// Mock data for charts
-const stockAvailabilityData = [
-  { month: "Jan", stock: 1200, sold: 800, revenue: 92000 },
-  { month: "Fév", stock: 1100, sold: 900, revenue: 105000 },
-  { month: "Mar", stock: 1300, sold: 750, revenue: 88000 },
-  { month: "Avr", stock: 1250, sold: 850, revenue: 98000 },
-  { month: "Mai", stock: 1400, sold: 950, revenue: 112000 },
-  { month: "Jun", stock: 1350, sold: 800, revenue: 95000 },
-]
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+)
 
-const revenueData = [
-  { month: "Jan", revenue: 92000, profit: 18400, orders: 156 },
-  { month: "Fév", revenue: 105000, profit: 21000, orders: 178 },
-  { month: "Mar", revenue: 88000, profit: 17600, orders: 145 },
-  { month: "Avr", revenue: 98000, profit: 19600, orders: 163 },
-  { month: "Mai", revenue: 112000, profit: 22400, orders: 189 },
-  { month: "Jun", revenue: 95000, profit: 19000, orders: 158 },
-]
+const revenueData = {
+  labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun'],
+  datasets: [
+    {
+      label: 'Revenus',
+      data: [92000, 105000, 88000, 98000, 112000, 95000],
+      borderColor: '#00A6D6',
+      backgroundColor: 'rgba(0, 166, 214, 0.1)',
+      fill: true,
+      tension: 0.4,
+      borderWidth: 3,
+    },
+    {
+      label: 'Profits',
+      data: [18400, 21000, 17600, 19600, 22400, 19000],
+      borderColor: '#FFD700',
+      backgroundColor: 'rgba(255, 215, 0, 0.1)',
+      fill: true,
+      tension: 0.4,
+      borderWidth: 3,
+    },
+  ],
+}
 
-const bestSellingProducts = [
+const weeklyActivityData = {
+  labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+  datasets: [
+    {
+      label: 'Commandes',
+      data: [45, 52, 48, 61, 55, 35, 28],
+      backgroundColor: '#FFD700',
+      borderRadius: 8,
+    },
+  ],
+}
+
+const categoryDistribution = {
+  labels: ['Ordinateurs', 'Téléphones', 'Tablettes'],
+  datasets: [
+    {
+      data: [35, 40, 25],
+      backgroundColor: ['#00A6D6', '#FFD700', '#FF6B6B'],
+      borderWidth: 2,
+      borderColor: '#fff',
+    },
+  ],
+}
+
+const bestSellingProducts = {
+  labels: ['iPhone 15 Pro', 'MacBook Air M2', 'Samsung Galaxy S24', 'iPad Pro 12.9"', 'Dell XPS 13'],
+  datasets: [
+    {
+      label: 'Ventes',
+      data: [145, 89, 76, 65, 43],
+      backgroundColor: '#FFD700',
+      borderRadius: 8,
+    },
+  ],
+}
+
+const bestSellingProductsData = [
   { name: "iPhone 15 Pro", sales: 145, value: 173550 },
   { name: "MacBook Air M2", sales: 89, value: 115611 },
   { name: "Samsung Galaxy S24", sales: 76, value: 68324 },
@@ -65,37 +115,69 @@ const supplierPerformance = [
   { name: "Computer Solutions", rating: 3.9, orders: 18, onTime: 72 },
 ]
 
-const categoryDistribution = [
-  { name: "Ordinateurs", value: 35, sales: 156, color: "#00A6D6" },
-  { name: "Téléphones", value: 40, sales: 178, color: "#FFD700" },
-  { name: "Tablettes", value: 25, sales: 112, color: "#FF6B6B" },
+const categoryStats = [
+  { name: "Ordinateurs", sales: 156, color: "#00A6D6" },
+  { name: "Téléphones", sales: 178, color: "#FFD700" },
+  { name: "Tablettes", sales: 112, color: "#FF6B6B" },
 ]
 
-const weeklyActivityData = [
-  { day: "Lun", orders: 45, revenue: 12400 },
-  { day: "Mar", orders: 52, revenue: 14800 },
-  { day: "Mer", orders: 48, revenue: 13200 },
-  { day: "Jeu", orders: 61, revenue: 16500 },
-  { day: "Ven", orders: 55, revenue: 15100 },
-  { day: "Sam", orders: 35, revenue: 9800 },
-  { day: "Dim", orders: 28, revenue: 7900 },
-]
-
-const chartConfig = {
-  stock: {
-    label: "Stock",
-    color: "#FFD700",
+const chartOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    tooltip: {
+      backgroundColor: 'white',
+      titleColor: '#000',
+      bodyColor: '#666',
+      borderColor: '#e0e0e0',
+      borderWidth: 1,
+      padding: 12,
+      displayColors: true,
+    },
   },
-  sold: {
-    label: "Vendus",
-    color: "#00FFFF",
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+    },
+    y: {
+      grid: {
+        color: '#e0e0e0',
+      },
+    },
+  },
+}
+
+const barChartOptions = {
+  ...chartOptions,
+  indexAxis: 'y' as const,
+}
+
+const doughnutOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'bottom' as const,
+    },
+    tooltip: {
+      backgroundColor: 'white',
+      titleColor: '#000',
+      bodyColor: '#666',
+      borderColor: '#e0e0e0',
+      borderWidth: 1,
+      padding: 12,
+    },
   },
 }
 
 export function StatisticsContent() {
   return (
     <div className="space-y-6">
-      {/* Page Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Statistiques et Analyses</h1>
@@ -114,7 +196,6 @@ export function StatisticsContent() {
         </Select>
       </div>
 
-      {/* KPI Overview */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card className="border-l-4 border-l-[#00A6D6] hover:shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -197,7 +278,6 @@ export function StatisticsContent() {
         </Card>
       </div>
 
-      {/* Revenue Chart - Full Width */}
       <Card className="border-t-4 border-t-[#00A6D6]">
         <CardHeader>
           <div className="flex items-center justify-between">
@@ -216,51 +296,11 @@ export function StatisticsContent() {
         </CardHeader>
         <CardContent>
           <div className="h-[350px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={revenueData}>
-                <defs>
-                  <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#00A6D6" stopOpacity={0.8}/>
-                    <stop offset="95%" stopColor="#00A6D6" stopOpacity={0.1}/>
-                  </linearGradient>
-                  <linearGradient id="colorProfit" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#FFD700" stopOpacity={0.8}/>
-                    <stop offset="95%" stopColor="#FFD700" stopOpacity={0.1}/>
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
-                <XAxis dataKey="month" stroke="#888888" />
-                <YAxis stroke="#888888" />
-                <Tooltip
-                  contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
-                  formatter={(value: number) => `€${value.toLocaleString()}`}
-                />
-                <Legend />
-                <Area
-                  type="monotone"
-                  dataKey="revenue"
-                  stroke="#00A6D6"
-                  fillOpacity={1}
-                  fill="url(#colorRevenue)"
-                  strokeWidth={3}
-                  name="Revenus"
-                />
-                <Area
-                  type="monotone"
-                  dataKey="profit"
-                  stroke="#FFD700"
-                  fillOpacity={1}
-                  fill="url(#colorProfit)"
-                  strokeWidth={3}
-                  name="Profits"
-                />
-              </AreaChart>
-            </ResponsiveContainer>
+            <Line data={revenueData} options={chartOptions} />
           </div>
         </CardContent>
       </Card>
 
-      {/* Charts Row 1 */}
       <div className="grid gap-4 md:grid-cols-2">
         <Card className="border-t-4 border-t-[#FFD700]">
           <CardHeader>
@@ -268,22 +308,11 @@ export function StatisticsContent() {
               <Package className="h-5 w-5 text-[#FFD700]" />
               Activité Hebdomadaire
             </CardTitle>
-            <CardDescription>Commandes et revenus par jour de la semaine</CardDescription>
+            <CardDescription>Commandes par jour de la semaine</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="h-[300px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={weeklyActivityData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
-                  <XAxis dataKey="day" stroke="#888888" />
-                  <YAxis stroke="#888888" />
-                  <Tooltip
-                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
-                  />
-                  <Legend />
-                  <Bar dataKey="orders" fill="#FFD700" radius={[8, 8, 0, 0]} name="Commandes" />
-                </BarChart>
-              </ResponsiveContainer>
+              <Bar data={weeklyActivityData} options={chartOptions} />
             </div>
           </CardContent>
         </Card>
@@ -298,34 +327,10 @@ export function StatisticsContent() {
           </CardHeader>
           <CardContent>
             <div className="h-[240px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={categoryDistribution}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={90}
-                    dataKey="value"
-                    label={({ name, value }) => `${name}: ${value}%`}
-                    labelLine={true}
-                  >
-                    {categoryDistribution.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
-                    formatter={(value: number, name: string, props: any) => [
-                      `${value}% (${props.payload.sales} ventes)`,
-                      name
-                    ]}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+              <Doughnut data={categoryDistribution} options={doughnutOptions} />
             </div>
             <div className="grid grid-cols-3 gap-2 mt-4">
-              {categoryDistribution.map((cat, idx) => (
+              {categoryStats.map((cat, idx) => (
                 <div key={idx} className="flex flex-col items-center p-2 bg-muted/50 rounded-lg">
                   <div className="h-3 w-3 rounded-full mb-1" style={{ backgroundColor: cat.color }} />
                   <span className="text-xs font-medium">{cat.name}</span>
@@ -338,7 +343,6 @@ export function StatisticsContent() {
         </Card>
       </div>
 
-      {/* Charts Row 2 */}
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -347,17 +351,7 @@ export function StatisticsContent() {
           </CardHeader>
           <CardContent>
             <div className="h-[300px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={bestSellingProducts} layout="horizontal">
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
-                  <XAxis type="number" stroke="#888888" />
-                  <YAxis dataKey="name" type="category" width={120} stroke="#888888" />
-                  <Tooltip
-                    contentStyle={{ backgroundColor: 'white', border: '1px solid #e0e0e0', borderRadius: '8px' }}
-                  />
-                  <Bar dataKey="sales" fill="#FFD700" name="Ventes" />
-                </BarChart>
-              </ResponsiveContainer>
+              <Bar data={bestSellingProducts} options={barChartOptions} />
             </div>
           </CardContent>
         </Card>
@@ -392,7 +386,6 @@ export function StatisticsContent() {
         </Card>
       </div>
 
-      {/* Low Stock Alert */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
