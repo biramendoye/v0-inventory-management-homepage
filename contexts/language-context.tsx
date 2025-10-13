@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
-type Language = "fr" | "en" | "es" | "ar" | "pt" | "zh" | "bn"
+type Language = "fr" | "en" | "es" | "ar" | "pt" | "zh" | "bn" | "ru" | "ja" | "de"
+
 
 type CurrencyConfig = {
   symbol: string
@@ -18,6 +19,9 @@ const currencyMap: Record<Language, CurrencyConfig> = {
   pt: { symbol: "€", code: "EUR", position: "after" },
   zh: { symbol: "¥", code: "CNY", position: "before" },
   bn: { symbol: "৳", code: "BDT", position: "before" },
+  ru: { symbol: "₽", code: "RUB", position: "before" },
+  ja: { symbol: "¥", code: "JPY", position: "before" },
+  de: { symbol: "€", code: "EUR", position: "after" },
 }
 
 interface LanguageContextType {
@@ -39,6 +43,9 @@ const translations: Record<Language, any> = {
   pt: require("../locales/pt.json"),
   zh: require("../locales/zh.json"),
   bn: require("../locales/bn.json"),
+  ru: require("../locales/ru.json"),
+  ja: require("../locales/ja.json"),
+  de: require("../locales/de.json"),
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -49,7 +56,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const savedLanguage = localStorage.getItem("fibem-language") as Language
     if (
       savedLanguage &&
-      (savedLanguage === "fr" || savedLanguage === "en" || savedLanguage === "es" || savedLanguage === "ar" || savedLanguage === "pt" || savedLanguage === "zh" || savedLanguage === "bn")
+      (savedLanguage === "fr" || savedLanguage === "en" || savedLanguage === "es" || savedLanguage === "ar" || savedLanguage === "pt" || savedLanguage === "zh" || savedLanguage === "bn" || savedLanguage === "ru" || savedLanguage === "ja" || savedLanguage === "de")
     ) {
       setLanguageState(savedLanguage)
     }

@@ -1,0 +1,568 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "search": "Suchen",
+    "filter": "Filter",
+    "actions": "Aktionen",
+    "status": "Status",
+    "date": "Datum",
+    "total": "Gesamt",
+    "subtotal": "Zwischensumme",
+    "tax": "Steuer",
+    "quantity": "Menge",
+    "price": "Preis",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "country": "Land",
+    "countryCode": "Ländercode",
+    "notes": "Notizen",
+    "required": "Erforderlich",
+    "optional": "Optional"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "products": "Produkte",
+    "sales": "Verkäufe",
+    "customers": "Kunden",
+    "suppliers": "Lieferanten",
+    "reports": "Berichte",
+    "settings": "Einstellungen"
+  },
+  "landing": {
+    "header": {
+      "home": "Startseite",
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "careers": "Karriere",
+      "contact": "Kontakt",
+      "dashboard": "Dashboard",
+      "login": "Anmelden",
+      "toggleMenu": "Menü umschalten"
+    },
+    "hero": {
+      "title": "Optimieren Sie Ihr",
+      "titleHighlight": "Bestandsmanagement",
+      "description": "Übernehmen Sie die Kontrolle über Ihren Bestand mit unserer leistungsstarken und intuitiven Software. Verfolgen Sie Lagerbestände, verwalten Sie Lieferanten und erstellen Sie automatisierte Berichte, um Ihre Geschäftsabläufe zu optimieren.",
+      "ctaPrimary": "Zum Dashboard",
+      "ctaSecondary": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich",
+      "freeTrial": "14-tägige kostenlose Testversion",
+      "imageAlt": "FIBEM Dashboard"
+    },
+    "features": {
+      "title": "Leistungsstarke Funktionen für moderne Unternehmen",
+      "subtitle": "Alles, was Sie brauchen, um Ihren Bestand effizient zu verwalten und Ihr Geschäft auszubauen.",
+      "realTimeTracking": {
+        "title": "Echtzeit-Bestandsverfolgung",
+        "description": "Überwachen Sie Lagerbestände in Echtzeit mit automatischen Warnungen bei niedrigem Lagerbestand und Nachbestellpunkten."
+      },
+      "supplierManagement": {
+        "title": "Lieferantenmanagement",
+        "description": "Verwalten Sie Lieferantenbeziehungen, verfolgen Sie Bestellungen und pflegen Sie Lieferanten-Leistungskennzahlen."
+      },
+      "automatedReports": {
+        "title": "Automatisierte Berichte",
+        "description": "Erstellen Sie detaillierte Berichte über Lagerumschlag, Kosten und Leistungsanalysen."
+      },
+      "quickIntegration": {
+        "title": "Schnelle Integration",
+        "description": "Integrieren Sie sich einfach in Ihre bestehenden ERP-, Buchhaltungs- und E-Commerce-Plattformen."
+      },
+      "secureCompliant": {
+        "title": "Sicher & Konform",
+        "description": "Sicherheit auf Unternehmensebene mit rollenbasierter Zugriffskontrolle und Audit-Protokollen."
+      },
+      "multiLocation": {
+        "title": "Unterstützung für mehrere Standorte",
+        "description": "Verwalten Sie den Bestand über mehrere Lager und Standorte von einem einzigen Dashboard aus."
+      }
+    },
+    "pricing": {
+      "title": "Einfache, transparente Preisgestaltung",
+      "subtitle": "Wählen Sie den perfekten Plan für Ihr Unternehmen. Alle Pläne beinhalten unsere Kernfunktionen für das Bestandsmanagement.",
+      "starter": {
+        "name": "Starter",
+        "price": "29 €",
+        "period": "/Monat",
+        "description": "Ideal für kleine Unternehmen, die gerade erst anfangen",
+        "features": {
+          "products": "Bis zu 1.000 Produkte",
+          "reports": "Grundlegende Berichte",
+          "support": "E-Mail-Support",
+          "mobile": "Zugang zur mobilen App",
+          "users": "2 Benutzerkonten"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "79 €",
+        "period": "/Monat",
+        "description": "Perfekt für wachsende Unternehmen",
+        "popular": "Am beliebtesten",
+        "features": {
+          "products": "Bis zu 10.000 Produkte",
+          "analytics": "Erweiterte Analysen",
+          "support": "Priorisierter Support",
+          "api": "API-Zugang",
+          "users": "10 Benutzerkonten",
+          "integrations": "Benutzerdefinierte Integrationen"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Individuell",
+        "description": "Für große Organisationen mit komplexen Anforderungen",
+        "features": {
+          "products": "Unbegrenzte Produkte",
+          "reports": "Benutzerdefinierte Berichte",
+          "support": "Dedizierter 24/7-Support",
+          "whiteLabel": "White-Label-Optionen",
+          "users": "Unbegrenzte Benutzer",
+          "security": "Erweiterte Sicherheit",
+          "development": "Benutzerdefinierte Entwicklung"
+        }
+      },
+      "trialInfo": "Alle Pläne beinhalten eine 14-tägige kostenlose Testversion. Keine Kreditkarte erforderlich.",
+      "compareFeatures": "Alle Funktionen vergleichen",
+      "getStarted": "Jetzt starten",
+      "contactSales": "Vertrieb kontaktieren"
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Bereit, Ihr Bestandsmanagement zu transformieren? Kontaktieren Sie unser Team für eine personalisierte Demo.",
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "description": "Füllen Sie das untenstehende Formular aus und wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+        "name": "Vollständiger Name",
+        "namePlaceholder": "Max Mustermann",
+        "email": "E-Mail",
+        "emailPlaceholder": "max@firma.de",
+        "phone": "Telefonnummer",
+        "phonePlaceholder": "+49 123 4567890",
+        "message": "Nachricht",
+        "messagePlaceholder": "Erzählen Sie uns von Ihren Anforderungen an das Bestandsmanagement...",
+        "submit": "Nachricht senden",
+        "submitting": "Wird gesendet...",
+        "success": "Nachricht erfolgreich gesendet!",
+        "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+      },
+      "whatsapp": {
+        "title": "Kontakt per WhatsApp",
+        "description": "Erhalten Sie sofortige Unterstützung über WhatsApp",
+        "details": "Chatten Sie direkt mit unserem Team auf WhatsApp für schnelle Antworten auf Ihre Fragen.",
+        "button": "Auf WhatsApp chatten",
+        "availability": "Verfügbar von Montag bis Samstag, 9 bis 18 Uhr"
+      },
+      "info": {
+        "title": "Kontaktinformationen",
+        "description": "Erreichen Sie uns über einen dieser Kanäle.",
+        "email": {
+          "title": "E-Mail",
+          "sales": "sales@fibem.com",
+          "support": "support@fibem.com"
+        },
+        "phone": {
+          "title": "Telefon",
+          "main": "+1 (555) 123-4567",
+          "secondary": "+1 (555) 987-6543"
+        },
+        "address": {
+          "title": "Adresse",
+          "line1": "123 Business Avenue",
+          "line2": "Suite 456",
+          "line3": "New York, NY 10001, USA"
+        },
+        "hours": {
+          "title": "Öffnungszeiten",
+          "weekdays": "Montag - Freitag: 9:00 - 18:00 Uhr EST",
+          "saturday": "Samstag: 10:00 - 16:00 Uhr EST",
+          "sunday": "Sonntag: Geschlossen"
+        }
+      },
+      "demo": {
+        "title": "Demo vereinbaren",
+        "description": "Sehen Sie unser Bestandsmanagementsystem in Aktion.",
+        "details": "Buchen Sie eine personalisierte 30-minütige Demo mit unseren Produktexperten und erfahren Sie, wie unsere Lösung Ihre Bestandsabläufe optimieren kann.",
+        "button": "Demo vereinbaren"
+      }
+    },
+    "careers": {
+      "title": "Werden Sie Teil unseres Teams",
+      "subtitle": "Werden Sie Teil eines dynamischen Teams, das das Bestandsmanagement revolutioniert. Entdecken Sie spannende Karrieremöglichkeiten und wachsen Sie mit uns.",
+      "viewDetails": "Details anzeigen",
+      "viewAllPositions": "Alle Stellen anzeigen",
+      "notFound": "Keine passende Stelle gefunden? Wir sind immer auf der Suche nach talentierten Persönlichkeiten.",
+      "backToJobs": "Zurück zu den Stellenangeboten",
+      "jobNotFound": "Stelle nicht gefunden",
+      "details": {
+        "location": "Standort",
+        "type": "Anstellungsart",
+        "salary": "Gehalt",
+        "experience": "Erfahrung",
+        "responsibilities": "Aufgaben",
+        "requirements": "Anforderungen",
+        "benefits": "Vorteile",
+        "applyTitle": "Bereit zur Bewerbung?",
+        "applyDescription": "Werden Sie Teil unseres Teams und gestalten Sie die Zukunft des Bestandsmanagements mit.",
+        "applyNow": "Jetzt bewerben"
+      },
+      "jobs": {
+        "softwareEngineer": {
+          "title": "Senior Software Engineer",
+          "department": "Technik",
+          "location": "Paris, Frankreich / Remote",
+          "type": "Vollzeit",
+          "description": "Werden Sie Teil unseres Engineering-Teams, um skalierbare Bestandsmanagementlösungen mit modernen Technologien zu entwickeln.",
+          "salary": "80.000 € - 120.000 €",
+          "experience": "5+ Jahre",
+          "posted": "Veröffentlicht vor 2 Tagen",
+          "responsibilities": [
+            "Entwurf und Entwicklung neuer Funktionen für unsere Bestandsmanagement-Plattform",
+            "Schreiben von sauberem, wartbarem und gut getestetem Code",
+            "Zusammenarbeit mit Produktmanagern und Designern, um außergewöhnliche Benutzererlebnisse zu schaffen",
+            "Mentoring von Junior-Ingenieuren und Beitrag zur technischen Dokumentation",
+            "Teilnahme an Code-Reviews und Architekturdiskussionen"
+          ],
+          "requirements": [
+            "5+ Jahre Erfahrung in der Softwareentwicklung",
+            "Starke Kenntnisse in React, TypeScript und Node.js",
+            "Erfahrung mit modernen Web-Technologien und Cloud-Plattformen",
+            "Ausgezeichnete Problemlösungs- und Kommunikationsfähigkeiten",
+            "Bachelor-Abschluss in Informatik oder einem verwandten Bereich"
+          ],
+          "benefits": [
+            "Wettbewerbsfähiges Gehalt und Aktienpaket",
+            "Flexible Remote-Arbeitsoptionen",
+            "Krankenversicherung und Wellness-Programme",
+            "Budget für berufliche Weiterbildung",
+            "25 Tage bezahlter Urlaub"
+          ]
+        },
+        "productManager": {
+          "title": "Produktmanager",
+          "department": "Produkt",
+          "location": "Paris, Frankreich",
+          "type": "Vollzeit",
+          "description": "Leiten Sie die Produktstrategie und -entwicklung unserer Bestandsmanagement-Plattform in enger Zusammenarbeit mit Kunden und Stakeholdern.",
+          "salary": "90.000 € - 130.000 €",
+          "experience": "3-5 Jahre",
+          "posted": "Veröffentlicht vor 1 Woche",
+          "responsibilities": [
+            "Definition der Produktvision und Roadmap basierend auf Marktforschung und Kundenfeedback",
+            "Zusammenarbeit mit den Engineering-Teams zur Priorisierung von Funktionen und zur Wertschöpfung",
+            "Durchführung von Benutzerforschung und Analyse von Produktmetriken",
+            "Zusammenarbeit mit Vertriebs- und Marketingteams bei Markteinführungsstrategien",
+            "Präsentation von Produkt-Updates für Stakeholder und Kunden"
+          ],
+          "requirements": [
+            "3-5 Jahre Erfahrung im Produktmanagement im B2B-SaaS-Bereich",
+            "Starke analytische Fähigkeiten und datengesteuerte Entscheidungsfindung",
+            "Ausgezeichnete Kommunikations- und Stakeholder-Management-Fähigkeiten",
+            "Erfahrung im Bestands- oder Lieferkettenmanagement ist von Vorteil",
+            "MBA oder ein relevanter Hochschulabschluss wird bevorzugt"
+          ],
+          "benefits": [
+            "Wettbewerbsfähiges Gehalt und Leistungsprämien",
+            "Aktienoptionen",
+            "Umfassende Gesundheitsleistungen",
+            "Lern- und Entwicklungsmöglichkeiten",
+            "Modernes Büro im Zentrum von Paris"
+          ]
+        },
+        "salesRepresentative": {
+          "title": "Vertriebsmitarbeiter",
+          "department": "Vertrieb",
+          "location": "Remote (USA/Europa)",
+          "type": "Vollzeit",
+          "description": "Steigern Sie das Umsatzwachstum durch die Identifizierung und den Abschluss neuer Geschäftsmöglichkeiten mit KMUs.",
+          "salary": "60.000 € - 90.000 € + Provision",
+          "experience": "2-4 Jahre",
+          "posted": "Veröffentlicht vor 3 Tagen",
+          "responsibilities": [
+            "Identifizierung und Qualifizierung neuer Verkaufschancen durch Outbound-Prospecting",
+            "Durchführung von Produktdemos und Präsentationen für potenzielle Kunden",
+            "Aufbau und Pflege starker Kundenbeziehungen",
+            "Verhandlung von Verträgen und Abschluss von Geschäften zur Erreichung der Verkaufsziele",
+            "Zusammenarbeit mit Marketing- und Kundenerfolgsteams"
+          ],
+          "requirements": [
+            "2-4 Jahre Erfahrung im B2B-Vertrieb, vorzugsweise im SaaS-Bereich",
+            "Nachgewiesene Erfolgsbilanz bei der Erreichung oder Übererfüllung von Verkaufsquoten",
+            "Starke Präsentations- und Verhandlungsfähigkeiten",
+            "Selbstmotiviert mit ausgezeichnetem Zeitmanagement",
+            "Erfahrung mit CRM-Tools (Salesforce, HubSpot, etc.)"
+          ],
+          "benefits": [
+            "Grundgehalt plus unbegrenzte Provision",
+            "Flexibilität bei der Remote-Arbeit",
+            "Kranken- und Zahnversicherung",
+            "Verkaufstraining und Karriereentwicklung",
+            "Jährliche Team-Retreats"
+          ]
+        }
+      },
+      "application": {
+        "title": "Für diese Stelle bewerben",
+        "description": "Füllen Sie das untenstehende Formular aus, um sich zu bewerben. Wir werden es prüfen und uns bald bei Ihnen melden.",
+        "fullName": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer",
+        "resume": "Lebenslauf (PDF)",
+        "uploadResume": "Lebenslauf hochladen",
+        "changeResume": "Lebenslauf ändern",
+        "viewResume": "Ansehen",
+        "uploading": "Wird hochgeladen...",
+        "uploadSuccess": "Lebenslauf erfolgreich hochgeladen",
+        "uploadSuccessDescription": "Ihr Lebenslauf wurde hochgeladen und ist bereit zum Senden.",
+        "preview": "Lebenslauf-Vorschau",
+        "coverLetter": "Anschreiben (optional)",
+        "coverLetterPlaceholder": "Sagen Sie uns, warum Sie an dieser Stelle interessiert sind...",
+        "submit": "Bewerbung absenden",
+        "success": "Bewerbung erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.",
+        "resumeRequired": "Bitte laden Sie Ihren Lebenslauf hoch, um fortzufahren.",
+        "invalidFile": "Bitte laden Sie eine PDF-Datei hoch."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Bestandsmanagement zu transformieren?",
+      "subtitle": "Schließen Sie sich Tausenden von Unternehmen an, die FIBEM STOCK vertrauen, um ihre Abläufe zu optimieren und die Rentabilität zu steigern.",
+      "benefits": {
+        "reduceCosts": "Reduzieren Sie die Lagerkosten um bis zu 30 %",
+        "eliminateStockouts": "Beseitigen Sie Fehlbestände und Überbestände",
+        "saveTime": "Sparen Sie mehr als 10 Stunden pro Woche bei manuellen Aufgaben",
+        "improveRelations": "Verbessern Sie die Lieferantenbeziehungen"
+      },
+      "ctaPrimary": "Jetzt starten",
+      "ctaSecondary": "Demo vereinbaren",
+      "footer": "Keine Einrichtungsgebühren • Jederzeit kündbar • 24/7-Support inklusive"
+    },
+    "footer": {
+      "description": "Optimieren Sie Ihr Bestandsmanagement mit unserer leistungsstarken und intuitiven Software, die für moderne Unternehmen entwickelt wurde.",
+      "address": "123 Business Avenue, Suite 100, New York, NY 10001, USA",
+      "email": "contact@fibem.com",
+      "phone": "+1 (555) 123-4567",
+      "product": {
+        "title": "Produkt",
+        "features": "Funktionen",
+        "pricing": "Preise",
+        "integrations": "Integrationen",
+        "api": "API"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "about": "Über uns",
+        "careers": "Karriere",
+        "blog": "Blog",
+        "press": "Presse"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Hilfezentrum",
+        "documentation": "Dokumentation",
+        "contact": "Support kontaktieren",
+        "status": "Systemstatus"
+      },
+      "legal": {
+        "privacy": "Datenschutzrichtlinie",
+        "terms": "Nutzungsbedingungen",
+        "cookies": "Cookie-Richtlinie",
+        "gdpr": "DSGVO"
+      },
+      "copyright": "© 2025 FIBEM. Alle Rechte vorbehalten."
+    },
+    "lowStockAlerts": {
+      "title": "Echtzeit-Warnungen bei niedrigem Lagerbestand",
+      "subtitle": "Nie wieder ohne Ware dastehen. Erhalten Sie automatische Warnungen, wenn Ihre Artikel einen kritischen Stand erreichen, und bestellen Sie rechtzeitig nach.",
+      "criticalItems": "Kritische Artikel",
+      "criticalDescription": "Benötigen sofortige Wiederauffüllung",
+      "warningItems": "Artikel mit Warnung",
+      "warningDescription": "Nähern sich dem Mindestschwellenwert",
+      "totalValue": "Gesamtwert",
+      "valueDescription": "Wert der Artikel mit niedrigem Lagerbestand",
+      "itemsTitle": "Artikel, die Aufmerksamkeit erfordern",
+      "itemsDescription": "Überwachen und verwalten Sie Lagerbestände in Echtzeit",
+      "viewDashboard": "Dashboard anzeigen",
+      "critical": "Kritisch",
+      "warning": "Warnung",
+      "sku": "SKU",
+      "currentStock": "Aktueller Bestand",
+      "reorder": "Nachbestellen",
+      "ctaText": "Automatisieren Sie Ihre Lagerwarnungen und verpassen Sie nie wieder wichtige Artikel",
+      "ctaButton": "Kostenlos testen"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen bei FIBEM STOCK",
+    "subtitle": "Ein Überblick über Ihren Bestand und Ihre Aktivitäten",
+    "totalProducts": "Gesamtanzahl Produkte",
+    "lowStock": "Niedriger Lagerbestand",
+    "outOfStock": "Nicht vorrätig",
+    "totalValue": "Gesamtwert",
+    "recentActivity": "Letzte Aktivitäten",
+    "quickActions": "Schnellaktionen",
+    "addProduct": "Produkt hinzufügen",
+    "viewReports": "Berichte anzeigen",
+    "manageStock": "Bestand verwalten",
+    "realTime": {
+      "title": "Echtzeit-Verfolgung",
+      "description": "Überwachen Sie Ihre Bestandsänderungen live",
+      "live": "Live",
+      "stockMovements": "Lagerbewegungen",
+      "pendingOrders": "Ausstehende Bestellungen",
+      "recentUpdates": "Letzte Aktualisierungen",
+      "today": "Heute",
+      "processing": "In Bearbeitung",
+      "lastHour": "Letzte Stunde",
+      "activity1": "Bestand aktualisiert: Samsung Galaxy S24 (+15 Stk.)",
+      "activity2": "Neue Bestellung erhalten: iPhone 15 Pro (3 Stk.)",
+      "activity3": "Warnung bei niedrigem Lagerbestand: MacBook Air M2",
+      "justNow": "Gerade eben",
+      "twoMinutesAgo": "Vor 2 Minuten",
+      "fiveMinutesAgo": "Vor 5 Minuten"
+    }
+  },
+  "products": {
+    "title": "Produktmanagement",
+    "addProduct": "Produkt hinzufügen",
+    "productName": "Produktname",
+    "category": "Kategorie",
+    "stockQuantity": "Lagermenge",
+    "minimumStock": "Mindestbestand",
+    "unitPrice": "Stückpreis",
+    "supplier": "Lieferant",
+    "description": "Beschreibung",
+    "sku": "SKU",
+    "barcode": "Barcode",
+    "inStock": "Auf Lager",
+    "lowStock": "Niedriger Lagerbestand",
+    "outOfStock": "Nicht vorrätig",
+    "categories": {
+      "electronics": "Elektronik",
+      "clothing": "Kleidung",
+      "food": "Lebensmittel",
+      "books": "Bücher",
+      "sports": "Sport",
+      "home": "Haushalt",
+      "beauty": "Schönheit",
+      "toys": "Spielzeug"
+    }
+  },
+  "sales": {
+    "title": "Verkaufsmanagement",
+    "newSale": "Neuer Verkauf/Angebot",
+    "newQuotation": "Neues Angebot",
+    "invoiceNumber": "Rechnungsnummer",
+    "customer": "Kunde",
+    "customerName": "Kundenname",
+    "customerEmail": "Kunden-E-Mail",
+    "customerPhone": "Kundentelefon",
+    "customerAddress": "Kundenadresse",
+    "saleDate": "Verkaufsdatum",
+    "dueDate": "Fälligkeitsdatum",
+    "paymentStatus": "Zahlungsstatus",
+    "paid": "Bezahlt",
+    "pending": "Ausstehend",
+    "overdue": "Überfällig",
+    "draft": "Entwurf",
+    "viewInvoice": "Rechnung ansehen",
+    "downloadPdf": "PDF herunterladen",
+    "sendEmail": "Per E-Mail senden",
+    "monthlySales": "Monatliche Verkäufe",
+    "paidInvoices": "Bezahlte Rechnungen",
+    "pendingPayments": "Ausstehende Zahlungen",
+    "activeCustomers": "Aktive Kunden",
+    "selectProduct": "Produkt auswählen",
+    "addItem": "Position hinzufügen",
+    "removeItem": "Position entfernen",
+    "taxRate": "Steuersatz",
+    "paymentTerms": "Zahlungsbedingungen",
+    "invoice": "Rechnung",
+    "billTo": "Rechnung an",
+    "itemDescription": "Artikelbeschreibung",
+    "unitPrice": "Stückpreis",
+    "amount": "Betrag",
+    "quotation": "Angebot",
+    "quotations": "Angebote",
+    "validUntil": "Gültig bis",
+    "documentType": "Dokumenttyp",
+    "generateQuotation": "Angebot erstellen",
+    "viewQuotation": "Angebot ansehen",
+    "invoiceViewer": {
+      "title": "Rechnung",
+      "sendByEmail": "Per E-Mail senden",
+      "email": "E-Mail",
+      "downloadPdf": "PDF herunterladen",
+      "generating": "Wird generiert...",
+      "pdf": "PDF",
+      "companyName": "FIBEM STOCK",
+      "companyTagline": "Bestandsmanagementsystem",
+      "companyAddress": "123 Business Street",
+      "companyCity": "75001 Paris, Frankreich",
+      "companyPhone": "Tel: +33 1 23 45 67 89",
+      "companyEmail": "E-Mail: contact@fibemstock.fr",
+      "companySiret": "SIRET: 123 456 789 00012",
+      "invoiceTitle": "RECHNUNG",
+      "invoiceNumber": "Nr.",
+      "date": "Datum:",
+      "dueDate": "Fällig am:",
+      "billedTo": "Rechnung an:",
+      "description": "Beschreibung",
+      "sku": "SKU",
+      "quantity": "Menge",
+      "unitPriceShort": "Stückpr.",
+      "total": "Gesamt",
+      "subtotal": "Zwischensumme:",
+      "tax": "Steuer",
+      "grandTotal": "GESAMTSUMME:",
+      "paymentTermsTitle": "Zahlungsbedingungen",
+      "paymentTermsDue": "Fälligkeit:",
+      "paymentTermsDueText": "Zahlung innerhalb von 30 Tagen nach Rechnungserhalt",
+      "paymentTermsMethod": "Methode:",
+      "paymentTermsMethodText": "Banküberweisung oder Scheck an FIBEM STOCK",
+      "paymentTermsPenalties": "Strafen:",
+      "paymentTermsPenaltiesText": "Bei Zahlungsverzug wird eine Gebühr in Höhe des 3-fachen gesetzlichen Zinssatzes erhoben",
+      "footer": "Vielen Dank für Ihren Einkauf • FIBEM STOCK • www.fibemstock.fr",
+      "emailSubject": "Rechnung {{invoiceId}} - FIBEM STOCK",
+      "emailBody": "Hallo {{customerName}},\n\nanbei finden Sie Ihre Rechnung {{invoiceId}} über {{total}} €.\n\nFälligkeitsdatum: {{dueDate}}\n\nMit freundlichen Grüßen,\nDas FIBEM STOCK Team",
+      "quantityLabel": "Menge:",
+      "unitPriceLabel": "Stückpreis:",
+      "viewPdf": "PDF anzeigen",
+      "view": "Ansehen"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Ungültige E-Mail-Adresse",
+      "phone": "Ungültige Telefonnummer",
+      "minLength": "Mindestens {{min}} Zeichen",
+      "maxLength": "Maximal {{max}} Zeichen",
+      "positiveNumber": "Muss eine positive Zahl sein"
+    },
+    "success": {
+      "productAdded": "Produkt erfolgreich hinzugefügt",
+      "productUpdated": "Produkt erfolgreich aktualisiert",
+      "saleCreated": "Verkauf erfolgreich erstellt",
+      "invoiceSent": "Rechnung erfolgreich gesendet"
+    },
+    "errors": {
+      "generic": "Ein Fehler ist aufgetreten",
+      "networkError": "Netzwerkfehler",
+      "serverError": "Serverfehler"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 FIBEM STOCK. Alle Rechte vorbehalten.",
+    "poweredBy": "Powered by v0"
+  }
+}
