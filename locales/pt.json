@@ -1,0 +1,568 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "add": "Adicionar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "actions": "Ações",
+    "status": "Status",
+    "date": "Data",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "tax": "Imposto",
+    "quantity": "Quantidade",
+    "price": "Preço",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "city": "Cidade",
+    "postalCode": "Código Postal",
+    "country": "País",
+    "countryCode": "Código do País",
+    "notes": "Notas",
+    "required": "Obrigatório",
+    "optional": "Opcional"
+  },
+  "navigation": {
+    "dashboard": "Painel",
+    "products": "Produtos",
+    "sales": "Vendas",
+    "customers": "Clientes",
+    "suppliers": "Fornecedores",
+    "reports": "Relatórios",
+    "settings": "Configurações"
+  },
+  "landing": {
+    "header": {
+      "home": "Início",
+      "features": "Recursos",
+      "pricing": "Preços",
+      "careers": "Carreiras",
+      "contact": "Contato",
+      "dashboard": "Painel",
+      "login": "Entrar",
+      "toggleMenu": "Alternar menu"
+    },
+    "hero": {
+      "title": "Otimize Seu",
+      "titleHighlight": "Gerenciamento de Estoque",
+      "description": "Assuma o controle do seu estoque com nosso software poderoso e intuitivo. Monitore níveis de estoque, gerencie fornecedores e gere relatórios automatizados para otimizar suas operações comerciais.",
+      "ctaPrimary": "Acessar Painel",
+      "ctaSecondary": "Assistir Demo",
+      "noCreditCard": "Nenhum cartão de crédito necessário",
+      "freeTrial": "Teste grátis de 14 dias",
+      "imageAlt": "Painel FIBEM"
+    },
+    "features": {
+      "title": "Recursos Poderosos para Empresas Modernas",
+      "subtitle": "Tudo o que você precisa para gerenciar eficientemente seu estoque e expandir suas operações comerciais.",
+      "realTimeTracking": {
+        "title": "Rastreamento de Estoque em Tempo Real",
+        "description": "Monitore os níveis de estoque em tempo real com alertas automatizados para estoque baixo e pontos de reposição."
+      },
+      "supplierManagement": {
+        "title": "Gerenciamento de Fornecedores",
+        "description": "Gerencie relacionamentos com fornecedores, rastreie ordens de compra e mantenha métricas de desempenho de fornecedores."
+      },
+      "automatedReports": {
+        "title": "Relatórios Automatizados",
+        "description": "Gere relatórios abrangentes sobre rotatividade de estoque, custos e análises de desempenho."
+      },
+      "quickIntegration": {
+        "title": "Integração Rápida",
+        "description": "Integre facilmente com seus sistemas ERP, contabilidade e plataformas de e-commerce existentes."
+      },
+      "secureCompliant": {
+        "title": "Seguro e Compatível",
+        "description": "Segurança de nível empresarial com controle de acesso baseado em funções e trilhas de auditoria."
+      },
+      "multiLocation": {
+        "title": "Suporte Multi-Localização",
+        "description": "Gerencie estoque em múltiplos armazéns e localizações a partir de um único painel."
+      }
+    },
+    "pricing": {
+      "title": "Preços Simples e Transparentes",
+      "subtitle": "Escolha o plano perfeito para seu negócio. Todos os planos incluem nossos recursos principais de gerenciamento de estoque.",
+      "starter": {
+        "name": "Iniciante",
+        "price": "€29",
+        "period": "/mês",
+        "description": "Perfeito para pequenas empresas começando",
+        "features": {
+          "products": "Até 1.000 produtos",
+          "reports": "Relatórios básicos",
+          "support": "Suporte por e-mail",
+          "mobile": "Acesso ao app móvel",
+          "users": "2 contas de usuário"
+        }
+      },
+      "professional": {
+        "name": "Profissional",
+        "price": "€79",
+        "period": "/mês",
+        "description": "Ideal para empresas em crescimento",
+        "popular": "Mais Popular",
+        "features": {
+          "products": "Até 10.000 produtos",
+          "analytics": "Análises avançadas",
+          "support": "Suporte prioritário",
+          "api": "Acesso à API",
+          "users": "10 contas de usuário",
+          "integrations": "Integrações personalizadas"
+        }
+      },
+      "enterprise": {
+        "name": "Empresarial",
+        "price": "Personalizado",
+        "description": "Para grandes organizações com necessidades complexas",
+        "features": {
+          "products": "Produtos ilimitados",
+          "reports": "Relatórios personalizados",
+          "support": "Suporte dedicado 24/7",
+          "whiteLabel": "Opções de marca branca",
+          "users": "Usuários ilimitados",
+          "security": "Segurança avançada",
+          "development": "Desenvolvimento personalizado"
+        }
+      },
+      "trialInfo": "Todos os planos incluem um teste grátis de 14 dias. Nenhum cartão de crédito necessário.",
+      "compareFeatures": "Comparar Todos os Recursos",
+      "getStarted": "Começar",
+      "contactSales": "Entrar em Contato com Vendas"
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "subtitle": "Pronto para transformar seu gerenciamento de estoque? Entre em contato com nossa equipe para uma demonstração personalizada.",
+      "form": {
+        "title": "Envie-nos uma Mensagem",
+        "description": "Preencha o formulário abaixo e responderemos em até 24 horas.",
+        "name": "Nome Completo",
+        "namePlaceholder": "João Silva",
+        "email": "E-mail",
+        "emailPlaceholder": "joao@empresa.com",
+        "phone": "Número de Telefone",
+        "phonePlaceholder": "+55 11 99999-9999",
+        "message": "Mensagem",
+        "messagePlaceholder": "Conte-nos sobre suas necessidades de gerenciamento de estoque...",
+        "submit": "Enviar Mensagem",
+        "submitting": "Enviando...",
+        "success": "Mensagem enviada com sucesso!",
+        "error": "Falha ao enviar mensagem. Tente novamente."
+      },
+      "whatsapp": {
+        "title": "Contato via WhatsApp",
+        "description": "Obtenha suporte instantâneo através do WhatsApp",
+        "details": "Converse com nossa equipe diretamente no WhatsApp para respostas rápidas às suas perguntas.",
+        "button": "Conversar no WhatsApp",
+        "availability": "Disponível Segunda - Sábado, 9:00 - 18:00"
+      },
+      "info": {
+        "title": "Informações de Contato",
+        "description": "Entre em contato conosco através de qualquer um desses canais.",
+        "email": {
+          "title": "E-mail",
+          "sales": "vendas@fibem.com",
+          "support": "suporte@fibem.com"
+        },
+        "phone": {
+          "title": "Telefone",
+          "main": "+55 11 9999-9999",
+          "secondary": "+55 11 8888-8888"
+        },
+        "address": {
+          "title": "Endereço",
+          "line1": "Av. dos Negócios, 123",
+          "line2": "Sala 456",
+          "line3": "São Paulo, SP 01000-000, Brasil"
+        },
+        "hours": {
+          "title": "Horário de Funcionamento",
+          "weekdays": "Segunda - Sexta: 9:00 - 18:00",
+          "saturday": "Sábado: 10:00 - 16:00",
+          "sunday": "Domingo: Fechado"
+        }
+      },
+      "demo": {
+        "title": "Agende uma Demo",
+        "description": "Veja nosso sistema de gerenciamento de estoque em ação.",
+        "details": "Agende uma demonstração personalizada de 30 minutos com nossos especialistas em produto e descubra como nossa solução pode otimizar suas operações de estoque.",
+        "button": "Agendar uma Demo"
+      }
+    },
+    "careers": {
+      "title": "Junte-se à Nossa Equipe",
+      "subtitle": "Faça parte de uma equipe dinâmica que está revolucionando o gerenciamento de estoque. Explore oportunidades de carreira empolgantes e cresça conosco.",
+      "viewDetails": "Ver Detalhes",
+      "viewAllPositions": "Ver Todas as Posições",
+      "notFound": "Não vê uma posição que se adequa? Estamos sempre procurando indivíduos talentosos.",
+      "backToJobs": "Voltar aos Empregos",
+      "jobNotFound": "Emprego Não Encontrado",
+      "details": {
+        "location": "Localização",
+        "type": "Tipo",
+        "salary": "Salário",
+        "experience": "Experiência",
+        "responsibilities": "Responsabilidades",
+        "requirements": "Requisitos",
+        "benefits": "Benefícios",
+        "applyTitle": "Pronto para Se Candidatar?",
+        "applyDescription": "Junte-se à nossa equipe e ajude a moldar o futuro do gerenciamento de estoque.",
+        "applyNow": "Candidatar-se Agora"
+      },
+      "jobs": {
+        "softwareEngineer": {
+          "title": "Engenheiro de Software Sênior",
+          "department": "Engenharia",
+          "location": "Lisboa, Portugal / Remoto",
+          "type": "Tempo integral",
+          "description": "Junte-se à nossa equipe de engenharia para construir soluções escalonáveis de gerenciamento de estoque usando tecnologias modernas.",
+          "salary": "€60.000 - €90.000",
+          "experience": "5+ anos",
+          "posted": "Publicado há 2 dias",
+          "responsibilities": [
+            "Projetar e desenvolver novos recursos para nossa plataforma de gerenciamento de estoque",
+            "Escrever código limpo, sustentável e bem testado",
+            "Colaborar com gerentes de produto e designers para entregar experiências excepcionais ao usuário",
+            "Orientar engenheiros juniores e contribuir para documentação técnica",
+            "Participar de revisões de código e discussões arquitetônicas"
+          ],
+          "requirements": [
+            "5+ anos de experiência em desenvolvimento de software",
+            "Forte proficiência em React, TypeScript e Node.js",
+            "Experiência com tecnologias web modernas e plataformas de nuvem",
+            "Excelentes habilidades de resolução de problemas e comunicação",
+            "Bacharelado em Ciência da Computação ou área relacionada"
+          ],
+          "benefits": [
+            "Salário competitivo e pacote de equity",
+            "Opções flexíveis de trabalho remoto",
+            "Seguro saúde e programas de bem-estar",
+            "Orçamento para desenvolvimento profissional",
+            "25 dias de férias pagas"
+          ]
+        },
+        "productManager": {
+          "title": "Gerente de Produto",
+          "department": "Produto",
+          "location": "Lisboa, Portugal",
+          "type": "Tempo integral",
+          "description": "Lidere a estratégia e desenvolvimento de produto para nossa plataforma de gerenciamento de estoque, trabalhando de perto com clientes e stakeholders.",
+          "salary": "€70.000 - €100.000",
+          "experience": "3-5 anos",
+          "posted": "Publicado há 1 semana",
+          "responsibilities": [
+            "Definir visão e roadmap do produto com base em pesquisa de mercado e feedback do cliente",
+            "Trabalhar com equipes de engenharia para priorizar recursos e entregar valor",
+            "Conduzir pesquisa de usuário e analisar métricas de produto",
+            "Colaborar com equipes de vendas e marketing em estratégias de go-to-market",
+            "Apresentar atualizações de produto para stakeholders e clientes"
+          ],
+          "requirements": [
+            "3-5 anos de experiência em gerenciamento de produto em B2B SaaS",
+            "Fortes habilidades analíticas e tomada de decisão baseada em dados",
+            "Excelentes habilidades de comunicação e gerenciamento de stakeholders",
+            "Experiência com gerenciamento de estoque ou supply chain é um plus",
+            "MBA ou graduação avançada relevante preferível"
+          ],
+          "benefits": [
+            "Salário competitivo e bônus de desempenho",
+            "Opções de ações",
+            "Benefícios de saúde abrangentes",
+            "Oportunidades de aprendizado e desenvolvimento",
+            "Escritório moderno no centro de Lisboa"
+          ]
+        },
+        "salesRepresentative": {
+          "title": "Representante de Vendas",
+          "department": "Vendas",
+          "location": "Remoto (Brasil/Portugal)",
+          "type": "Tempo integral",
+          "description": "Impulsione o crescimento da receita identificando e fechando novas oportunidades de negócios com pequenas e médias empresas.",
+          "salary": "€45.000 - €70.000 + Comissão",
+          "experience": "2-4 anos",
+          "posted": "Publicado há 3 dias",
+          "responsibilities": [
+            "Identificar e qualificar novas oportunidades de vendas através de prospecção outbound",
+            "Conduzir demonstrações e apresentações de produto para clientes potenciais",
+            "Construir e manter relacionamentos sólidos com clientes",
+            "Negociar contratos e fechar negócios para atingir metas de vendas",
+            "Colaborar com equipes de marketing e sucesso do cliente"
+          ],
+          "requirements": [
+            "2-4 anos de experiência em vendas B2B, preferencialmente em SaaS",
+            "Histórico comprovado de atingir ou superar cotas de vendas",
+            "Fortes habilidades de apresentação e negociação",
+            "Auto-motivado com excelente gerenciamento de tempo",
+            "Experiência com ferramentas de CRM (Salesforce, HubSpot, etc.)"
+          ],
+          "benefits": [
+            "Salário base mais comissão sem limite",
+            "Flexibilidade de trabalho remoto",
+            "Seguro saúde e odontológico",
+            "Treinamento de vendas e avanço na carreira",
+            "Retiros anuais da equipe"
+          ]
+        }
+      },
+      "application": {
+        "title": "Candidatar-se a Esta Posição",
+        "description": "Preencha o formulário abaixo para enviar sua candidatura. Analisaremos e entraremos em contato em breve.",
+        "fullName": "Nome Completo",
+        "email": "Endereço de E-mail",
+        "phone": "Número de Telefone",
+        "resume": "Currículo (PDF)",
+        "uploadResume": "Enviar Currículo",
+        "changeResume": "Alterar Currículo",
+        "viewResume": "Ver",
+        "uploading": "Enviando...",
+        "uploadSuccess": "Currículo enviado com sucesso",
+        "uploadSuccessDescription": "Seu currículo foi enviado e está pronto para submissão.",
+        "preview": "Visualização do Currículo",
+        "coverLetter": "Carta de Apresentação (Opcional)",
+        "coverLetterPlaceholder": "Conte-nos por que você está interessado nesta posição...",
+        "submit": "Enviar Candidatura",
+        "success": "Candidatura enviada com sucesso! Entraremos em contato em breve.",
+        "resumeRequired": "Por favor, envie seu currículo para continuar.",
+        "invalidFile": "Por favor, envie um arquivo PDF."
+      }
+    },
+    "cta": {
+      "title": "Pronto para Transformar Seu Gerenciamento de Estoque?",
+      "subtitle": "Junte-se a milhares de empresas que confiam no FIBEM STOCK para otimizar suas operações e aumentar a lucratividade.",
+      "benefits": {
+        "reduceCosts": "Reduza custos de estoque em até 30%",
+        "eliminateStockouts": "Elimine rupturas de estoque e excesso de estoque",
+        "saveTime": "Economize 10+ horas por semana em tarefas manuais",
+        "improveRelations": "Melhore relacionamentos com fornecedores"
+      },
+      "ctaPrimary": "Começar Agora",
+      "ctaSecondary": "Agendar uma Demo",
+      "footer": "Sem taxas de configuração • Cancele a qualquer momento • Suporte 24/7 incluído"
+    },
+    "footer": {
+      "description": "Otimize seu gerenciamento de estoque com nosso software poderoso e intuitivo projetado para empresas modernas.",
+      "address": "Av. dos Negócios, 123, Sala 100, São Paulo, SP 01000-000, Brasil",
+      "email": "contato@fibem.com",
+      "phone": "+55 11 9999-9999",
+      "product": {
+        "title": "Produto",
+        "features": "Recursos",
+        "pricing": "Preços",
+        "integrations": "Integrações",
+        "api": "API"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Sobre",
+        "careers": "Carreiras",
+        "blog": "Blog",
+        "press": "Imprensa"
+      },
+      "support": {
+        "title": "Suporte",
+        "helpCenter": "Central de Ajuda",
+        "documentation": "Documentação",
+        "contact": "Contatar Suporte",
+        "status": "Status do Sistema"
+      },
+      "legal": {
+        "privacy": "Política de Privacidade",
+        "terms": "Termos de Serviço",
+        "cookies": "Política de Cookies",
+        "gdpr": "LGPD"
+      },
+      "copyright": "© 2025 FIBEM. Todos os direitos reservados."
+    },
+    "lowStockAlerts": {
+      "title": "Alertas de Estoque Baixo em Tempo Real",
+      "subtitle": "Nunca mais fique sem estoque. Receba alertas automáticos quando seus produtos atingirem níveis críticos e reponha no momento certo.",
+      "criticalItems": "Itens Críticos",
+      "criticalDescription": "Requerem reposição imediata",
+      "warningItems": "Itens de Aviso",
+      "warningDescription": "Aproximando-se do limite mínimo",
+      "totalValue": "Valor Total",
+      "valueDescription": "Valor dos itens com estoque baixo",
+      "itemsTitle": "Itens Que Requerem Atenção",
+      "itemsDescription": "Monitore e gerencie seus níveis de estoque em tempo real",
+      "viewDashboard": "Ver Painel",
+      "critical": "Crítico",
+      "warning": "Aviso",
+      "sku": "SKU",
+      "currentStock": "Estoque Atual",
+      "reorder": "Repor",
+      "ctaText": "Automatize seus alertas de estoque e nunca mais perca produtos importantes",
+      "ctaButton": "Teste Grátis"
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo ao FIBEM STOCK",
+    "subtitle": "Visão geral do seu estoque e atividade",
+    "totalProducts": "Total de Produtos",
+    "lowStock": "Estoque Baixo",
+    "outOfStock": "Sem Estoque",
+    "totalValue": "Valor Total",
+    "recentActivity": "Atividade Recente",
+    "quickActions": "Ações Rápidas",
+    "addProduct": "Adicionar Produto",
+    "viewReports": "Ver Relatórios",
+    "manageStock": "Gerenciar Estoque",
+    "realTime": {
+      "title": "Rastreamento em Tempo Real",
+      "description": "Monitore suas mudanças de estoque conforme acontecem",
+      "live": "Ao Vivo",
+      "stockMovements": "Movimentações de Estoque",
+      "pendingOrders": "Pedidos Pendentes",
+      "recentUpdates": "Atualizações Recentes",
+      "today": "Hoje",
+      "processing": "Processando",
+      "lastHour": "Última hora",
+      "activity1": "Estoque atualizado: Samsung Galaxy S24 (+15 unidades)",
+      "activity2": "Novo pedido recebido: iPhone 15 Pro (3 unidades)",
+      "activity3": "Alerta de estoque baixo: MacBook Air M2",
+      "justNow": "Agora mesmo",
+      "twoMinutesAgo": "2 minutos atrás",
+      "fiveMinutesAgo": "5 minutos atrás"
+    }
+  },
+  "products": {
+    "title": "Gerenciamento de Produtos",
+    "addProduct": "Adicionar Produto",
+    "productName": "Nome do Produto",
+    "category": "Categoria",
+    "stockQuantity": "Quantidade em Estoque",
+    "minimumStock": "Estoque Mínimo",
+    "unitPrice": "Preço Unitário",
+    "supplier": "Fornecedor",
+    "description": "Descrição",
+    "sku": "SKU",
+    "barcode": "Código de Barras",
+    "inStock": "Em Estoque",
+    "lowStock": "Estoque Baixo",
+    "outOfStock": "Sem Estoque",
+    "categories": {
+      "electronics": "Eletrônicos",
+      "clothing": "Roupas",
+      "food": "Comida",
+      "books": "Livros",
+      "sports": "Esportes",
+      "home": "Casa",
+      "beauty": "Beleza",
+      "toys": "Brinquedos"
+    }
+  },
+  "sales": {
+    "title": "Gerenciamento de Vendas",
+    "newSale": "Nova Venda/Orçamento",
+    "newQuotation": "Novo Orçamento",
+    "invoiceNumber": "Número da Fatura",
+    "customer": "Cliente",
+    "customerName": "Nome do Cliente",
+    "customerEmail": "E-mail do Cliente",
+    "customerPhone": "Telefone do Cliente",
+    "customerAddress": "Endereço do Cliente",
+    "saleDate": "Data da Venda",
+    "dueDate": "Data de Vencimento",
+    "paymentStatus": "Status do Pagamento",
+    "paid": "Pago",
+    "pending": "Pendente",
+    "overdue": "Vencido",
+    "draft": "Rascunho",
+    "viewInvoice": "Ver Fatura",
+    "downloadPdf": "Baixar PDF",
+    "sendEmail": "Enviar E-mail",
+    "monthlySales": "Vendas Mensais",
+    "paidInvoices": "Faturas Pagas",
+    "pendingPayments": "Pagamentos Pendentes",
+    "activeCustomers": "Clientes Ativos",
+    "selectProduct": "Selecionar Produto",
+    "addItem": "Adicionar Item",
+    "removeItem": "Remover Item",
+    "taxRate": "Taxa de Imposto",
+    "paymentTerms": "Termos de Pagamento",
+    "invoice": "Fatura",
+    "billTo": "Faturar Para",
+    "itemDescription": "Descrição do Item",
+    "unitPrice": "Preço Unitário",
+    "amount": "Valor",
+    "quotation": "Orçamento",
+    "quotations": "Orçamentos",
+    "validUntil": "Válido Até",
+    "documentType": "Tipo de Documento",
+    "generateQuotation": "Gerar Orçamento",
+    "viewQuotation": "Ver Orçamento",
+    "invoiceViewer": {
+      "title": "Fatura",
+      "sendByEmail": "Enviar por E-mail",
+      "email": "E-mail",
+      "downloadPdf": "Baixar PDF",
+      "generating": "Gerando...",
+      "pdf": "PDF",
+      "companyName": "FIBEM STOCK",
+      "companyTagline": "Sistema de Gerenciamento de Estoque",
+      "companyAddress": "Rua dos Negócios, 123",
+      "companyCity": "01000-000 São Paulo, Brasil",
+      "companyPhone": "Tel: +55 11 9999-9999",
+      "companyEmail": "E-mail: contato@fibemstock.com.br",
+      "companySiret": "CNPJ: 00.000.000/0001-00",
+      "invoiceTitle": "FATURA",
+      "invoiceNumber": "Nº",
+      "date": "Data:",
+      "dueDate": "Data de Vencimento:",
+      "billedTo": "Faturado para:",
+      "description": "Descrição",
+      "sku": "SKU",
+      "quantity": "Qtd",
+      "unitPriceShort": "Preço Unit.",
+      "total": "Total",
+      "subtotal": "Subtotal:",
+      "tax": "Imposto",
+      "grandTotal": "TOTAL:",
+      "paymentTermsTitle": "Termos de Pagamento",
+      "paymentTermsDue": "Vencimento:",
+      "paymentTermsDueText": "Pagamento devido em 30 dias após o recebimento da fatura",
+      "paymentTermsMethod": "Método:",
+      "paymentTermsMethodText": "Transferência bancária ou cheque nominal a FIBEM STOCK",
+      "paymentTermsPenalties": "Multas:",
+      "paymentTermsPenaltiesText": "Multas por atraso de 3 vezes a taxa legal se aplicam",
+      "footer": "Obrigado pelo seu negócio • FIBEM STOCK • www.fibemstock.com.br",
+      "emailSubject": "Fatura {{invoiceId}} - FIBEM STOCK",
+      "emailBody": "Olá {{customerName}},\\n\\nSegue em anexo sua fatura {{invoiceId}} no valor de €{{total}}.\\n\\nData de vencimento: {{dueDate}}\\n\\nAtenciosamente,\\nEquipe FIBEM STOCK",
+      "quantityLabel": "Quantidade:",
+      "unitPriceLabel": "Preço unitário:",
+      "viewPdf": "Ver PDF",
+      "view": "Ver"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "Este campo é obrigatório",
+      "email": "Endereço de e-mail inválido",
+      "phone": "Número de telefone inválido",
+      "minLength": "Mínimo {{min}} caracteres",
+      "maxLength": "Máximo {{max}} caracteres",
+      "positiveNumber": "Deve ser um número positivo"
+    },
+    "success": {
+      "productAdded": "Produto adicionado com sucesso",
+      "productUpdated": "Produto atualizado com sucesso",
+      "saleCreated": "Venda criada com sucesso",
+      "invoiceSent": "Fatura enviada com sucesso"
+    },
+    "errors": {
+      "generic": "Ocorreu um erro",
+      "networkError": "Erro de rede",
+      "serverError": "Erro do servidor"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 FIBEM STOCK. Todos os direitos reservados.",
+    "poweredBy": "Desenvolvido por v0"
+  }
+}

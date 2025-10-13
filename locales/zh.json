@@ -1,0 +1,568 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "search": "搜索",
+    "filter": "筛选",
+    "actions": "操作",
+    "status": "状态",
+    "date": "日期",
+    "total": "总计",
+    "subtotal": "小计",
+    "tax": "税金",
+    "quantity": "数量",
+    "price": "价格",
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "address": "地址",
+    "city": "城市",
+    "postalCode": "邮政编码",
+    "country": "国家",
+    "countryCode": "国家代码",
+    "notes": "备注",
+    "required": "必填",
+    "optional": "可选"
+  },
+  "navigation": {
+    "dashboard": "仪表板",
+    "products": "产品",
+    "sales": "销售",
+    "customers": "客户",
+    "suppliers": "供应商",
+    "reports": "报表",
+    "settings": "设置"
+  },
+  "landing": {
+    "header": {
+      "home": "首页",
+      "features": "功能",
+      "pricing": "定价",
+      "careers": "职业",
+      "contact": "联系",
+      "dashboard": "仪表板",
+      "login": "登录",
+      "toggleMenu": "切换菜单"
+    },
+    "hero": {
+      "title": "优化您的",
+      "titleHighlight": "库存管理",
+      "description": "使用我们强大而直观的软件控制您的库存。跟踪库存水平，管理供应商，生成自动化报告以优化您的业务运营。",
+      "ctaPrimary": "访问仪表板",
+      "ctaSecondary": "观看演示",
+      "noCreditCard": "无需信用卡",
+      "freeTrial": "14天免费试用",
+      "imageAlt": "FIBEM 仪表板"
+    },
+    "features": {
+      "title": "现代企业的强大功能",
+      "subtitle": "高效管理库存和发展业务运营所需的一切。",
+      "realTimeTracking": {
+        "title": "实时库存跟踪",
+        "description": "实时监控库存水平，当库存不足和需要补货时自动发出警报。"
+      },
+      "supplierManagement": {
+        "title": "供应商管理",
+        "description": "管理供应商关系，跟踪采购订单，维护供应商绩效指标。"
+      },
+      "automatedReports": {
+        "title": "自动化报告",
+        "description": "生成关于库存周转、成本和绩效分析的综合报告。"
+      },
+      "quickIntegration": {
+        "title": "快速集成",
+        "description": "轻松与您现有的ERP、会计和电子商务平台集成。"
+      },
+      "secureCompliant": {
+        "title": "安全合规",
+        "description": "企业级安全，基于角色的访问控制和审计跟踪。"
+      },
+      "multiLocation": {
+        "title": "多地点支持",
+        "description": "从单一仪表板管理多个仓库和地点的库存。"
+      }
+    },
+    "pricing": {
+      "title": "简单透明的定价",
+      "subtitle": "为您的企业选择完美的计划。所有计划都包含我们的核心库存管理功能。",
+      "starter": {
+        "name": "入门版",
+        "price": "¥199",
+        "period": "/月",
+        "description": "适合刚起步的小企业",
+        "features": {
+          "products": "最多1,000个产品",
+          "reports": "基础报告",
+          "support": "邮件支持",
+          "mobile": "移动应用访问",
+          "users": "2个用户账户"
+        }
+      },
+      "professional": {
+        "name": "专业版",
+        "price": "¥599",
+        "period": "/月",
+        "description": "适合成长中的企业",
+        "popular": "最受欢迎",
+        "features": {
+          "products": "最多10,000个产品",
+          "analytics": "高级分析",
+          "support": "优先支持",
+          "api": "API访问",
+          "users": "10个用户账户",
+          "integrations": "自定义集成"
+        }
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "定制",
+        "description": "适合有复杂需求的大型组织",
+        "features": {
+          "products": "无限产品",
+          "reports": "定制报告",
+          "support": "7x24专属支持",
+          "whiteLabel": "白标选项",
+          "users": "无限用户",
+          "security": "高级安全",
+          "development": "定制开发"
+        }
+      },
+      "trialInfo": "所有计划都包含14天免费试用。无需信用卡。",
+      "compareFeatures": "比较所有功能",
+      "getStarted": "开始使用",
+      "contactSales": "联系销售"
+    },
+    "contact": {
+      "title": "联系我们",
+      "subtitle": "准备转变您的库存管理？联系我们的团队获得个性化演示。",
+      "form": {
+        "title": "给我们留言",
+        "description": "填写下面的表格，我们将在24小时内回复。",
+        "name": "全名",
+        "namePlaceholder": "张三",
+        "email": "邮箱",
+        "emailPlaceholder": "zhang@company.com",
+        "phone": "电话号码",
+        "phonePlaceholder": "+86 138 0000 0000",
+        "message": "留言",
+        "messagePlaceholder": "告诉我们您的库存管理需求...",
+        "submit": "发送留言",
+        "submitting": "发送中...",
+        "success": "留言发送成功！",
+        "error": "发送失败，请重试。"
+      },
+      "whatsapp": {
+        "title": "WhatsApp联系",
+        "description": "通过WhatsApp获得即时支持",
+        "details": "直接通过WhatsApp与我们的团队聊天，快速回答您的问题。",
+        "button": "在WhatsApp上聊天",
+        "availability": "服务时间：周一至周六，上午9:00 - 下午6:00"
+      },
+      "info": {
+        "title": "联系信息",
+        "description": "通过以下任一渠道联系我们。",
+        "email": {
+          "title": "邮箱",
+          "sales": "sales@fibem.com",
+          "support": "support@fibem.com"
+        },
+        "phone": {
+          "title": "电话",
+          "main": "+86 400-000-0000",
+          "secondary": "+86 400-111-1111"
+        },
+        "address": {
+          "title": "地址",
+          "line1": "商务大道123号",
+          "line2": "456室",
+          "line3": "北京市朝阳区 100000，中国"
+        },
+        "hours": {
+          "title": "营业时间",
+          "weekdays": "周一至周五：上午9:00 - 下午6:00",
+          "saturday": "周六：上午10:00 - 下午4:00",
+          "sunday": "周日：休息"
+        }
+      },
+      "demo": {
+        "title": "预约演示",
+        "description": "看看我们的库存管理系统实际操作。",
+        "details": "预约30分钟的个性化演示，与我们的产品专家一起发现我们的解决方案如何优化您的库存运营。",
+        "button": "预约演示"
+      }
+    },
+    "careers": {
+      "title": "加入我们的团队",
+      "subtitle": "成为正在革新库存管理的动态团队的一员。探索令人兴奋的职业机会，与我们一起成长。",
+      "viewDetails": "查看详情",
+      "viewAllPositions": "查看所有职位",
+      "notFound": "没有看到合适的职位？我们一直在寻找优秀人才。",
+      "backToJobs": "返回职位",
+      "jobNotFound": "职位未找到",
+      "details": {
+        "location": "地点",
+        "type": "类型",
+        "salary": "薪资",
+        "experience": "经验",
+        "responsibilities": "职责",
+        "requirements": "要求",
+        "benefits": "福利",
+        "applyTitle": "准备好申请了吗？",
+        "applyDescription": "加入我们的团队，帮助塑造库存管理的未来。",
+        "applyNow": "立即申请"
+      },
+      "jobs": {
+        "softwareEngineer": {
+          "title": "高级软件工程师",
+          "department": "工程",
+          "location": "上海，中国 / 远程",
+          "type": "全职",
+          "description": "加入我们的工程团队，使用现代技术构建可扩展的库存管理解决方案。",
+          "salary": "¥400,000 - ¥600,000",
+          "experience": "5年以上",
+          "posted": "2天前发布",
+          "responsibilities": [
+            "设计和开发库存管理平台的新功能",
+            "编写干净、可维护且经过良好测试的代码",
+            "与产品经理和设计师协作，提供卓越的用户体验",
+            "指导初级工程师并贡献技术文档",
+            "参与代码审查和架构讨论"
+          ],
+          "requirements": [
+            "5年以上软件开发经验",
+            "精通React、TypeScript和Node.js",
+            "有现代Web技术和云平台经验",
+            "优秀的问题解决和沟通技能",
+            "计算机科学或相关专业学士学位"
+          ],
+          "benefits": [
+            "具有竞争力的薪资和股权包",
+            "灵活的远程工作选择",
+            "健康保险和健康计划",
+            "专业发展预算",
+            "25天带薪假期"
+          ]
+        },
+        "productManager": {
+          "title": "产品经理",
+          "department": "产品",
+          "location": "上海，中国",
+          "type": "全职",
+          "description": "领导我们库存管理平台的产品战略和开发，与客户和利益相关者密切合作。",
+          "salary": "¥350,000 - ¥500,000",
+          "experience": "3-5年",
+          "posted": "1周前发布",
+          "responsibilities": [
+            "基于市场研究和客户反馈定义产品愿景和路线图",
+            "与工程团队合作优先考虑功能并交付价值",
+            "进行用户研究并分析产品指标",
+            "与销售和营销团队合作制定上市策略",
+            "向利益相关者和客户展示产品更新"
+          ],
+          "requirements": [
+            "B2B SaaS产品管理经验3-5年",
+            "强大的分析和数据驱动决策技能",
+            "优秀的沟通和利益相关者管理能力",
+            "有库存或供应链管理经验者优先",
+            "MBA或相关高级学位优先"
+          ],
+          "benefits": [
+            "具有竞争力的薪资和绩效奖金",
+            "股票期权",
+            "全面的健康福利",
+            "学习和发展机会",
+            "上海市中心的现代办公室"
+          ]
+        },
+        "salesRepresentative": {
+          "title": "销售代表",
+          "department": "销售",
+          "location": "远程（中国）",
+          "type": "全职",
+          "description": "通过识别和达成与中小企业的新业务机会推动收入增长。",
+          "salary": "¥250,000 - ¥400,000 + 提成",
+          "experience": "2-4年",
+          "posted": "3天前发布",
+          "responsibilities": [
+            "通过主动开发识别和筛选新的销售机会",
+            "向潜在客户进行产品演示和展示",
+            "与客户建立和维护牢固的关系",
+            "谈判合同并达成交易以满足销售目标",
+            "与营销和客户成功团队协作"
+          ],
+          "requirements": [
+            "2-4年B2B销售经验，SaaS领域优先",
+            "有达到或超过销售配额的良好记录",
+            "强大的展示和谈判技能",
+            "自我驱动，时间管理能力优秀",
+            "有CRM工具（Salesforce、HubSpot等）使用经验"
+          ],
+          "benefits": [
+            "基本工资加无上限提成",
+            "远程工作灵活性",
+            "健康和牙科保险",
+            "销售培训和职业发展",
+            "年度团队聚会"
+          ]
+        }
+      },
+      "application": {
+        "title": "申请此职位",
+        "description": "填写下面的表格提交您的申请。我们将审核并很快与您联系。",
+        "fullName": "全名",
+        "email": "邮箱地址",
+        "phone": "电话号码",
+        "resume": "简历（PDF）",
+        "uploadResume": "上传简历",
+        "changeResume": "更换简历",
+        "viewResume": "查看",
+        "uploading": "上传中...",
+        "uploadSuccess": "简历上传成功",
+        "uploadSuccessDescription": "您的简历已上传并准备提交。",
+        "preview": "简历预览",
+        "coverLetter": "求职信（可选）",
+        "coverLetterPlaceholder": "告诉我们您为什么对这个职位感兴趣...",
+        "submit": "提交申请",
+        "success": "申请提交成功！我们很快会与您联系。",
+        "resumeRequired": "请上传您的简历以继续。",
+        "invalidFile": "请上传PDF文件。"
+      }
+    },
+    "cta": {
+      "title": "准备转变您的库存管理吗？",
+      "subtitle": "加入数千家信任FIBEM STOCK优化运营并提高盈利能力的企业。",
+      "benefits": {
+        "reduceCosts": "降低库存成本高达30%",
+        "eliminateStockouts": "消除缺货和库存过剩",
+        "saveTime": "每周节省10+小时的手工工作",
+        "improveRelations": "改善供应商关系"
+      },
+      "ctaPrimary": "立即开始",
+      "ctaSecondary": "预约演示",
+      "footer": "无设置费 • 随时取消 • 包含24/7支持"
+    },
+    "footer": {
+      "description": "使用我们为现代企业设计的强大直观软件优化您的库存管理。",
+      "address": "商务大道123号，100室，北京市朝阳区 100000，中国",
+      "email": "contact@fibem.com",
+      "phone": "+86 400-000-0000",
+      "product": {
+        "title": "产品",
+        "features": "功能",
+        "pricing": "定价",
+        "integrations": "集成",
+        "api": "API"
+      },
+      "company": {
+        "title": "公司",
+        "about": "关于",
+        "careers": "职业",
+        "blog": "博客",
+        "press": "媒体"
+      },
+      "support": {
+        "title": "支持",
+        "helpCenter": "帮助中心",
+        "documentation": "文档",
+        "contact": "联系支持",
+        "status": "系统状态"
+      },
+      "legal": {
+        "privacy": "隐私政策",
+        "terms": "服务条款",
+        "cookies": "Cookie政策",
+        "gdpr": "GDPR"
+      },
+      "copyright": "© 2025 FIBEM。保留所有权利。"
+    },
+    "lowStockAlerts": {
+      "title": "实时库存不足警报",
+      "subtitle": "再也不会缺货。当您的产品达到临界水平时获得自动警报，及时补货。",
+      "criticalItems": "紧急商品",
+      "criticalDescription": "需要立即补货",
+      "warningItems": "警告商品",
+      "warningDescription": "接近最低阈值",
+      "totalValue": "总价值",
+      "valueDescription": "库存不足商品的价值",
+      "itemsTitle": "需要关注的商品",
+      "itemsDescription": "实时监控和管理您的库存水平",
+      "viewDashboard": "查看仪表板",
+      "critical": "紧急",
+      "warning": "警告",
+      "sku": "SKU",
+      "currentStock": "当前库存",
+      "reorder": "补货",
+      "ctaText": "自动化您的库存警报，再也不会错过重要产品",
+      "ctaButton": "免费试用"
+    }
+  },
+  "dashboard": {
+    "title": "仪表板",
+    "welcome": "欢迎使用FIBEM STOCK",
+    "subtitle": "您的库存和活动概览",
+    "totalProducts": "总产品数",
+    "lowStock": "库存不足",
+    "outOfStock": "缺货",
+    "totalValue": "总价值",
+    "recentActivity": "最近活动",
+    "quickActions": "快速操作",
+    "addProduct": "添加产品",
+    "viewReports": "查看报告",
+    "manageStock": "管理库存",
+    "realTime": {
+      "title": "实时跟踪",
+      "description": "监控您的库存变化",
+      "live": "实时",
+      "stockMovements": "库存变动",
+      "pendingOrders": "待处理订单",
+      "recentUpdates": "最近更新",
+      "today": "今天",
+      "processing": "处理中",
+      "lastHour": "最近一小时",
+      "activity1": "库存更新：三星Galaxy S24（+15件）",
+      "activity2": "收到新订单：iPhone 15 Pro（3件）",
+      "activity3": "库存不足警报：MacBook Air M2",
+      "justNow": "刚刚",
+      "twoMinutesAgo": "2分钟前",
+      "fiveMinutesAgo": "5分钟前"
+    }
+  },
+  "products": {
+    "title": "产品管理",
+    "addProduct": "添加产品",
+    "productName": "产品名称",
+    "category": "类别",
+    "stockQuantity": "库存数量",
+    "minimumStock": "最低库存",
+    "unitPrice": "单价",
+    "supplier": "供应商",
+    "description": "描述",
+    "sku": "SKU",
+    "barcode": "条形码",
+    "inStock": "有库存",
+    "lowStock": "库存不足",
+    "outOfStock": "缺货",
+    "categories": {
+      "electronics": "电子产品",
+      "clothing": "服装",
+      "food": "食品",
+      "books": "图书",
+      "sports": "体育",
+      "home": "家居",
+      "beauty": "美容",
+      "toys": "玩具"
+    }
+  },
+  "sales": {
+    "title": "销售管理",
+    "newSale": "新销售/报价",
+    "newQuotation": "新报价",
+    "invoiceNumber": "发票号",
+    "customer": "客户",
+    "customerName": "客户姓名",
+    "customerEmail": "客户邮箱",
+    "customerPhone": "客户电话",
+    "customerAddress": "客户地址",
+    "saleDate": "销售日期",
+    "dueDate": "到期日期",
+    "paymentStatus": "付款状态",
+    "paid": "已付",
+    "pending": "待付",
+    "overdue": "逾期",
+    "draft": "草稿",
+    "viewInvoice": "查看发票",
+    "downloadPdf": "下载PDF",
+    "sendEmail": "发送邮件",
+    "monthlySales": "月度销售",
+    "paidInvoices": "已付发票",
+    "pendingPayments": "待付款项",
+    "activeCustomers": "活跃客户",
+    "selectProduct": "选择产品",
+    "addItem": "添加项目",
+    "removeItem": "删除项目",
+    "taxRate": "税率",
+    "paymentTerms": "付款条件",
+    "invoice": "发票",
+    "billTo": "账单地址",
+    "itemDescription": "项目描述",
+    "unitPrice": "单价",
+    "amount": "金额",
+    "quotation": "报价",
+    "quotations": "报价单",
+    "validUntil": "有效期至",
+    "documentType": "文档类型",
+    "generateQuotation": "生成报价",
+    "viewQuotation": "查看报价",
+    "invoiceViewer": {
+      "title": "发票",
+      "sendByEmail": "通过邮件发送",
+      "email": "邮箱",
+      "downloadPdf": "下载PDF",
+      "generating": "生成中...",
+      "pdf": "PDF",
+      "companyName": "FIBEM STOCK",
+      "companyTagline": "库存管理系统",
+      "companyAddress": "商务街123号",
+      "companyCity": "100000 北京，中国",
+      "companyPhone": "电话：+86 400-000-0000",
+      "companyEmail": "邮箱：contact@fibemstock.cn",
+      "companySiret": "统一社会信用代码：91000000000000000X",
+      "invoiceTitle": "发票",
+      "invoiceNumber": "编号",
+      "date": "日期：",
+      "dueDate": "到期日期：",
+      "billedTo": "账单地址：",
+      "description": "描述",
+      "sku": "SKU",
+      "quantity": "数量",
+      "unitPriceShort": "单价",
+      "total": "总计",
+      "subtotal": "小计：",
+      "tax": "税金",
+      "grandTotal": "总计：",
+      "paymentTermsTitle": "付款条件",
+      "paymentTermsDue": "到期：",
+      "paymentTermsDueText": "收到发票后30天内付款",
+      "paymentTermsMethod": "方式：",
+      "paymentTermsMethodText": "银行转账或开具FIBEM STOCK支票",
+      "paymentTermsPenalties": "违约金：",
+      "paymentTermsPenaltiesText": "逾期付款违约金为法定利率的3倍",
+      "footer": "感谢您的业务 • FIBEM STOCK • www.fibemstock.cn",
+      "emailSubject": "发票{{invoiceId}} - FIBEM STOCK",
+      "emailBody": "您好{{customerName}}，\\n\\n请查收附件中金额为¥{{total}}的发票{{invoiceId}}。\\n\\n到期日期：{{dueDate}}\\n\\n此致，\\nFIBEM STOCK团队",
+      "quantityLabel": "数量：",
+      "unitPriceLabel": "单价：",
+      "viewPdf": "查看PDF",
+      "view": "查看"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "此字段为必填项",
+      "email": "无效的邮箱地址",
+      "phone": "无效的电话号码",
+      "minLength": "最少{{min}}个字符",
+      "maxLength": "最多{{max}}个字符",
+      "positiveNumber": "必须是正数"
+    },
+    "success": {
+      "productAdded": "产品添加成功",
+      "productUpdated": "产品更新成功",
+      "saleCreated": "销售创建成功",
+      "invoiceSent": "发票发送成功"
+    },
+    "errors": {
+      "generic": "发生错误",
+      "networkError": "网络错误",
+      "serverError": "服务器错误"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 FIBEM STOCK。保留所有权利。",
+    "poweredBy": "由v0提供支持"
+  }
+}

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
-type Language = "fr" | "en" | "es" | "ar"
+type Language = "fr" | "en" | "es" | "ar" | "pt" | "zh" | "bn"
 
 type CurrencyConfig = {
   symbol: string
@@ -15,6 +15,9 @@ const currencyMap: Record<Language, CurrencyConfig> = {
   fr: { symbol: "€", code: "EUR", position: "after" },
   es: { symbol: "€", code: "EUR", position: "after" },
   ar: { symbol: "د.م.", code: "MAD", position: "after" },
+  pt: { symbol: "€", code: "EUR", position: "after" },
+  zh: { symbol: "¥", code: "CNY", position: "before" },
+  bn: { symbol: "৳", code: "BDT", position: "before" },
 }
 
 interface LanguageContextType {
@@ -33,6 +36,9 @@ const translations: Record<Language, any> = {
   en: require("../locales/en.json"),
   es: require("../locales/es.json"),
   ar: require("../locales/ar.json"),
+  pt: require("../locales/pt.json"),
+  zh: require("../locales/zh.json"),
+  bn: require("../locales/bn.json"),
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -43,7 +49,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const savedLanguage = localStorage.getItem("fibem-language") as Language
     if (
       savedLanguage &&
-      (savedLanguage === "fr" || savedLanguage === "en" || savedLanguage === "es" || savedLanguage === "ar")
+      (savedLanguage === "fr" || savedLanguage === "en" || savedLanguage === "es" || savedLanguage === "ar" || savedLanguage === "pt" || savedLanguage === "zh" || savedLanguage === "bn")
     ) {
       setLanguageState(savedLanguage)
     }
@@ -56,7 +62,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("fibem-language", lang)
     // Update HTML lang attribute
     document.documentElement.lang = lang
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"
+    document.documentElement.dir = (lang === "ar" || lang === "bn") ? "rtl" : "ltr"
   }
 
   const t = (key: string, params?: Record<string, string | number>): string => {

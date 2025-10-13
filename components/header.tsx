@@ -32,6 +32,9 @@ export function Header() {
     en: "🇬🇧",
     es: "🇪🇸",
     ar: "🇸🇦",
+    pt: "🇵🇹",
+    zh: "🇨🇳",
+    bn: "🇧🇩",
   };
 
   return (
@@ -140,6 +143,37 @@ export function Header() {
                       <span className="mr-2">🇸🇦</span>
                       العربية
                     </button>
+                    <button
+                      onClick={() => {
+                        setLanguage("pt");
+                        setShowLanguageDropdown(false);
+                      }}
+                      className={`w-full px-3 py-2 text-sm text-left hover:bg-gray-100 flex items-center ${language === "pt" ? "bg-blue-50" : ""}`}
+                    >
+                      <span className="mr-2">🇵🇹</span>
+                      Português
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage("zh");
+                        setShowLanguageDropdown(false);
+                      }}
+                      className={`w-full px-3 py-2 text-sm text-left hover:bg-gray-100 flex items-center ${language === "zh" ? "bg-blue-50" : ""}`}
+                    >
+                      <span className="mr-2">🇨🇳</span>
+                      中文
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage("bn");
+                        setShowLanguageDropdown(false);
+                      }}
+                      className={`w-full px-3 py-2 text-sm text-left hover:bg-gray-100 flex items-center ${language === "bn" ? "bg-blue-50" : ""}`}
+                    >
+                      <span className="mr-2">🇧🇩</span>
+                      বাংলা
+                    </button>
+                    
                   </div>
                 </>,
                 document.body,
@@ -221,6 +255,27 @@ export function Header() {
                     onClick={() => setLanguage("ar")}
                   >
                     🇸🇦 العربية
+                  </Button>
+                  <Button
+                    variant={language === "pt" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setLanguage("pt")}
+                  >
+                    🇵🇹 Português
+                  </Button>
+                  <Button
+                    variant={language === "zh" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setLanguage("zh")}
+                  >
+                    🇨🇳 中文
+                  </Button>
+                  <Button
+                    variant={language === "bn" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setLanguage("bn")}
+                  >
+                    🇧🇩 বাংলা
                   </Button>
                 </div>
 
